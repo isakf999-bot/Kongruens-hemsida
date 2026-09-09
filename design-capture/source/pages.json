@@ -1,0 +1,48 @@
+{
+  "origin": "https://www.kongruens.se",
+  "startUrl": "https://www.kongruens.se/",
+  "pages": [
+    {
+      "path": "/",
+      "slug": "home",
+      "title": "Home",
+      "url": "https://www.kongruens.se/"
+    },
+    {
+      "path": "/services",
+      "slug": "services",
+      "title": "Tjänster | My Site",
+      "url": "https://www.kongruens.se/services"
+    },
+    {
+      "path": "/blog",
+      "slug": "blog",
+      "title": "Blogg | My Site",
+      "url": "https://www.kongruens.se/blog"
+    },
+    {
+      "path": "/about-5",
+      "slug": "about-5",
+      "title": "Om mig | My Site",
+      "url": "https://www.kongruens.se/about-5"
+    },
+    {
+      "path": "/booking-calendar/kursmaterial",
+      "slug": "booking-calendar-kursmaterial",
+      "title": "Kursmaterial - My Site",
+      "url": "https://www.kongruens.se/booking-calendar/kursmaterial"
+    },
+    {
+      "path": "/booking-calendar/personlig-v%C3%A4gledning",
+      "slug": "booking-calendar-personlig-v-c3-a4gledning",
+      "title": "Personlig vägledning - My Site",
+      "url": "https://www.kongruens.se/booking-calendar/personlig-v%C3%A4gledning"
+    },
+    {
+      "path": "/booking-calendar/kurs-i-grupp",
+      "slug": "booking-calendar-kurs-i-grupp",
+      "title": "Kurs i grupp - My Site",
+      "url": "https://www.kongruens.se/booking-calendar/kurs-i-grupp"
+    }
+  ]
+}

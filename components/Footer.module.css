@@ -1,0 +1,76 @@
+.footer {
+  padding: var(--space-8) var(--gutter);
+  background: var(--water-deep);
+  color: var(--paper);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.15fr);
+  gap: var(--space-8);
+  max-width: var(--container);
+  margin: 0 auto;
+}
+
+.info h2 {
+  font-size: var(--text-2xl);
+  font-weight: 400;
+  margin-bottom: var(--space-5);
+  color: var(--paper);
+}
+
+.info p {
+  margin: 0 0 var(--space-2);
+}
+
+.info a {
+  text-decoration: none;
+}
+
+.info a:hover {
+  color: var(--paper);
+  text-decoration: underline;
+}
+
+.socials {
+  display: flex;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+}
+
+.socials a {
+  display: grid;
+  place-items: center;
+  width: 2.6rem;
+  height: 2.6rem;
+  color: var(--paper);
+  opacity: 0.8;
+  border-radius: var(--radius-pill);
+  background: color-mix(in srgb, var(--paper) 10%, transparent);
+  transition: opacity var(--t-fast) var(--ease), transform var(--t-fast) var(--ease);
+}
+
+.socials a:hover {
+  opacity: 1;
+  transform: translateY(-3px);
+  color: var(--paper);
+}
+
+.socialsInk {
+  margin-top: var(--space-6);
+}
+
+.socialsInk a {
+  color: var(--ink);
+  background: color-mix(in srgb, var(--ink) 7%, transparent);
+}
+
+.socialsInk a:hover {
+  color: var(--ink);
+}
+
+@media (max-width: 800px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
