@@ -1,0 +1,20 @@
+:root {
+  --content-max: 741px;
+  --header-h: 124px;
+  --captured-color-1: #000000;
+  --captured-color-2: #ffffff;
+  --captured-color-3: #0000ee;
+  --captured-color-4: rgba(255, 255, 255, 0);
+  --captured-color-5: #484a8f;
+  --captured-color-6: #116dff;
+  --captured-color-7: #c7c7c7;
+  --captured-color-8: #27508f;
+  --captured-color-9: rgba(0, 3, 106, 0.7);
+  --captured-color-10: #a3a5da;
+  --captured-color-11: rgba(0, 3, 106, 0.74);
+  --captured-color-12: rgba(232, 230, 230, 0);
+  --font-1: avenir-lt-w01_35-light1475496, sans-serif;
+  --font-2: Arial, sans-serif;
+  --font-3: lato-light, sans-serif;
+  --font-4: kepler-w03-light-scd-cp, sans-serif;
+}

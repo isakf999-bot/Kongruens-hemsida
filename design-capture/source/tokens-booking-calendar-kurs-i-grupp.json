@@ -1,0 +1,1743 @@
+{
+  "url": "https://www.kongruens.se/booking-calendar/kurs-i-grupp",
+  "title": "Kurs i grupp - My Site",
+  "language": "en",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "engine": "studio",
+  "description": null,
+  "favicon": "https://static.parastorage.com/client/pfavico.ico",
+  "cssVars": {
+    "--wst-color-custom-17": "rgb(250,248,242)",
+    "--wix-opt-in-direction": "ltr",
+    "--wst-font-style-body-large": "normal normal normal 17px/1.4em avenir-lt-w01_35-light1475496,sans-serif",
+    "--font_9": "normal normal normal 14px/1.4em avenir-lt-w01_35-light1475496,sans-serif",
+    "--color_55": "199,199,199",
+    "--wst-color-fill-background-primary": "rgb(255,255,255)",
+    "--wst-color-custom-20": "rgb(147,146,140)",
+    "--wst-color-custom-11": "rgb(254,255,174)",
+    "--color_37": "0,0,0",
+    "--color_43": "199,199,199",
+    "--wst-color-fill-base-shade-2": "rgb(199,199,199)",
+    "--wst-color-custom-19": "rgb(196,194,186)",
+    "--color_12": "232,230,230",
+    "--color_60": "72,74,143",
+    "--wst-button-color-border-secondary-hover": "rgb(72,74,143)",
+    "--color_25": "84,73,58",
+    "--color_48": "72,74,143",
+    "--wix-ads-height": "0px",
+    "--wst-font-style-body-small": "normal normal normal 14px/1.4em avenir-lt-w01_35-light1475496,sans-serif",
+    "--scaling-factor": "clamp(0px, 100 * 1cqw * 1, min(9999px, 9999px))",
+    "--wst-button-color-text-primary": "rgb(255,255,255)",
+    "--wst-font-style-body-x-small": "normal normal normal 12px/1.4em din-next-w01-light,sans-serif",
+    "--wst-color-line": "rgb(117,117,117)",
+    "--color_21": "237,229,221",
+    "--color_51": "255,255,255",
+    "--color_50": "255,255,255",
+    "--color_13": "199,199,199",
+    "--color_10": "176,176,176",
+    "--wst-color-custom-12": "rgb(254,255,134)",
+    "--wst-font-style-h6": "normal normal normal 17px/1.4em lulo-clean-w01-one-bold,sans-serif",
+    "--browser-zoom": "1",
+    "--color_54": "199,199,199",
+    "--wst-color-custom-7": "rgb(232,214,193)",
+    "--color_20": "0,1,53",
+    "--color_58": "72,74,143",
+    "--color_65": "199,199,199",
+    "--color_46": "0,0,0",
+    "--color_2": "0,0,0",
+    "--wst-color-custom-8": "rgb(205,175,140)",
+    "--wst-button-color-border-primary-hover": "rgb(72,74,143)",
+    "--color_3": "237,28,36",
+    "--wst-color-action": "rgb(72,74,143)",
+    "--wst-color-fill-accent-2": "rgb(0,0,0)",
+    "--color_41": "72,74,143",
+    "--color_22": "232,214,193",
+    "--color_30": "84,85,4",
+    "--color_23": "205,175,140",
+    "--wst-color-custom-13": "rgb(252,255,13)",
+    "--color_31": "252,252,250",
+    "--maxViewportSize": "1920",
+    "--minViewportSize": "320",
+    "--wst-color-custom-14": "rgb(168,170,9)",
+    "--color_42": "0,0,0",
+    "--wst-button-color-fill-secondary": "rgb(255,255,255)",
+    "--wst-font-style-h2": "normal normal normal 42px/1.4em lulo-clean-w01-one-bold,sans-serif",
+    "--font_7": "normal normal normal 17px/1.4em avenir-lt-w01_35-light1475496,sans-serif",
+    "--wst-button-color-fill-secondary-hover": "rgb(72,74,143)",
+    "--font_6": "normal normal normal 17px/1.4em lulo-clean-w01-one-bold,sans-serif",
+    "--wst-button-color-fill-primary-disabled": "rgb(199,199,199)",
+    "--font_3": "normal normal normal 35px/1.4em lulo-clean-w01-one-bold,sans-serif",
+    "--font_4": "normal normal normal 23px/1.4em avenir-lt-w01_35-light1475496,sans-serif",
+    "--wst-color-custom-16": "rgb(252,252,250)",
+    "--color_44": "255,255,255",
+    "--wst-color-custom-15": "rgb(84,85,4)",
+    "--wst-button-color-text-secondary": "rgb(72,74,143)",
+    "--wst-button-color-border-primary-disabled": "rgb(199,199,199)",
+    "--wst-color-custom-4": "rgb(0,3,106)",
+    "--wst-color-fill-base-shade-3": "rgb(117,117,117)",
+    "--color_56": "255,255,255",
+    "--wst-color-fill-accent-3": "rgb(199,199,199)",
+    "--theme-spx-ratio": "1px",
+    "--spx-stopper-max": "9999px",
+    "--color_9": "114,114,114",
+    "--color_27": "254,255,134",
+    "--customScaleViewportLimit": "clamp(320 * 1px, 100 * 1cqw * 1, min(9999px, 1920 * 1px))",
+    "--portals-z-index": "100001",
+    "--wst-color-custom-3": "rgb(120,122,180)",
+    "--color_62": "255,255,255",
+    "--wst-color-fill-base-shade-1": "rgb(232,230,230)",
+    "--color_33": "245,243,233",
+    "--color_0": "255,255,255",
+    "--wst-color-custom-18": "rgb(245,243,233)",
+    "--color_61": "72,74,143",
+    "--font_5": "normal normal normal 20px/1.4em avenir-lt-w01_35-light1475496,sans-serif",
+    "--font_8": "normal normal normal 15px/1.4em avenir-lt-w01_35-light1475496,sans-serif",
+    "--color_39": "199,199,199",
+    "--font_2": "normal normal normal 42px/1.4em lulo-clean-w01-one-bold,sans-serif",
+    "--color_63": "255,255,255",
+    "--wst-color-custom-6": "rgb(237,229,221)",
+    "--color_4": "0,136,203",
+    "--color_7": "176,176,176",
+    "--wst-button-color-text-secondary-hover": "rgb(255,255,255)",
+    "--color_52": "72,74,143",
+    "--wst-font-style-h3": "normal normal normal 35px/1.4em lulo-clean-w01-one-bold,sans-serif",
+    "--font_0": "normal normal normal 110px/1.4em lulo-clean-w01-one-bold,sans-serif",
+    "--wst-color-fill-accent-1": "rgb(72,74,143)",
+    "--color_34": "196,194,186",
+    "--color_47": "117,117,117",
+    "--wst-button-color-border-secondary": "rgb(72,74,143)",
+    "--wst-button-color-text-secondary-disabled": "rgb(199,199,199)",
+    "--color_45": "0,0,0",
+    "--color_59": "72,74,143",
+    "--wst-button-color-border-secondary-disabled": "rgb(199,199,199)",
+    "--wst-color-fill-background-secondary": "rgb(232,230,230)",
+    "--wst-color-fill-accent-4": "rgb(255,255,255)",
+    "--wst-color-custom-1": "rgb(199,199,199)",
+    "--color_5": "255,203,5",
+    "--color_1": "255,255,255",
+    "--color_14": "117,117,117",
+    "--full-viewport": "100 * 1cqw * 1",
+    "--wst-font-style-body-medium": "normal normal normal 15px/1.4em avenir-lt-w01_35-light1475496,sans-serif",
+    "--font_10": "normal normal normal 12px/1.4em din-next-w01-light,sans-serif",
+    "--wst-font-style-h4": "normal normal normal 23px/1.4em avenir-lt-w01_35-light1475496,sans-serif",
+    "--wst-color-text-secondary": "rgb(117,117,117)",
+    "--color_17": "120,122,180",
+    "--color_40": "117,117,117",
+    "--wst-button-color-fill-primary-hover": "rgb(255,255,255)",
+    "--wst-button-color-border-primary": "rgb(72,74,143)",
+    "--wst-color-disabled": "rgb(199,199,199)",
+    "--color_16": "163,165,218",
+    "--color_24": "125,107,85",
+    "--color_19": "0,3,106",
+    "--site-width": "980px",
+    "--wst-button-color-fill-primary": "rgb(72,74,143)",
+    "--wst-color-fill-base-1": "rgb(255,255,255)",
+    "--wst-color-custom-5": "rgb(0,1,53)",
+    "--color_15": "0,0,0",
+    "--font_1": "normal normal normal 16px/1.4em din-next-w01-light,sans-serif",
+    "--wst-font-style-h5": "normal normal normal 20px/1.4em avenir-lt-w01_35-light1475496,sans-serif",
+    "--spx-stopper-min": "0px",
+    "--color_6": "114,114,114",
+    "--color_49": "72,74,143",
+    "--wst-button-color-fill-secondary-disabled": "rgb(255,255,255)",
+    "--wst-color-custom-10": "rgb(84,73,58)",
+    "--color_26": "254,255,174",
+    "--wst-color-text-primary": "rgb(0,0,0)",
+    "--wix-ads-top-height": "0px",
+    "--color_38": "232,230,230",
+    "--sticky-offset": "0px",
+    "--color_57": "255,255,255",
+    "--color_8": "255,255,255",
+    "--wst-color-subtitle": "rgb(0,0,0)",
+    "--color_36": "255,255,255",
+    "--color_18": "72,74,143",
+    "--wst-color-custom-9": "rgb(125,107,85)",
+    "--wst-color-fill-base-2": "rgb(0,0,0)",
+    "--wix-opt-in-direction-multiplier": "1",
+    "--color_64": "199,199,199",
+    "--color_53": "72,74,143",
+    "--color_28": "252,255,13",
+    "--wst-color-title": "rgb(0,0,0)",
+    "--above-all-z-index": "100000",
+    "--color_35": "147,146,140",
+    "--color_32": "250,248,242",
+    "--color_29": "168,170,9",
+    "--one-unit": "1cqw",
+    "--wst-button-color-text-primary-hover": "rgb(72,74,143)",
+    "--wst-button-color-text-primary-disabled": "rgb(255,255,255)",
+    "--color_11": "255,255,255",
+    "--wst-color-custom-2": "rgb(163,165,218)",
+    "--section-max-width": "9999px",
+    "--scrollbar-width": "0px"
+  },
+  "fontsLoaded": [
+    {
+      "family": "avenir-lt-w01_35-light1475496",
+      "weight": "400",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "avenir-lt-w01_35-light1475496",
+      "weight": "400",
+      "style": "normal",
+      "status": "loaded"
+    },
+    {
+      "family": "din-next-w01-light",
+      "weight": "400",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "din-next-w01-light",
+      "weight": "400",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "din-next-w01-light",
+      "weight": "400",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "helvetica-w01-roman",
+      "weight": "400",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "helvetica-w01-roman",
+      "weight": "400",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "helvetica-w01-roman",
+      "weight": "400",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "kepler-w03-light-scd-cp",
+      "weight": "400",
+      "style": "normal",
+      "status": "loaded"
+    },
+    {
+      "family": "lato",
+      "weight": "400",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "lato",
+      "weight": "700",
+      "style": "italic",
+      "status": "unloaded"
+    },
+    {
+      "family": "lato",
+      "weight": "700",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "lato",
+      "weight": "400",
+      "style": "italic",
+      "status": "unloaded"
+    },
+    {
+      "family": "lato",
+      "weight": "400",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "lato",
+      "weight": "700",
+      "style": "italic",
+      "status": "unloaded"
+    },
+    {
+      "family": "lato",
+      "weight": "700",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "lato",
+      "weight": "400",
+      "style": "italic",
+      "status": "unloaded"
+    },
+    {
+      "family": "lato-light",
+      "weight": "400",
+      "style": "italic",
+      "status": "unloaded"
+    },
+    {
+      "family": "lato-light",
+      "weight": "700",
+      "style": "italic",
+      "status": "unloaded"
+    },
+    {
+      "family": "lato-light",
+      "weight": "400",
+      "style": "normal",
+      "status": "loaded"
+    },
+    {
+      "family": "lato-light",
+      "weight": "700",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "lulo-clean-w01-one-bold",
+      "weight": "400",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "lulo-clean-w01-one-bold",
+      "weight": "400",
+      "style": "normal",
+      "status": "loaded"
+    },
+    {
+      "family": "playfair display",
+      "weight": "700",
+      "style": "italic",
+      "status": "unloaded"
+    },
+    {
+      "family": "playfair display",
+      "weight": "400",
+      "style": "italic",
+      "status": "unloaded"
+    },
+    {
+      "family": "playfair display",
+      "weight": "400",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "playfair display",
+      "weight": "700",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "playfair display",
+      "weight": "700",
+      "style": "italic",
+      "status": "unloaded"
+    },
+    {
+      "family": "playfair display",
+      "weight": "400",
+      "style": "italic",
+      "status": "unloaded"
+    },
+    {
+      "family": "playfair display",
+      "weight": "400",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "playfair display",
+      "weight": "700",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "playfair display",
+      "weight": "700",
+      "style": "italic",
+      "status": "unloaded"
+    },
+    {
+      "family": "playfair display",
+      "weight": "400",
+      "style": "italic",
+      "status": "unloaded"
+    },
+    {
+      "family": "playfair display",
+      "weight": "400",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "playfair display",
+      "weight": "700",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "playfair display",
+      "weight": "700",
+      "style": "italic",
+      "status": "unloaded"
+    },
+    {
+      "family": "playfair display",
+      "weight": "400",
+      "style": "italic",
+      "status": "unloaded"
+    },
+    {
+      "family": "playfair display",
+      "weight": "400",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "playfair display",
+      "weight": "700",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "playfairdisplay-bold",
+      "weight": "700",
+      "style": "italic",
+      "status": "unloaded"
+    },
+    {
+      "family": "playfairdisplay-bold",
+      "weight": "400",
+      "style": "normal",
+      "status": "loaded"
+    },
+    {
+      "family": "playfairdisplay-bold",
+      "weight": "700",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "playfairdisplay-bold",
+      "weight": "400",
+      "style": "italic",
+      "status": "unloaded"
+    },
+    {
+      "family": "avenir-lt-w01_35-light1475496",
+      "weight": "400",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "avenir-lt-w01_35-light1475496",
+      "weight": "400",
+      "style": "normal",
+      "status": "loaded"
+    },
+    {
+      "family": "lato",
+      "weight": "400",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "lato",
+      "weight": "700",
+      "style": "italic",
+      "status": "unloaded"
+    },
+    {
+      "family": "lato",
+      "weight": "700",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "lato",
+      "weight": "400",
+      "style": "italic",
+      "status": "unloaded"
+    },
+    {
+      "family": "lato",
+      "weight": "400",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "lato",
+      "weight": "700",
+      "style": "italic",
+      "status": "unloaded"
+    },
+    {
+      "family": "lato",
+      "weight": "700",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "lato",
+      "weight": "400",
+      "style": "italic",
+      "status": "unloaded"
+    },
+    {
+      "family": "lato-light",
+      "weight": "400",
+      "style": "italic",
+      "status": "unloaded"
+    },
+    {
+      "family": "lato-light",
+      "weight": "700",
+      "style": "italic",
+      "status": "unloaded"
+    },
+    {
+      "family": "lato-light",
+      "weight": "400",
+      "style": "normal",
+      "status": "loaded"
+    },
+    {
+      "family": "lato-light",
+      "weight": "700",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "playfair display",
+      "weight": "700",
+      "style": "italic",
+      "status": "unloaded"
+    },
+    {
+      "family": "playfair display",
+      "weight": "400",
+      "style": "italic",
+      "status": "unloaded"
+    },
+    {
+      "family": "playfair display",
+      "weight": "400",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "playfair display",
+      "weight": "700",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "playfair display",
+      "weight": "700",
+      "style": "italic",
+      "status": "unloaded"
+    },
+    {
+      "family": "playfair display",
+      "weight": "400",
+      "style": "italic",
+      "status": "unloaded"
+    },
+    {
+      "family": "playfair display",
+      "weight": "400",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "playfair display",
+      "weight": "700",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "playfair display",
+      "weight": "700",
+      "style": "italic",
+      "status": "unloaded"
+    },
+    {
+      "family": "playfair display",
+      "weight": "400",
+      "style": "italic",
+      "status": "unloaded"
+    },
+    {
+      "family": "playfair display",
+      "weight": "400",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "playfair display",
+      "weight": "700",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "playfair display",
+      "weight": "700",
+      "style": "italic",
+      "status": "unloaded"
+    },
+    {
+      "family": "playfair display",
+      "weight": "400",
+      "style": "italic",
+      "status": "unloaded"
+    },
+    {
+      "family": "playfair display",
+      "weight": "400",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "playfair display",
+      "weight": "700",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "playfairdisplay-bold",
+      "weight": "700",
+      "style": "italic",
+      "status": "unloaded"
+    },
+    {
+      "family": "playfairdisplay-bold",
+      "weight": "400",
+      "style": "normal",
+      "status": "loaded"
+    },
+    {
+      "family": "playfairdisplay-bold",
+      "weight": "700",
+      "style": "normal",
+      "status": "unloaded"
+    },
+    {
+      "family": "playfairdisplay-bold",
+      "weight": "400",
+      "style": "italic",
+      "status": "unloaded"
+    }
+  ],
+  "fontFiles": [
+    "https://static.parastorage.com/fonts/v2/af36905f-3c92-4ef9-b0c1-f91432f16ac1/v1/avenir-lt-w01_35-light1475496.woff2",
+    "https://static.parastorage.com/fonts/v2/19f6e474-15ce-4e6a-baee-1511a65fe78e/v1/kepler-w03-light-scd-cp.woff2",
+    "https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/lato/v14/2hXzmNaFRuKTSBR9nRGO-A.woff2",
+    "https://static.parastorage.com/fonts/v2/e3cf8f7e-35c4-446f-9b93-de93e989f66f/v1/lulo-clean-w01-one-bold.woff2",
+    "https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/playfairdisplay/v18/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgEM86xQ.woff2",
+    "https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/playfairdisplay/v13/UC3ZEjagJi85gF9qFaBgIIWMvkC5IXg8PD2cMeMDjBI.woff2",
+    "https://static.parastorage.com/tag-bundler/api/v1/fonts-cache/googlefont/woff2/s/playfairdisplay/v13/UC3ZEjagJi85gF9qFaBgILxv9TIgpWQaRKdG-_MdlP0.woff2"
+  ],
+  "typeStyles": [
+    {
+      "fontFamily": "lato-light",
+      "fontSize": "17px",
+      "fontWeight": "400",
+      "fontStyle": "normal",
+      "lineHeight": "23.8px",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "textAlign": "left",
+      "color": "#000000",
+      "samples": [
+        "August",
+        "2026",
+        "Mon"
+      ],
+      "count": 15,
+      "tag": "span"
+    },
+    {
+      "fontFamily": "lato-light",
+      "fontSize": "17px",
+      "fontWeight": "400",
+      "fontStyle": "normal",
+      "lineHeight": "23.8px",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "textAlign": "left",
+      "color": "#c7c7c7",
+      "samples": [
+        "10",
+        "11",
+        "12"
+      ],
+      "count": 15,
+      "tag": "td"
+    },
+    {
+      "fontFamily": "lato-light",
+      "fontSize": "17px",
+      "fontWeight": "400",
+      "fontStyle": "normal",
+      "lineHeight": "23.8px",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "textAlign": "center",
+      "color": "#c7c7c7",
+      "samples": [
+        "10",
+        "11",
+        "12"
+      ],
+      "count": 15,
+      "tag": "button"
+    },
+    {
+      "fontFamily": "lato-light",
+      "fontSize": "17px",
+      "fontWeight": "400",
+      "fontStyle": "normal",
+      "lineHeight": "17px",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "textAlign": "center",
+      "color": "#c7c7c7",
+      "samples": [
+        "10",
+        "11",
+        "12"
+      ],
+      "count": 15,
+      "tag": "span"
+    },
+    {
+      "fontFamily": "lato-light",
+      "fontSize": "17px",
+      "fontWeight": "400",
+      "fontStyle": "normal",
+      "lineHeight": "23.8px",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "textAlign": "center",
+      "color": "#000000",
+      "samples": [
+        "26",
+        "27",
+        "28"
+      ],
+      "count": 6,
+      "tag": "button"
+    },
+    {
+      "fontFamily": "lato-light",
+      "fontSize": "17px",
+      "fontWeight": "400",
+      "fontStyle": "normal",
+      "lineHeight": "17px",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "textAlign": "center",
+      "color": "#000000",
+      "samples": [
+        "26",
+        "27",
+        "28"
+      ],
+      "count": 6,
+      "tag": "span"
+    },
+    {
+      "fontFamily": "Arial, Helvetica, sans-serif",
+      "fontSize": "10px",
+      "fontWeight": "400",
+      "fontStyle": "normal",
+      "lineHeight": "normal",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "textAlign": "center",
+      "color": "#000000",
+      "samples": [
+        "Om",
+        "Tjänster",
+        "Blogg"
+      ],
+      "count": 4,
+      "tag": "li"
+    },
+    {
+      "fontFamily": "Arial, Helvetica, sans-serif",
+      "fontSize": "10px",
+      "fontWeight": "400",
+      "fontStyle": "normal",
+      "lineHeight": "normal",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "textAlign": "center",
+      "color": "#0000ee",
+      "samples": [
+        "Om",
+        "Tjänster",
+        "Blogg"
+      ],
+      "count": 4,
+      "tag": "a"
+    },
+    {
+      "fontFamily": "lato-light, lato, sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "fontStyle": "normal",
+      "lineHeight": "14px",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "textAlign": "start",
+      "color": "#373b4d",
+      "samples": [
+        "Ditt namn",
+        "Din e-mail",
+        "Ämne"
+      ],
+      "count": 4,
+      "tag": "label"
+    },
+    {
+      "fontFamily": "playfairdisplay-bold, \"playfair display\", serif",
+      "fontSize": "29px",
+      "fontWeight": "400",
+      "fontStyle": "normal",
+      "lineHeight": "normal",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "textAlign": "center",
+      "color": "#ffffff",
+      "samples": [
+        "MATS SVENSSON"
+      ],
+      "count": 3,
+      "tag": "span"
+    },
+    {
+      "fontFamily": "kepler-w03-light-scd-cp, serif",
+      "fontSize": "18px",
+      "fontWeight": "400",
+      "fontStyle": "normal",
+      "lineHeight": "48px",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "textAlign": "center",
+      "color": "#ffffff",
+      "samples": [
+        "Om",
+        "Tjänster",
+        "Blogg"
+      ],
+      "count": 3,
+      "tag": "p"
+    },
+    {
+      "fontFamily": "lato-light",
+      "fontSize": "17px",
+      "fontWeight": "400",
+      "fontStyle": "normal",
+      "lineHeight": "17px",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "textAlign": "center",
+      "color": "#ffffff",
+      "samples": [
+        "25",
+        "Nästa"
+      ],
+      "count": 3,
+      "tag": "span"
+    },
+    {
+      "fontFamily": "lulo-clean-w01-one-bold, sans-serif",
+      "fontSize": "23px",
+      "fontWeight": "400",
+      "fontStyle": "normal",
+      "lineHeight": "normal",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "textAlign": "start",
+      "color": "#000000",
+      "samples": [
+        "Kontakt"
+      ],
+      "count": 3,
+      "tag": "p"
+    },
+    {
+      "fontFamily": "avenir-lt-w01_35-light1475496, sans-serif",
+      "fontSize": "15px",
+      "fontWeight": "400",
+      "fontStyle": "normal",
+      "lineHeight": "25.5px",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "textAlign": "start",
+      "color": "#000000",
+      "samples": [
+        "​​",
+        "Tel: 0705-536050",
+        "info@kongruens.se"
+      ],
+      "count": 3,
+      "tag": "p"
+    },
+    {
+      "fontFamily": "avenir-lt-w01_35-light1475496, sans-serif",
+      "fontSize": "15px",
+      "fontWeight": "400",
+      "fontStyle": "normal",
+      "lineHeight": "25.5px",
+      "letterSpacing": "0.3px",
+      "textTransform": "none",
+      "textAlign": "start",
+      "color": "#000000",
+      "samples": [
+        "Tel: 0705-536050",
+        "info@kongruens.se"
+      ],
+      "count": 3,
+      "tag": "span"
+    },
+    {
+      "fontFamily": "lulo-clean-w01-one-bold, sans-serif",
+      "fontSize": "29px",
+      "fontWeight": "400",
+      "fontStyle": "normal",
+      "lineHeight": "normal",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "textAlign": "center",
+      "color": "#ffffff",
+      "samples": [
+        "MATS SVENSSON"
+      ],
+      "count": 2,
+      "tag": "span"
+    },
+    {
+      "fontFamily": "lato-light",
+      "fontSize": "17px",
+      "fontWeight": "400",
+      "fontStyle": "normal",
+      "lineHeight": "25.5px",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "textAlign": "start",
+      "color": "#000000",
+      "samples": [
+        "Availability for Tuesday, 25 August",
+        "Ingen tillgänglighet"
+      ],
+      "count": 2,
+      "tag": "p"
+    },
+    {
+      "fontFamily": "lato-light",
+      "fontSize": "17px",
+      "fontWeight": "400",
+      "fontStyle": "normal",
+      "lineHeight": "22.1px",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "textAlign": "center",
+      "color": "#ffffff",
+      "samples": [
+        "Nästa tillgängliga datum"
+      ],
+      "count": 2,
+      "tag": "button"
+    },
+    {
+      "fontFamily": "lulo-clean-w01-one-bold, sans-serif",
+      "fontSize": "29px",
+      "fontWeight": "400",
+      "fontStyle": "normal",
+      "lineHeight": "normal",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "textAlign": "center",
+      "color": "#000000",
+      "samples": [
+        "MATS SVENSSON"
+      ],
+      "count": 1,
+      "tag": "p"
+    },
+    {
+      "fontFamily": "avenir-lt-w01_35-light1475496, sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "fontStyle": "normal",
+      "lineHeight": "normal",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "textAlign": "center",
+      "color": "#000000",
+      "samples": [
+        "Personliv Vägledare"
+      ],
+      "count": 1,
+      "tag": "p"
+    },
+    {
+      "fontFamily": "avenir-lt-w01_35-light1475496, sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "fontStyle": "normal",
+      "lineHeight": "normal",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "textAlign": "center",
+      "color": "#ffffff",
+      "samples": [
+        "Personliv Vägledare"
+      ],
+      "count": 1,
+      "tag": "span"
+    },
+    {
+      "fontFamily": "avenir-lt-w01_35-light1475496, sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "fontStyle": "normal",
+      "lineHeight": "normal",
+      "letterSpacing": "2.1px",
+      "textTransform": "none",
+      "textAlign": "center",
+      "color": "#ffffff",
+      "samples": [
+        "Personliv Vägledare"
+      ],
+      "count": 1,
+      "tag": "span"
+    },
+    {
+      "fontFamily": "lato-light, lato, sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "fontStyle": "normal",
+      "lineHeight": "normal",
+      "letterSpacing": "2.1px",
+      "textTransform": "none",
+      "textAlign": "center",
+      "color": "#ffffff",
+      "samples": [
+        "Personliv Vägledare"
+      ],
+      "count": 1,
+      "tag": "span"
+    },
+    {
+      "fontFamily": "kepler-w03-light-scd-cp, serif",
+      "fontSize": "18px",
+      "fontWeight": "400",
+      "fontStyle": "normal",
+      "lineHeight": "48px",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "textAlign": "center",
+      "color": "#000000",
+      "samples": [
+        "Kontakt"
+      ],
+      "count": 1,
+      "tag": "p"
+    },
+    {
+      "fontFamily": "playfairdisplay-bold",
+      "fontSize": "49px",
+      "fontWeight": "400",
+      "fontStyle": "normal",
+      "lineHeight": "65.17px",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "textAlign": "left",
+      "color": "#000000",
+      "samples": [
+        "Schedule your service"
+      ],
+      "count": 1,
+      "tag": "h1"
+    },
+    {
+      "fontFamily": "lato-light",
+      "fontSize": "17px",
+      "fontWeight": "400",
+      "fontStyle": "normal",
+      "lineHeight": "25.5px",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "textAlign": "left",
+      "color": "#000000",
+      "samples": [
+        "Se vår tillgänglighet och boka de tider som passar dig."
+      ],
+      "count": 1,
+      "tag": "p"
+    },
+    {
+      "fontFamily": "lato-light",
+      "fontSize": "20px",
+      "fontWeight": "400",
+      "fontStyle": "normal",
+      "lineHeight": "28px",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "textAlign": "left",
+      "color": "#000000",
+      "samples": [
+        "Select a Date and Time"
+      ],
+      "count": 1,
+      "tag": "h2"
+    },
+    {
+      "fontFamily": "lato-light",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "fontStyle": "normal",
+      "lineHeight": "21px",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "textAlign": "start",
+      "color": "#000000",
+      "samples": [
+        "Central European Summer Time (CEST)"
+      ],
+      "count": 1,
+      "tag": "span"
+    },
+    {
+      "fontFamily": "lato-light",
+      "fontSize": "17px",
+      "fontWeight": "400",
+      "fontStyle": "normal",
+      "lineHeight": "23.8px",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "textAlign": "left",
+      "color": "#ffffff",
+      "samples": [
+        "25"
+      ],
+      "count": 1,
+      "tag": "td"
+    },
+    {
+      "fontFamily": "lato-light",
+      "fontSize": "17px",
+      "fontWeight": "400",
+      "fontStyle": "normal",
+      "lineHeight": "23.8px",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "textAlign": "center",
+      "color": "#ffffff",
+      "samples": [
+        "25"
+      ],
+      "count": 1,
+      "tag": "button"
+    },
+    {
+      "fontFamily": "lato-light",
+      "fontSize": "20px",
+      "fontWeight": "400",
+      "fontStyle": "normal",
+      "lineHeight": "28px",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "textAlign": "start",
+      "color": "#000000",
+      "samples": [
+        "Sammanfattning"
+      ],
+      "count": 1,
+      "tag": "h2"
+    },
+    {
+      "fontFamily": "lato-light",
+      "fontSize": "17px",
+      "fontWeight": "400",
+      "fontStyle": "normal",
+      "lineHeight": "23.8px",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "textAlign": "start",
+      "color": "#000000",
+      "samples": [
+        "Kurs i grupp"
+      ],
+      "count": 1,
+      "tag": "span"
+    },
+    {
+      "fontFamily": "Arial, Helvetica, sans-serif",
+      "fontSize": "10px",
+      "fontWeight": "400",
+      "fontStyle": "normal",
+      "lineHeight": "normal",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "textAlign": "start",
+      "color": "#000000",
+      "samples": [
+        "More details"
+      ],
+      "count": 1,
+      "tag": "button"
+    },
+    {
+      "fontFamily": "lato-light",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "fontStyle": "normal",
+      "lineHeight": "19.6px",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "textAlign": "start",
+      "color": "#000000",
+      "samples": [
+        "More details"
+      ],
+      "count": 1,
+      "tag": "h3"
+    },
+    {
+      "fontFamily": "playfairdisplay-bold, \"playfair display\", serif",
+      "fontSize": "23px",
+      "fontWeight": "400",
+      "fontStyle": "normal",
+      "lineHeight": "normal",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "textAlign": "start",
+      "color": "#000000",
+      "samples": [
+        "Kontakt"
+      ],
+      "count": 1,
+      "tag": "span"
+    },
+    {
+      "fontFamily": "Arial",
+      "fontSize": "13.3333px",
+      "fontWeight": "400",
+      "fontStyle": "normal",
+      "lineHeight": "normal",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "textAlign": "start",
+      "color": "#000000",
+      "samples": [
+        "Skicka"
+      ],
+      "count": 1,
+      "tag": "button"
+    },
+    {
+      "fontFamily": "lato-light, lato, sans-serif",
+      "fontSize": "14px",
+      "fontWeight": "400",
+      "fontStyle": "normal",
+      "lineHeight": "19.6px",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "textAlign": "start",
+      "color": "#ffffff",
+      "samples": [
+        "Skicka"
+      ],
+      "count": 1,
+      "tag": "span"
+    }
+  ],
+  "colors": [
+    {
+      "value": "#000000",
+      "count": 303,
+      "roles": [
+        "body-text",
+        "text",
+        "border",
+        "bg"
+      ]
+    },
+    {
+      "value": "#c7c7c7",
+      "count": 52,
+      "roles": [
+        "text",
+        "border",
+        "bg"
+      ]
+    },
+    {
+      "value": "#0000ee",
+      "count": 32,
+      "roles": [
+        "text",
+        "border"
+      ]
+    },
+    {
+      "value": "#ffffff",
+      "count": 21,
+      "roles": [
+        "bg",
+        "text",
+        "border"
+      ]
+    },
+    {
+      "value": "#3899ec",
+      "count": 4,
+      "roles": [
+        "text",
+        "border"
+      ]
+    },
+    {
+      "value": "#116dff",
+      "count": 2,
+      "roles": [
+        "text",
+        "border"
+      ]
+    },
+    {
+      "value": "rgba(0, 0, 0, 0.2)",
+      "count": 1,
+      "roles": [
+        "border"
+      ]
+    },
+    {
+      "value": "#df3131",
+      "count": 1,
+      "roles": [
+        "bg"
+      ]
+    },
+    {
+      "value": "rgba(255, 255, 255, 0.4)",
+      "count": 1,
+      "roles": [
+        "border"
+      ]
+    },
+    {
+      "value": "rgba(232, 230, 230, 0)",
+      "count": 1,
+      "roles": [
+        "bg"
+      ]
+    },
+    {
+      "value": "#373b4d",
+      "count": 1,
+      "roles": [
+        "bg"
+      ]
+    },
+    {
+      "value": "rgba(117, 117, 117, 0)",
+      "count": 1,
+      "roles": [
+        "border"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "tag": "header",
+      "id": "SITE_HEADER",
+      "testId": null,
+      "y": 0,
+      "height": 124,
+      "width": 1440,
+      "backgroundColor": null,
+      "backgroundImage": null,
+      "heading": "",
+      "textPreview": "MATS SVENSSON Personliv Vägledare Om Tjänster Blogg Kontakt"
+    },
+    {
+      "tag": "section",
+      "id": "comp-l43yvth6",
+      "testId": null,
+      "y": 124,
+      "height": 903,
+      "width": 1440,
+      "backgroundColor": null,
+      "backgroundImage": null,
+      "heading": "Schedule your service",
+      "textPreview": "Schedule your service Se vår tillgänglighet och boka de tider som passar dig. Select a Date and Time Central European Summer Time (CEST) Time zone: Central European Summer Time (CE"
+    },
+    {
+      "tag": "footer",
+      "id": "SITE_FOOTER",
+      "testId": null,
+      "y": 1027,
+      "height": 557,
+      "width": 1440,
+      "backgroundColor": null,
+      "backgroundImage": null,
+      "heading": "",
+      "textPreview": "Kontakt ​ ​​ Tel: 0705-536050 ​ info@kongruens.se Ditt namn Din e-mail Ämne Meddelande Skicka"
+    }
+  ],
+  "images": [
+    {
+      "src": "https://static.wixstatic.com/media/6450c7_2d7f9a9215234b53b96976e8ae02e28d~mv2.jpg/v1/fill/w_845,h_930,al_c,q_85,enc_avif,quality_auto/6450c7_2d7f9a9215234b53b96976e8ae02e28d~mv2.jpg",
+      "alt": "",
+      "width": 845,
+      "height": 930,
+      "displayWidth": 1440,
+      "displayHeight": 1584,
+      "objectFit": "cover"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/0fdef751204647a3bbd7eaa2827ed4f9.png/v1/fill/w_25,h_25,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/0fdef751204647a3bbd7eaa2827ed4f9.png",
+      "alt": "Facebook",
+      "width": 25,
+      "height": 25,
+      "displayWidth": 25,
+      "displayHeight": 25,
+      "objectFit": "cover"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/c7d035ba85f6486680c2facedecdcf4d.png/v1/fill/w_25,h_25,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/c7d035ba85f6486680c2facedecdcf4d.png",
+      "alt": "Twitter",
+      "width": 25,
+      "height": 25,
+      "displayWidth": 25,
+      "displayHeight": 25,
+      "objectFit": "cover"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/01c3aff52f2a4dffa526d7a9843d46ea.png/v1/fill/w_25,h_25,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/01c3aff52f2a4dffa526d7a9843d46ea.png",
+      "alt": "Instagram",
+      "width": 25,
+      "height": 25,
+      "displayWidth": 25,
+      "displayHeight": 25,
+      "objectFit": "cover"
+    },
+    {
+      "src": "https://static.wixstatic.com/media/78aa2057f0cb42fbbaffcbc36280a64a.png/v1/fill/w_25,h_25,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/78aa2057f0cb42fbbaffcbc36280a64a.png",
+      "alt": "YouTube",
+      "width": 25,
+      "height": 25,
+      "displayWidth": 25,
+      "displayHeight": 25,
+      "objectFit": "cover"
+    }
+  ],
+  "backgroundImageUrls": [],
+  "videos": [],
+  "nav": [
+    {
+      "text": "MATS SVENSSON",
+      "href": "https://www.kongruens.se/"
+    },
+    {
+      "text": "Om",
+      "href": "https://www.kongruens.se/"
+    },
+    {
+      "text": "Tjänster",
+      "href": "https://www.kongruens.se/services"
+    },
+    {
+      "text": "Blogg",
+      "href": "https://www.kongruens.se/blog"
+    },
+    {
+      "text": "Kontakt",
+      "href": "https://www.kongruens.se/"
+    }
+  ],
+  "buttons": [
+    {
+      "text": "MATS SVENSSON",
+      "href": "https://www.kongruens.se/",
+      "fontFamily": "playfairdisplay-bold, \"playfair display\", serif",
+      "fontSize": "29px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "color": "#ffffff",
+      "backgroundColor": null,
+      "border": "0px none #ffffff",
+      "borderRadius": "0px",
+      "padding": "0px",
+      "width": 240,
+      "height": 38
+    },
+    {
+      "text": "Om",
+      "href": "https://www.kongruens.se/",
+      "fontFamily": "Arial, Helvetica, sans-serif",
+      "fontSize": "10px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "color": "#0000ee",
+      "backgroundColor": null,
+      "border": "0px none #0000ee",
+      "borderRadius": "0px",
+      "padding": "0px",
+      "width": 55,
+      "height": 48
+    },
+    {
+      "text": "Tjänster",
+      "href": "https://www.kongruens.se/services",
+      "fontFamily": "Arial, Helvetica, sans-serif",
+      "fontSize": "10px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "color": "#0000ee",
+      "backgroundColor": null,
+      "border": "0px none #0000ee",
+      "borderRadius": "0px",
+      "padding": "0px",
+      "width": 88,
+      "height": 48
+    },
+    {
+      "text": "Blogg",
+      "href": "https://www.kongruens.se/blog",
+      "fontFamily": "Arial, Helvetica, sans-serif",
+      "fontSize": "10px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "color": "#0000ee",
+      "backgroundColor": null,
+      "border": "0px none #0000ee",
+      "borderRadius": "0px",
+      "padding": "0px",
+      "width": 69,
+      "height": 48
+    },
+    {
+      "text": "Kontakt",
+      "href": "https://www.kongruens.se/",
+      "fontFamily": "Arial, Helvetica, sans-serif",
+      "fontSize": "10px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "color": "#0000ee",
+      "backgroundColor": null,
+      "border": "0px none #0000ee",
+      "borderRadius": "0px",
+      "padding": "0px",
+      "width": 86,
+      "height": 48
+    },
+    {
+      "text": "1",
+      "href": null,
+      "fontFamily": "lato-light",
+      "fontSize": "17px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "color": "#c7c7c7",
+      "backgroundColor": null,
+      "border": "0px none #c7c7c7",
+      "borderRadius": "0px",
+      "padding": "0px",
+      "width": 41,
+      "height": 41
+    },
+    {
+      "text": "2",
+      "href": null,
+      "fontFamily": "lato-light",
+      "fontSize": "17px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "color": "#c7c7c7",
+      "backgroundColor": null,
+      "border": "0px none #c7c7c7",
+      "borderRadius": "0px",
+      "padding": "0px",
+      "width": 41,
+      "height": 41
+    },
+    {
+      "text": "3",
+      "href": null,
+      "fontFamily": "lato-light",
+      "fontSize": "17px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "color": "#c7c7c7",
+      "backgroundColor": null,
+      "border": "0px none #c7c7c7",
+      "borderRadius": "0px",
+      "padding": "0px",
+      "width": 41,
+      "height": 41
+    },
+    {
+      "text": "4",
+      "href": null,
+      "fontFamily": "lato-light",
+      "fontSize": "17px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "color": "#c7c7c7",
+      "backgroundColor": null,
+      "border": "0px none #c7c7c7",
+      "borderRadius": "0px",
+      "padding": "0px",
+      "width": 41,
+      "height": 41
+    },
+    {
+      "text": "5",
+      "href": null,
+      "fontFamily": "lato-light",
+      "fontSize": "17px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "color": "#c7c7c7",
+      "backgroundColor": null,
+      "border": "0px none #c7c7c7",
+      "borderRadius": "0px",
+      "padding": "0px",
+      "width": 41,
+      "height": 41
+    },
+    {
+      "text": "6",
+      "href": null,
+      "fontFamily": "lato-light",
+      "fontSize": "17px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "color": "#c7c7c7",
+      "backgroundColor": null,
+      "border": "0px none #c7c7c7",
+      "borderRadius": "0px",
+      "padding": "0px",
+      "width": 41,
+      "height": 41
+    },
+    {
+      "text": "7",
+      "href": null,
+      "fontFamily": "lato-light",
+      "fontSize": "17px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "color": "#c7c7c7",
+      "backgroundColor": null,
+      "border": "0px none #c7c7c7",
+      "borderRadius": "0px",
+      "padding": "0px",
+      "width": 41,
+      "height": 41
+    },
+    {
+      "text": "8",
+      "href": null,
+      "fontFamily": "lato-light",
+      "fontSize": "17px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "color": "#c7c7c7",
+      "backgroundColor": null,
+      "border": "0px none #c7c7c7",
+      "borderRadius": "0px",
+      "padding": "0px",
+      "width": 41,
+      "height": 41
+    },
+    {
+      "text": "9",
+      "href": null,
+      "fontFamily": "lato-light",
+      "fontSize": "17px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "color": "#c7c7c7",
+      "backgroundColor": null,
+      "border": "0px none #c7c7c7",
+      "borderRadius": "0px",
+      "padding": "0px",
+      "width": 41,
+      "height": 41
+    },
+    {
+      "text": "10",
+      "href": null,
+      "fontFamily": "lato-light",
+      "fontSize": "17px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "color": "#c7c7c7",
+      "backgroundColor": null,
+      "border": "0px none #c7c7c7",
+      "borderRadius": "0px",
+      "padding": "0px",
+      "width": 41,
+      "height": 41
+    },
+    {
+      "text": "11",
+      "href": null,
+      "fontFamily": "lato-light",
+      "fontSize": "17px",
+      "fontWeight": "400",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "color": "#c7c7c7",
+      "backgroundColor": null,
+      "border": "0px none #c7c7c7",
+      "borderRadius": "0px",
+      "padding": "0px",
+      "width": 41,
+      "height": 41
+    }
+  ],
+  "layout": {
+    "headerHeight": 124,
+    "headerPosition": "sticky",
+    "headerBackground": null,
+    "contentMaxWidth": 371,
+    "bodyBackground": null
+  },
+  "sameOriginPaths": [
+    "/",
+    "/services",
+    "/blog"
+  ]
+}
