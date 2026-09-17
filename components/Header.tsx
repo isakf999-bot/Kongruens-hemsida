@@ -66,7 +66,7 @@ export function Header() {
           })}
         </nav>
 
-        <Link href="/services" className={`btn ${ink ? "" : "btn-on-dark"} ${styles.cta}`} onClick={() => setOpen(false)}>
+        <Link href="/services" className={`btn ${styles.cta}`} onClick={() => setOpen(false)}>
           BOKA NU
         </Link>
 
