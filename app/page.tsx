@@ -29,11 +29,40 @@ export default function HomePage() {
 
       <section className={styles.intro}>
         <div className={styles.introInner}>
+          <Reveal className={styles.introBody} delay={80}>
+            <p className={styles.lead}>
+              Ja, det ena utesluter såklart inte det andra men det är ju vanligt att man har en PT för
+              den fysiska träningen emedan man låter den inre träningen stå tillbaka. Ska man vara
+              ärlig blir ingen människa genuint lycklig genom att fokusera på det yttre. Det är en
+              viktig del för att vi ska må fysiskt väl men en kombination av yttre och inre fokus
+              kommer att ge dig harmoni och större förmåga att leva ditt ditt liv med full potential.
+            </p>
+            <p className={styles.emphasis}>
+              Med mig som PV – Personlig Vägledare – får du någon att tänka högt tillsammans med.
+            </p>
+            <p>
+              Många drar sig för att kontakta psykolog eller terapeut. Det kan kännas stort, dyrt och
+              för vissa fortfarande förknippat med att något måste vara fel. Det kan i sig bli ett
+              hinder för att söka stöd.
+            </p>
+            <p>
+              Mitt PV-koncept är tänkt som ett mer tillgängligt och avslappnat alternativ för dig som
+              vill ha någon att resonera med kring livet, relationer, arbete, beslut eller andra
+              frågor som dyker upp längs vägen.
+            </p>
+            <p>
+              Tanken är enkel: att ha en person du kan vända dig till när du behöver sortera tankar,
+              få nya perspektiv eller komma vidare i en fråga.
+            </p>
+            <p>
+              En egen PV – Personlig Vägledare – som finns där som ett kontinuerligt stöd.
+            </p>
+          </Reveal>
           <div className={styles.introLockup}>
             <Reveal className={styles.introHead}>
               <h2>
                 Alla borde
-                <span className={styles.titleBreak}>ha en PV.</span>
+                <span className={styles.titleBreak}>ha en PV</span>
               </h2>
             </Reveal>
             <Reveal className={styles.close} delay={120}>
@@ -45,38 +74,51 @@ export default function HomePage() {
                 Boka nu
               </Link>
             </Reveal>
+            <Reveal className={styles.session} delay={160}>
+              <img
+                src="/images/pv-samtal.jpg"
+                alt="Två personer som sitter i samtal i ett ljust rum."
+                width={800}
+                height={1000}
+              />
+            </Reveal>
           </div>
-          <Reveal className={styles.introBody} delay={80}>
-            <p className={styles.lead}>
-              Ja, det ena utesluter såklart inte det andra men det är ju vanligt att man har en PT för
-              den fysiska träningen emedan man låter den inre träningen stå tillbaka. Ska man vara
-              ärlig blir ingen människa genuint lycklig genom att fokusera på det yttre. Det är en
-              viktig del för att vi ska må fysiskt väl men en kombination av yttre och inre fokus
-              kommer att ge dig harmoni och större förmåga att leva ditt ditt liv med full potential.
-            </p>
-            <p className={styles.emphasis}>
-              Med mig som PV (Personlig Vägledare) kan du uppnå din fulla potential!
-            </p>
-            <p>
-              Många drar sig för att gå till en psykolog eller terapeut. Det är dyrt och för många är
-              det fortfarande förknippat med psykisk sjukdom. Det i sig utgör ett hinder. Med mitt
-              PV-koncept erbjuds du ett billigt och mer avslappnat alternativ som inte är på bekostnad
-              av kvalité. Tänk att ha någon du kan ringa och dryfta olika frågeställningar med när
-              helst du behöver det, din alldeles egna PV.
-            </p>
-            <div className={styles.topicBlock}>
-              <p>Livet ger oss alla olika utmaningar. I följande ämnen kan jag vara ett stöd för dig.</p>
-              <ul>
-                {topics.map((t) => (
-                  <li key={t}>{t}</li>
-                ))}
-              </ul>
-            </div>
-            <p className={styles.free}>
-              Första samtalet är kostnadsfritt då vi tillsammans ringar in dina frågeställningar och
-              kommer överens om hur vi ska gå vidare.
+        </div>
+      </section>
+
+      <section className={styles.topics} aria-labelledby="stod-rubrik">
+        <div className={styles.topicsInner}>
+          <Reveal className={styles.topicsIntro}>
+            <h2 id="stod-rubrik">Jag kan vara ett stöd inom bland annat:</h2>
+            <p className={styles.topicLead}>
+              Livet ställer oss alla inför olika utmaningar. I vissa perioder kan det vara
+              värdefullt att ha någon utomstående att resonera med, få perspektiv av och sortera
+              tankarna tillsammans med.
             </p>
           </Reveal>
+          <Reveal className={styles.topicLists} delay={80}>
+            <ul>
+              {topics.slice(0, 8).map((t) => (
+                <li key={t}>
+                  <span aria-hidden="true">→</span>
+                  {t}
+                </li>
+              ))}
+            </ul>
+            <ul>
+              {topics.slice(8).map((t) => (
+                <li key={t}>
+                  <span aria-hidden="true">→</span>
+                  {t}
+                </li>
+              ))}
+            </ul>
+          </Reveal>
+          <p className={styles.free}>
+            Det första samtalet är kostnadsfritt. Då ringar vi tillsammans in vad du vill ha hjälp
+            med och ser om mitt sätt att arbeta passar dig. Därefter kommer vi överens om hur vi går
+            vidare.
+          </p>
         </div>
       </section>
 
@@ -86,29 +128,32 @@ export default function HomePage() {
             <div className={styles.aboutCopy}>
               <h2>Om mig</h2>
               <p>
-                Jag är en 55 - årig sjubarnspappa. Gift tre gånger och gått igenom två skilsmässor. Nu
-                gift med min kära fru sedan 20 år tillbaka. Med henne har jag fyra barn. Tre
-                tonåringar och en tre-åring.
+                Jag är socionom sedan 1998 och har bred erfarenhet av många olika arbetsområden inom
+                socialt arbete, bland annat som kurator, handledare, socialkonsulent,
+                familjehemskonsulent och barnsekreterare.
               </p>
               <p>
-                Jag har en vuxen dotter och genom henne ett barnbarn. Två av mina barn har gått bort.
-                En pojke i plötslig spädbarnsdöd när han var åtta månader och en flicka som avled i
-                suicid när hon var 14 år.
+                Min spetskompetens ligger i arbetet med att vägleda, stödja och handleda individer och
+                grupper. Under omkring tolv år har jag arbetat särskilt med handledning, samtal och
+                personlig utveckling, både individuellt och i grupp.
               </p>
               <p>
-                Jag är uppväxt med knappa omständigheter i en familj med 5 storasystrar. Mina
-                föräldrar skildes när jag var 10 och jag bodde med min mamma i ett höghus getto i
-                Landskrona där vi barn sprang ute på nätterna och levde rövare.
+                Jag har även lång erfarenhet av att leda grupper och utvecklingsprocesser och har genom
+                åren arbetat med många människor i olika livssituationer – kring relationer, sorg,
+                arbete, förändring, personlig utveckling och svåra beslut.
               </p>
               <p>
-                Idag bor jag med min familj på en gård med hästar, hundar och katter och marsvin. Jag
-                har byggt upp ett finansföretag från grunden till en omsättning på 15 miljoner kr per
-                år och har en vision om att alla människor ska kunna ha det gott både inombords och
-                ekonomiskt.
+                Jag vidareutbildar mig för närvarande inom psykoterapi och går en grundläggande
+                psykoterapiutbildning med inriktning mot affektfokuserat och psykodynamiskt arbete.
               </p>
               <p>
-                Min levnadsbana har varit krokig och många gånger svår. På vägen har jag dock lärt
-                mig mycket om livet, mig själv, människor och om livets olika processer.
+                Parallellt har jag under många år arbetat med ekonomi, företagande, sparande och
+                investeringar. Det gör att jag kan erbjuda vägledning både i personliga frågor och i
+                mer praktiska frågor kring arbete, ekonomi och framtidsplanering.
+              </p>
+              <p>
+                Min utgångspunkt är enkel: människor behöver inte alltid terapi. Ibland behöver man
+                någon med erfarenhet, kunskap och perspektiv att resonera med för att komma vidare.
               </p>
               <Link href="/about-5" className="btn">
                 Läs mer
