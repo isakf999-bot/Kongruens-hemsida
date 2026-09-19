@@ -20,7 +20,9 @@ export default async function BookingPage({
       </div>
       <article className={styles.sheet}>
         <h1>{service.title}</h1>
-        <p>{service.blurb}</p>
+        {service.paragraphs.map((p) => (
+          <p key={p}>{p}</p>
+        ))}
         {service.meta ? <p className={styles.meta}>{service.meta}</p> : null}
         <p className={styles.price}>{service.price}</p>
         <a

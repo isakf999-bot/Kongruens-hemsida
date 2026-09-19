@@ -17,7 +17,7 @@ export default function ServicesPage() {
         <div className={styles.listInner}>
           {services.map((s, i) => (
             <Reveal key={s.slug} delay={i * 90}>
-              <ServiceCard service={s} heading="h2" more />
+              <ServiceCard service={s} heading="h2" />
             </Reveal>
           ))}
         </div>
