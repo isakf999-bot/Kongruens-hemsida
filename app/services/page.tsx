@@ -6,14 +6,8 @@ import styles from "./services.module.css";
 export default function ServicesPage() {
   return (
     <main>
-      <section className={styles.hero}>
-        <img
-          src="/images/hero-home.jpg"
-          alt="Hand som håller en glaskula framför en brygga i skymning."
-        />
-        <h1>TJÄNSTER</h1>
-      </section>
       <section className={styles.list}>
+        <h1 className={styles.title}>Tjänster</h1>
         <div className={styles.listInner}>
           {services.map((s, i) => (
             <Reveal key={s.slug} delay={i * 90}>
