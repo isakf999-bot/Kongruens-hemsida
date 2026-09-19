@@ -46,23 +46,25 @@ export function ContactForm() {
       noValidate
       aria-busy={status === "loading"}
     >
-      <label>
-        Ditt namn
-        <input name="name" type="text" autoComplete="name" />
-      </label>
-      <label>
-        Din e-mail
-        <input
-          name="email"
-          type="email"
-          autoComplete="email"
-          required
-          aria-invalid={errors.email || undefined}
-          onBlur={(e) => {
-            if (e.target.value) setErrors({ email: !validateEmail(e.target.value) });
-          }}
-        />
-      </label>
+      <div className={styles.row}>
+        <label>
+          Ditt namn
+          <input name="name" type="text" autoComplete="name" />
+        </label>
+        <label>
+          Din e-mail
+          <input
+            name="email"
+            type="email"
+            autoComplete="email"
+            required
+            aria-invalid={errors.email || undefined}
+            onBlur={(e) => {
+              if (e.target.value) setErrors({ email: !validateEmail(e.target.value) });
+            }}
+          />
+        </label>
+      </div>
       <label>
         Ämne
         <input name="subject" type="text" />
@@ -72,7 +74,7 @@ export function ContactForm() {
         <textarea name="message" rows={6} />
       </label>
       <div className={styles.actions}>
-        <button className="btn btn-on-dark" type="submit" disabled={status === "loading"}>
+        <button className="btn" type="submit" disabled={status === "loading"}>
           Skicka
           {status === "loading" ? <span className={styles.spinner} aria-hidden="true" /> : null}
           {status === "success" ? <span className={styles.check} aria-hidden="true" /> : null}
