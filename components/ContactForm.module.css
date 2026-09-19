@@ -10,16 +10,16 @@
   gap: var(--space-2);
   font-size: var(--text-sm);
   font-weight: 500;
-  color: color-mix(in srgb, var(--paper) 82%, transparent);
+  color: color-mix(in srgb, var(--foam) 82%, transparent);
 }
 
 .form input,
 .form textarea {
   border: 0;
-  background: color-mix(in srgb, var(--paper) 10%, transparent);
+  background: color-mix(in srgb, var(--foam) 10%, transparent);
   border-radius: var(--radius);
   padding: 0.95rem 1.05rem;
-  color: var(--paper);
+  color: var(--foam);
   min-height: 3.15rem;
   transition: background var(--t-med) var(--ease), box-shadow var(--t-med) var(--ease);
 }
@@ -31,14 +31,14 @@
 
 .form input:hover,
 .form textarea:hover {
-  background: color-mix(in srgb, var(--paper) 14%, transparent);
+  background: color-mix(in srgb, var(--foam) 14%, transparent);
 }
 
 .form input:focus-visible,
 .form textarea:focus-visible {
-  outline: 2px solid var(--paper);
+  outline: 2px solid var(--foam);
   outline-offset: 2px;
-  background: color-mix(in srgb, var(--paper) 16%, transparent);
+  background: color-mix(in srgb, var(--foam) 16%, transparent);
 }
 
 .form input[aria-invalid="true"] {
