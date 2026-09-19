@@ -1,7 +1,4 @@
-"use client";
-
 import Link from "next/link";
-import { useState } from "react";
 import type { Service } from "@/lib/content";
 import styles from "./ServiceCard.module.css";
 
@@ -13,8 +10,6 @@ export function ServiceCard({
   heading?: "h2" | "h3";
 }) {
   const Title = heading;
-  const [open, setOpen] = useState(false);
-  const shown = open ? service.paragraphs : service.paragraphs.slice(0, 1);
 
   return (
     <article className={styles.card}>
@@ -23,19 +18,11 @@ export function ServiceCard({
       </div>
       <div className={styles.body}>
         <Title className={styles.title}>{service.title}</Title>
-        <div className={`${styles.copy} ${open ? styles.copyOpen : ""}`}>
-          {shown.map((p) => (
+        <div className={styles.copy}>
+          {service.paragraphs.map((p) => (
             <p key={p}>{p}</p>
           ))}
         </div>
-        <button
-          type="button"
-          className={styles.more}
-          aria-expanded={open}
-          onClick={() => setOpen((v) => !v)}
-        >
-          Läs mer
-        </button>
         <div className={styles.meta}>
           {service.meta ? (
             <>
