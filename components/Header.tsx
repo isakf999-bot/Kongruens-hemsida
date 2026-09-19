@@ -8,7 +8,6 @@ import styles from "./Header.module.css";
 const links = [
   { href: "/about-5", label: "Om" },
   { href: "/services", label: "Tjänster" },
-  { href: "/blog", label: "Blogg" },
   { href: "/#kontakt", label: "Kontakt" },
 ];
 
@@ -51,7 +50,6 @@ export function Header() {
           {links.map((l) => {
             const active =
               (l.href === "/services" && pathname.startsWith("/services")) ||
-              (l.href === "/blog" && pathname.startsWith("/blog")) ||
               (l.href.startsWith("/about") && pathname.startsWith("/about"));
             return (
               <Link
