@@ -21,7 +21,7 @@
 }
 
 .bio {
-  background: var(--paper);
+  background: #fff;
   padding: var(--space-8) 0;
 }
 
