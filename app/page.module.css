@@ -103,7 +103,7 @@
 }
 
 .intro {
-  background: var(--paper);
+  background: #fff;
   padding: var(--space-8) 0;
 }
 
@@ -284,7 +284,7 @@
 }
 
 .about {
-  background: var(--paper-3);
+  background: #fff;
   padding: var(--space-8) 0;
 }
 
