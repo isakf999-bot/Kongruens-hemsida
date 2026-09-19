@@ -8,7 +8,6 @@ import styles from "./Header.module.css";
 const links = [
   { href: "/about-5", label: "Om" },
   { href: "/services", label: "Tjänster" },
-  { href: "/#kontakt", label: "Kontakt" },
 ];
 
 export function Header() {
@@ -17,10 +16,11 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const darkHero =
     pathname === "/" ||
-    pathname.startsWith("/services") ||
     pathname.startsWith("/about") ||
     pathname.startsWith("/booking-calendar");
-  const ink = open || scrolled || !darkHero;
+  const solid =
+    scrolled || pathname.startsWith("/services") || pathname.startsWith("/kontakt");
+  const ink = open || solid || !darkHero;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -38,7 +38,7 @@ export function Header() {
 
   return (
     <header
-      className={`${styles.header} ${ink ? styles.ink : ""} ${scrolled ? styles.scrolled : ""} ${open ? styles.open : ""}`}
+      className={`${styles.header} ${ink ? styles.ink : ""} ${solid ? styles.scrolled : ""} ${open ? styles.open : ""}`}
     >
       <div className={styles.inner}>
         <Link href="/" className={styles.brand} onClick={() => setOpen(false)}>
@@ -64,8 +64,8 @@ export function Header() {
           })}
         </nav>
 
-        <Link href="/services" className={`btn btn-nav ${styles.cta}`} onClick={() => setOpen(false)}>
-          BOKA NU
+        <Link href="/kontakt" className={`btn btn-nav ${styles.cta}`} onClick={() => setOpen(false)}>
+          Mejla Nu
         </Link>
 
         <button
@@ -86,8 +86,8 @@ export function Header() {
             {l.label}
           </Link>
         ))}
-        <Link href="/services" className="btn btn-nav" onClick={() => setOpen(false)}>
-          BOKA NU
+        <Link href="/kontakt" className="btn btn-nav" onClick={() => setOpen(false)}>
+          Mejla Nu
         </Link>
       </div>
     </header>
