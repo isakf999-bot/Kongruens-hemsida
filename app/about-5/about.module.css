@@ -49,8 +49,6 @@
   justify-self: end;
   width: min(100%, 26rem);
   margin: 0;
-  position: sticky;
-  top: calc(var(--header-h-scrolled) + 1.25rem);
 }
 
 .portrait img {
@@ -160,16 +158,9 @@
     order: -1;
     justify-self: start;
     width: min(100%, 20rem);
-    position: static;
   }
 
   .drawing {
     width: min(100%, 12rem);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .portrait {
-    position: static;
   }
 }
