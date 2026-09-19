@@ -20,7 +20,7 @@ export default function HomePage() {
             <Link href="/services" className="btn btn-on-dark">
               BOKA NU
             </Link>
-            <Link href="/#om" className={styles.ghost}>
+            <Link href="/about-5" className={styles.ghost}>
               OM
             </Link>
           </div>
