@@ -155,9 +155,7 @@
   }
 
   .portrait {
-    order: -1;
-    justify-self: start;
-    width: min(100%, 20rem);
+    display: none;
   }
 
   .drawing {
