@@ -1,0 +1,49 @@
+.page {
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  background: var(--paper-2);
+  padding: calc(var(--header-h-scrolled) + var(--space-6)) var(--gutter) var(--space-7);
+}
+
+.panel {
+  width: min(100%, 38rem);
+  background: #fff;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: var(--space-6);
+}
+
+.intro {
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-5);
+}
+
+.intro h1 {
+  font-size: var(--text-2xl);
+  margin-bottom: var(--space-4);
+  font-variation-settings: "SOFT" 50, "WONK" 0.2, "opsz" 72;
+}
+
+.intro p {
+  margin: 0 0 0.35em;
+}
+
+.intro a {
+  text-decoration: none;
+}
+
+.intro a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 800px) {
+  .page {
+    padding: calc(var(--header-h-scrolled) + var(--space-5)) var(--gutter) 4.5rem;
+    place-items: start center;
+  }
+
+  .panel {
+    padding: var(--space-5);
+  }
+}
