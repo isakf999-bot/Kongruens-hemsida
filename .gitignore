@@ -3,4 +3,5 @@ node_modules
 out
 design-capture/source/screenshots
 design-capture/source/hovers
+references/inspiration
 *.log
