@@ -18,11 +18,6 @@ export function ServiceCard({
       </div>
       <div className={styles.body}>
         <Title className={styles.title}>{service.title}</Title>
-        <div className={styles.copy}>
-          {service.paragraphs.map((p) => (
-            <p key={p}>{p}</p>
-          ))}
-        </div>
         <div className={styles.meta}>
           {service.meta ? (
             <>
@@ -36,8 +31,13 @@ export function ServiceCard({
             <strong>{service.price}</strong>
           )}
         </div>
-        <Link href={service.href} className={`btn ${styles.cta}`}>
-          Boka
+        <div className={styles.copy}>
+          {service.paragraphs.map((p) => (
+            <p key={p}>{p}</p>
+          ))}
+        </div>
+        <Link href="/kontakt" className={`btn ${styles.cta}`}>
+          Kontakta mig
         </Link>
       </div>
     </article>
