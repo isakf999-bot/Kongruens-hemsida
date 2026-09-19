@@ -9,7 +9,7 @@ Stay in this repo only. Learn craft from Mats.ppm / other chats; never copy thei
 
 ## Content lock
 
-All visible text must match kongruens.se exactly, including typos: `Personliv Vägledare`, `leva ditt ditt liv`, `55 - årig` (home) vs `55-årig` (about), `kvalité`, `á 40 minuter`, `emedan`, `dig.Att spegla`. Nav: Om, Tjänster, Blogg, Kontakt, BOKA NU. Buttons stay `BOKA NU` / `Boka nu` / `Boka` / `Läs mer` / `Fler tjänster` / `Skicka`. Form labels: `Ditt namn`, `Din e-mail`, `Ämne`, `Meddelande`. Prices: `4 950 kr` / `120 kr` / `7 950 kr`. Booking is mailto, not Wix. Social hrefs stay Wix placeholders. Blog empty copy stays English.
+All visible text must match kongruens.se exactly, including typos: `Personliv Vägledare`, `leva ditt ditt liv`, `55 - årig` (home) vs `55-årig` (about), `kvalité`, `á 40 minuter`, `emedan`, `dig.Att spegla`. Nav: Om, Tjänster, Mejla Nu. Buttons stay `BOKA NU` / `Boka nu` / `Kontakta mig` / `Mejla Nu` / `Läs mer` / `Fler tjänster` / `Skicka`. Form labels: `Ditt namn`, `Din e-mail`, `Ämne`, `Meddelande`. Prices: `4 950 kr` / `900 kr` / `3 900 kr`. The contact form lives on `/kontakt`, not in the footer. Booking is mailto, not Wix. Social hrefs stay Wix placeholders.
 
 ## Palette and type
 
@@ -24,9 +24,9 @@ Blue-hour still water from the living reed lake — never cream+terracotta, acid
 - Cards: white surface + photo on top + hover lift. Featured = water fill (Personlig vägledning), not a middle offset.
 - Media: shadow + radius only. Never frames, hairlines, or register lines around images.
 - Reveal: blur + fade-up ~0.85s, IntersectionObserver threshold ~0.15.
-- Home hero is the signature: living wide sea-horizon video (sun + water + horizon, not a ripple close-up) in `public/media/`, delayed ~600ms, poster for LCP. Neutral plate — no gray wash, no filters, no full-image overlay. Type uses text-shadow only. Freeze on `prefers-reduced-motion`. No video on other routes.
+- Home hero is the glass-ball still (`/images/hero-home.jpg`) with a weak zoom-in. Neutral plate — no gray wash, no filters, no full-image overlay. Type uses text-shadow only. Freeze zoom on `prefers-reduced-motion`. No video on other routes. Services uses the sea still, not the ball.
 - Never overlap a paper card/bubble into the hero. Intro is a flat section that starts after the hero. Chapter with air, not sheets.
-- Home / services / about / booking have dark heroes → white nav until scroll.
+- Home / about / booking have dark heroes → white nav until scroll. Services has no hero; cards start under the nav.
 
 ## Rejected (do not bring back)
 
