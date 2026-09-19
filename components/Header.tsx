@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import styles from "./Header.module.css";
 
 const links = [
-  { href: "/#om", label: "Om" },
+  { href: "/about-5", label: "Om" },
   { href: "/services", label: "Tjänster" },
   { href: "/blog", label: "Blogg" },
   { href: "/#kontakt", label: "Kontakt" },
@@ -44,7 +44,7 @@ export function Header() {
       <div className={styles.inner}>
         <Link href="/" className={styles.brand} onClick={() => setOpen(false)}>
           <span className={styles.name}>MATS SVENSSON</span>
-          <span className={styles.tag}>Personliv Vägledare</span>
+          <span className={styles.tag}>Personlig Vägledare</span>
         </Link>
 
         <nav className={styles.nav} aria-label="Huvudmeny">
@@ -52,7 +52,7 @@ export function Header() {
             const active =
               (l.href === "/services" && pathname.startsWith("/services")) ||
               (l.href === "/blog" && pathname.startsWith("/blog")) ||
-              (l.href === "/#om" && pathname.startsWith("/about"));
+              (l.href.startsWith("/about") && pathname.startsWith("/about"));
             return (
               <Link
                 key={l.label}
@@ -66,7 +66,7 @@ export function Header() {
           })}
         </nav>
 
-        <Link href="/services" className={`btn ${styles.cta}`} onClick={() => setOpen(false)}>
+        <Link href="/services" className={`btn btn-nav ${styles.cta}`} onClick={() => setOpen(false)}>
           BOKA NU
         </Link>
 
@@ -88,7 +88,7 @@ export function Header() {
             {l.label}
           </Link>
         ))}
-        <Link href="/services" className="btn" onClick={() => setOpen(false)}>
+        <Link href="/services" className="btn btn-nav" onClick={() => setOpen(false)}>
           BOKA NU
         </Link>
       </div>
