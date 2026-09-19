@@ -27,6 +27,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      <div className={styles.homeStack}>
       <section className={styles.intro}>
         <div className={styles.introInner}>
           <Reveal className={styles.introBody} delay={80}>
@@ -65,23 +66,25 @@ export default function HomePage() {
                 <span className={styles.titleBreak}>ha en PV</span>
               </h2>
             </Reveal>
-            <Reveal className={styles.close} delay={120}>
-              <div className={styles.closeCopy}>
-                <p>Samtal på Zoom, Teams eller mobil?</p>
-                <p>Du bestämmer!</p>
-              </div>
-              <Link href="/services" className="btn">
-                Boka nu
-              </Link>
-            </Reveal>
-            <Reveal className={styles.session} delay={160}>
-              <img
-                src="/images/pv-samtal.jpg"
-                alt="Två personer som sitter i samtal i ett ljust rum."
-                width={800}
-                height={1000}
-              />
-            </Reveal>
+            <div className={styles.introMedia}>
+              <Reveal className={styles.close} delay={120}>
+                <div className={styles.closeCopy}>
+                  <p>Samtal på Zoom, Teams eller mobil?</p>
+                  <p>Du bestämmer!</p>
+                </div>
+                <Link href="/services" className="btn">
+                  Boka nu
+                </Link>
+              </Reveal>
+              <Reveal className={styles.session} delay={160}>
+                <img
+                  src="/images/pv-samtal.jpg"
+                  alt="Två personer som sitter i samtal i ett ljust rum."
+                  width={800}
+                  height={1000}
+                />
+              </Reveal>
+            </div>
           </div>
         </div>
       </section>
@@ -187,6 +190,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      </div>
     </main>
   );
 }
