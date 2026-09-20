@@ -1,6 +1,7 @@
 .media {
   position: absolute;
   inset: 0;
+  z-index: var(--z-base);
   overflow: hidden;
   background: var(--water-deep);
 }
@@ -11,7 +12,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 50% 58%;
+  object-position: 50% 76%;
   animation: heroZoom 22s var(--ease) both;
 }
 
@@ -21,6 +22,12 @@
   }
   to {
     transform: scale(1.07);
+  }
+}
+
+@media (max-width: 800px) {
+  .plate {
+    object-position: 54% 84%;
   }
 }
 

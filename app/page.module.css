@@ -1,17 +1,23 @@
 .hero {
   position: relative;
+  isolation: isolate;
   min-height: 100svh;
   display: grid;
-  align-items: center;
+  align-items: start;
   justify-items: stretch;
-  color: var(--white);
+  color: var(--ink);
   overflow: hidden;
-  padding: var(--header-h) 0 8vh;
+  padding: calc(var(--header-h) + 0.2rem) 0 26vh;
+}
+
+.hero::before,
+.hero::after {
+  content: none;
 }
 
 .heroCopy {
   position: relative;
-  z-index: 1;
+  z-index: var(--z-raise);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,7 +26,8 @@
   margin: 0 auto;
   padding: 0 var(--gutter);
   text-align: center;
-  text-shadow: 0 1px 16px rgba(14, 24, 30, 0.4);
+  text-shadow: none;
+  filter: none;
 }
 
 .heroCopy h1 {
@@ -32,12 +39,11 @@
 
 .kicker {
   font-family: var(--font-sans);
-  font-size: 0.8125rem;
-  font-weight: 500;
+  font-size: 0.875rem;
+  font-weight: 600;
   letter-spacing: 0.18em;
   line-height: 1.2;
   white-space: nowrap;
-  opacity: 0.88;
   animation: rise 1.05s var(--ease) both;
 }
 
@@ -80,13 +86,13 @@
   justify-content: center;
   min-height: 2.15rem;
   padding: 0.4rem 0.95rem;
-  border: 1.5px solid color-mix(in srgb, var(--white) 72%, transparent);
+  border: 1.5px solid color-mix(in srgb, var(--ink) 46%, transparent);
   border-radius: var(--radius-pill);
   background: transparent;
-  color: var(--white);
+  color: var(--ink);
   font-size: 0.72rem;
   font-weight: 600;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
   text-decoration: none;
   text-shadow: none;
   transition:
@@ -97,14 +103,14 @@
 }
 
 .ghost:hover {
-  color: var(--ink);
-  background: var(--white);
-  border-color: var(--white);
+  color: var(--white);
+  background: var(--ink);
+  border-color: var(--ink);
 }
 
 .intro {
   background: #fff;
-  padding: var(--space-8) 0;
+  padding: var(--space-9) 0;
 }
 
 .introInner {
@@ -200,6 +206,11 @@
   height: 100%;
   object-fit: cover;
   object-position: 50% 30%;
+  transition: transform 0.8s var(--ease);
+}
+
+.session:hover img {
+  transform: scale(1.03);
 }
 
 .close {
@@ -227,7 +238,7 @@
 .topics {
   background: var(--paper-2);
   color: var(--ink);
-  padding: var(--space-8) 0;
+  padding: var(--space-9) 0;
 }
 
 .topicsInner {
@@ -300,7 +311,7 @@
 
 .about {
   background: #fff;
-  padding: var(--space-8) 0;
+  padding: var(--space-9) 0;
 }
 
 .aboutInner {
@@ -352,8 +363,8 @@
 }
 
 .help {
-  background: var(--paper-4);
-  padding: var(--space-8) 0;
+  background: var(--paper-2);
+  padding: var(--space-9) 0;
 }
 
 .helpInner {
@@ -388,6 +399,18 @@
 }
 
 @media (max-width: 900px) {
+  .hero {
+    padding: calc(var(--header-h) + 0.15rem) 0 30vh;
+  }
+
+  .heroCopy {
+    padding-top: 0.15rem;
+  }
+
+  .title {
+    font-size: clamp(1.85rem, 8.2vw, 2.45rem);
+  }
+
   .intro,
   .topics,
   .about,
@@ -482,5 +505,11 @@
   .title,
   .heroActions {
     animation: none;
+  }
+
+  .session img,
+  .session:hover img {
+    transition: none;
+    transform: none;
   }
 }
