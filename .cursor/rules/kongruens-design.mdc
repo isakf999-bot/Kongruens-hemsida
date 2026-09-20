@@ -24,9 +24,10 @@ Blue-hour still water from the living reed lake — never cream+terracotta, acid
 - Cards: white surface + photo on top + hover lift. Featured = water fill (Personlig vägledning), not a middle offset.
 - Media: shadow + radius only. Never frames, hairlines, or register lines around images.
 - Reveal: blur + fade-up ~0.85s, IntersectionObserver threshold ~0.15.
-- Home hero is the glass-ball still (`/images/hero-home.jpg`) with a weak zoom-in. Neutral plate — no gray wash, no filters, no full-image overlay. Type uses text-shadow only. Freeze zoom on `prefers-reduced-motion`. No video on other routes. Services uses the sea still, not the ball.
+- Home hero is the glass-ball still (`/images/hero-home.jpg`) with a weak zoom-in. Type sits in the sky, not on the glass. Ink color with no white glow, no bottom fade, no gray wash, no filters, and no full-image overlay. Freeze zoom on `prefers-reduced-motion`. No video on other routes.
 - Never overlap a paper card/bubble into the hero. Intro is a flat section that starts after the hero. Chapter with air, not sheets.
-- Home / about / booking have dark heroes → white nav until scroll. Services has no hero; cards start under the nav.
+- Home keeps foam nav until scroll. About, services and kontakt are solid from the first paint. Services has no hero; cards start under the nav.
+- Logo is the customer lockup (`/images/logo.png` on light, `logo-on-dark.png` in the footer). Never a text stand-in.
 
 ## Rejected (do not bring back)
 

@@ -1,6 +1,6 @@
 .list {
-  background: var(--paper-2);
-  padding: calc(var(--header-h-scrolled) + var(--space-5)) 0 var(--space-8);
+  background: var(--paper);
+  padding: calc(var(--header-h-scrolled) + var(--space-7)) 0 var(--space-9);
 }
 
 .title {
@@ -13,11 +13,11 @@
 
 .listInner {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--space-5);
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
   align-items: stretch;
   width: 100%;
-  max-width: 90rem;
+  max-width: 78rem;
   margin: 0 auto;
   padding: 0 var(--gutter);
 }
@@ -34,10 +34,10 @@
 
 @media (max-width: 800px) {
   .list {
-    padding: calc(var(--header-h-scrolled) + var(--space-4)) 0 4.5rem;
+    padding: calc(var(--header-h-scrolled) + var(--space-5)) 0 4.5rem;
   }
 
   .listInner {
-    grid-template-columns: 1fr;
+    gap: var(--space-5);
   }
 }

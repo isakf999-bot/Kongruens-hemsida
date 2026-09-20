@@ -20,7 +20,9 @@ export default function ContactPage() {
               <a href="mailto:info@kongruens.se">info@kongruens.se</a>
             </p>
           </div>
-          <ContactForm />
+          <div className={styles.formArea}>
+            <ContactForm />
+          </div>
         </div>
       </section>
     </main>
