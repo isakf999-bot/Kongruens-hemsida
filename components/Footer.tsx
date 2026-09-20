@@ -6,6 +6,7 @@ import {
   IconTwitter,
   IconYoutube,
 } from "@/components/icons";
+import { BrandLogo } from "@/components/BrandLogo";
 import { aboutSocials, socials } from "@/lib/content";
 import styles from "./Footer.module.css";
 
@@ -23,9 +24,8 @@ export function Footer() {
     <footer className={styles.footer}>
       <div className={styles.inner}>
         <div className={styles.brand}>
-          <Link href="/" className={styles.mark} aria-label="Kongruens — startsidan">
-            <span className={styles.markName}>MATS SVENSSON</span>
-            <span className={styles.markTag}>Personlig Vägledare</span>
+          <Link href="/" className={styles.mark}>
+            <BrandLogo className={styles.logo} onDark />
           </Link>
           <p className={styles.blurb}>
             Personlig vägledning som ett mer tillgängligt alternativ. Någon att resonera med kring

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { BrandLogo } from "@/components/BrandLogo";
 import styles from "./Header.module.css";
 
 const links = [
@@ -15,11 +16,12 @@ export function Header() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const darkHero =
-    pathname === "/" ||
-    pathname.startsWith("/about") ||
-    pathname.startsWith("/booking-calendar");
+    pathname === "/" || pathname.startsWith("/booking-calendar");
   const solid =
-    scrolled || pathname.startsWith("/services") || pathname.startsWith("/kontakt");
+    scrolled ||
+    pathname.startsWith("/about") ||
+    pathname.startsWith("/services") ||
+    pathname.startsWith("/kontakt");
   const ink = open || solid || !darkHero;
 
   useEffect(() => {
@@ -42,8 +44,7 @@ export function Header() {
     >
       <div className={styles.inner}>
         <Link href="/" className={styles.brand} onClick={() => setOpen(false)}>
-          <span className={styles.name}>MATS SVENSSON</span>
-          <span className={styles.tag}>Personlig Vägledare</span>
+          <BrandLogo className={styles.logo} />
         </Link>
 
         <nav className={styles.nav} aria-label="Huvudmeny">

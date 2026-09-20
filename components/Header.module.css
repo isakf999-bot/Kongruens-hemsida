@@ -3,25 +3,19 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 40;
+  z-index: var(--z-nav);
   height: var(--header-h);
-  color: var(--nav-ink);
-  transition: height var(--t-med) var(--ease), background var(--t-med) var(--ease),
-    color var(--t-med) var(--ease), backdrop-filter var(--t-med) var(--ease);
-}
-
-.header::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, rgba(168, 186, 200, 0.76), transparent);
-  pointer-events: none;
-  transition: opacity var(--t-med) var(--ease);
+  color: var(--foam);
+  transition:
+    height var(--t-med) var(--ease),
+    background var(--t-med) var(--ease),
+    color var(--t-med) var(--ease),
+    box-shadow var(--t-med) var(--ease);
 }
 
 .inner {
   position: relative;
-  z-index: 1;
+  z-index: var(--z-raise);
   height: 100%;
   display: grid;
   grid-template-columns: 1fr auto auto;
@@ -35,30 +29,21 @@
 .brand {
   text-decoration: none;
   display: flex;
-  flex-direction: column;
   align-items: center;
   width: fit-content;
-  gap: 0.15rem;
-  text-align: center;
 }
 
 .brand:hover {
   color: inherit;
 }
 
-.name {
-  font-family: var(--font-serif);
-  font-size: var(--text-lg);
-  font-weight: 400;
-  letter-spacing: 0.02em;
-  line-height: 1;
-  font-variation-settings: "SOFT" 40, "WONK" 0.4, "opsz" 36;
-}
-
-.tag {
-  font-size: var(--text-xs);
-  letter-spacing: 0.04em;
-  opacity: 0.86;
+.logo {
+  display: block;
+  height: 2.7rem;
+  width: auto;
+  max-width: min(48vw, 16.75rem);
+  object-fit: contain;
+  object-position: left center;
 }
 
 .nav {
@@ -70,11 +55,25 @@
 .link {
   position: relative;
   text-decoration: none;
-  font-size: 1.125rem;
+  font-size: 1.0625rem;
   font-weight: 500;
-  padding: 0.2rem 0;
-  opacity: 0.72;
+  padding: 0.25rem 0;
+  opacity: 0.7;
   transition: opacity var(--t-med) var(--ease);
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -0.28rem;
+  width: 0.7rem;
+  height: 2px;
+  border-radius: 99px;
+  background: currentColor;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  transition: transform var(--t-fast) var(--ease);
 }
 
 .link:hover,
@@ -83,24 +82,25 @@
   color: inherit;
 }
 
-.inner :global(.btn).cta {
-  justify-self: end;
-  min-height: 2.15rem;
-  padding: 0.4rem 0.95rem;
-  font-size: 0.72rem;
-  box-shadow: var(--shadow-sm);
+.active::after {
+  transform: translateX(-50%) scaleX(1);
 }
 
-.scrolled .tag {
-  display: none;
+.inner :global(.btn).cta {
+  justify-self: end;
+  min-height: 2.65rem;
+  padding: 0.55rem 1.25rem;
+  font-size: 0.875rem;
+  box-shadow: var(--shadow-xs);
+}
+
+.scrolled .logo,
+.open .logo {
+  height: 2.2rem;
 }
 
 .ink {
   color: var(--nav-ink);
-}
-
-.ink::before {
-  background: linear-gradient(to bottom, rgba(168, 186, 200, 0.82), transparent);
 }
 
 .burger {
@@ -128,22 +128,14 @@
 .scrolled {
   height: var(--header-h-scrolled);
   color: var(--nav-ink);
-  background: color-mix(in srgb, var(--surface) 92%, transparent);
-  backdrop-filter: blur(18px);
-  box-shadow: var(--shadow-sm);
-}
-
-.scrolled::before {
-  opacity: 0;
+  background: color-mix(in srgb, var(--surface) 94%, transparent);
+  backdrop-filter: blur(16px);
+  box-shadow: var(--shadow-xs);
 }
 
 .open {
   color: var(--nav-ink);
-  background: var(--paper);
-}
-
-.open::before {
-  opacity: 0;
+  background: var(--surface);
 }
 
 .open .burger span:first-child {
@@ -155,6 +147,10 @@
 }
 
 @media (max-width: 860px) {
+  .logo {
+    height: 2.35rem;
+  }
+
   .nav,
   .inner .cta {
     display: none;
@@ -172,19 +168,22 @@
   .panel {
     display: flex;
     flex-direction: column;
-    gap: var(--space-4);
+    gap: var(--space-5);
     position: absolute;
     left: 0;
     right: 0;
     top: 100%;
-    padding: var(--space-6) var(--gutter) var(--space-8);
-    background: var(--paper);
+    padding: var(--space-6) var(--gutter) var(--space-7);
+    background: var(--surface);
     color: var(--nav-ink);
-    transform: translateY(-0.45rem);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-0.35rem);
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
-    transition: opacity var(--t-med) var(--ease), transform var(--t-slow) var(--ease),
+    transition:
+      opacity var(--t-med) var(--ease),
+      transform var(--t-slow) var(--ease),
       visibility var(--t-med) var(--ease);
   }
 
@@ -199,7 +198,7 @@
   .panel a {
     font-family: var(--font-serif);
     font-size: var(--text-xl);
-    font-weight: 300;
+    font-weight: 400;
     text-decoration: none;
   }
 
@@ -214,7 +213,8 @@
 @media (prefers-reduced-motion: reduce) {
   .header,
   .panel,
-  .burger span {
+  .burger span,
+  .link::after {
     transition: none;
   }
 }
