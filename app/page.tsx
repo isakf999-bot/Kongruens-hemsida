@@ -17,7 +17,7 @@ export default function HomePage() {
             <span className={styles.kicker}>STARTAR HÄR</span>
           </h1>
           <div className={styles.heroActions}>
-            <Link href="/services" className="btn btn-on-dark">
+            <Link href="/services" className="btn">
               BOKA NU
             </Link>
             <Link href="/about-5" className={styles.ghost}>

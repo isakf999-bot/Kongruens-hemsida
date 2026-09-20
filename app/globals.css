@@ -47,34 +47,36 @@
   --radius-lg: 20px;
   --radius-xl: 28px;
   --radius-pill: 999px;
-  --header-h: 6.5rem;
-  --header-h-scrolled: 4.15rem;
+  --header-h: 5.5rem;
+  --header-h-scrolled: 4.25rem;
   --gutter: clamp(1.25rem, 4vw, 4.5rem);
   --container: 72.5rem;
+
+  --z-base: 0;
+  --z-raise: 1;
+  --z-nav: 40;
+  --z-overlay: 45;
+  --z-skip: 50;
 
   --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
   --t-fast: 220ms;
   --t-med: 420ms;
   --t-slow: 850ms;
 
+  --shadow-xs:
+    0 1px 2px color-mix(in srgb, var(--water-deep) 6%, transparent);
   --shadow-sm:
     0 1px 1px color-mix(in srgb, var(--water-deep) 6%, transparent),
-    0 2px 6px color-mix(in srgb, var(--water-deep) 5%, transparent);
+    0 4px 12px -6px color-mix(in srgb, var(--water-deep) 18%, transparent);
   --shadow-card:
-    0 1px 1px color-mix(in srgb, var(--water-deep) 8%, transparent),
-    0 2px 4px color-mix(in srgb, var(--water-deep) 6%, transparent),
-    0 8px 18px -4px color-mix(in srgb, var(--water-deep) 12%, transparent),
-    0 22px 48px -10px color-mix(in srgb, var(--water-deep) 22%, transparent),
-    inset 0 1px 0 color-mix(in srgb, #fff 38%, transparent);
+    0 2px 5px color-mix(in srgb, var(--water-deep) 6%, transparent),
+    0 16px 38px -14px color-mix(in srgb, var(--water-deep) 22%, transparent);
   --shadow-card-hover:
-    0 2px 4px color-mix(in srgb, var(--water-deep) 8%, transparent),
-    0 8px 16px -2px color-mix(in srgb, var(--water-deep) 10%, transparent),
-    0 28px 58px -12px color-mix(in srgb, var(--water-deep) 26%, transparent),
-    inset 0 1px 0 color-mix(in srgb, #fff 46%, transparent);
+    0 3px 8px color-mix(in srgb, var(--water-deep) 7%, transparent),
+    0 24px 48px -16px color-mix(in srgb, var(--water-deep) 26%, transparent);
   --shadow-lg:
-    0 4px 10px color-mix(in srgb, var(--water-deep) 7%, transparent),
-    0 26px 56px -12px color-mix(in srgb, var(--water-deep) 22%, transparent),
-    inset 0 1px 0 color-mix(in srgb, #fff 32%, transparent);
+    0 6px 16px color-mix(in srgb, var(--water-deep) 7%, transparent),
+    0 34px 72px -24px color-mix(in srgb, var(--water-deep) 28%, transparent);
   --shadow: var(--shadow-card);
 }
 
@@ -148,7 +150,7 @@ h3 {
   line-height: var(--lh-tight);
   letter-spacing: -0.03em;
   text-wrap: balance;
-  font-variation-settings: "SOFT" 50, "WONK" 0.55, "opsz" 72;
+  font-variation-settings: "SOFT" 48, "WONK" 0.18, "opsz" 72;
 }
 
 button,
@@ -171,10 +173,10 @@ textarea {
   color: var(--white);
   font-size: var(--text-sm);
   font-weight: 600;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
   text-decoration: none;
   cursor: pointer;
-  box-shadow: var(--shadow-card);
+  box-shadow: var(--shadow-sm);
   transition:
     transform var(--t-fast) var(--ease),
     box-shadow var(--t-fast) var(--ease),
@@ -185,7 +187,7 @@ textarea {
 .btn:hover {
   color: var(--white);
   transform: translateY(-2px);
-  box-shadow: var(--shadow-card-hover);
+  box-shadow: 0 10px 24px -12px color-mix(in srgb, var(--water-deep) 48%, transparent);
   background: var(--water);
 }
 
@@ -257,7 +259,7 @@ textarea {
   position: absolute;
   left: var(--gutter);
   top: 0.6rem;
-  z-index: 60;
+  z-index: var(--z-skip);
   transform: translateY(-140%);
   background: var(--paper);
   color: var(--ink);
