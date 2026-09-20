@@ -30,6 +30,11 @@
   height: 100%;
   object-fit: cover;
   object-position: 50% 40%;
+  transition: transform 0.8s var(--ease);
+}
+
+.card:hover .visual img {
+  transform: scale(1.03);
 }
 
 .body {
@@ -64,6 +69,25 @@
   line-height: 1.65;
 }
 
+.points {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45em;
+}
+
+.points ul {
+  margin: 0;
+  padding: 0 0 0 1.15em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+}
+
+.points li {
+  line-height: 1.55;
+  padding-left: 0.15em;
+}
+
 .meta {
   display: flex;
   justify-content: center;
@@ -94,15 +118,105 @@
 }
 
 .body :global(.btn) {
-  margin-top: 0;
+  margin-top: var(--space-3);
   align-self: center;
   min-height: 2.75rem;
   padding: 0.55rem 1.4rem;
   font-size: 0.8125rem;
 }
 
+.catalog {
+  display: grid;
+  grid-template-columns: minmax(18rem, 0.78fr) minmax(0, 1.22fr);
+  min-height: 34rem;
+}
+
+.catalog .visual {
+  height: 100%;
+  aspect-ratio: auto;
+}
+
+.catalog .body {
+  padding: clamp(2.25rem, 4vw, 4.25rem);
+  gap: var(--space-4);
+  justify-content: center;
+}
+
+.catalog .title {
+  min-height: 0;
+  max-width: 18ch;
+  margin-inline: auto;
+  font-size: clamp(2rem, 1.5rem + 1.3vw, 3rem);
+}
+
+.catalog .copy {
+  max-width: 64ch;
+  margin-inline: auto;
+}
+
+.catalog .body :global(.btn) {
+  margin-top: var(--space-5);
+}
+
+.featured {
+  background: var(--water);
+  color: var(--foam);
+}
+
+.featured .copy {
+  color: color-mix(in srgb, var(--foam) 92%, transparent);
+}
+
+.featured .meta {
+  color: color-mix(in srgb, var(--foam) 72%, transparent);
+}
+
+.featured .sep {
+  background: color-mix(in srgb, var(--foam) 45%, transparent);
+}
+
+.featured .meta strong {
+  color: var(--foam);
+}
+
+.featured .body :global(.btn) {
+  background: var(--surface);
+  color: var(--ink);
+}
+
+.featured .body :global(.btn):hover {
+  background: var(--ink);
+  color: var(--white);
+}
+
+@media (max-width: 840px) {
+  .catalog {
+    display: flex;
+    min-height: 0;
+  }
+
+  .catalog .visual {
+    height: auto;
+    aspect-ratio: 4 / 3;
+  }
+
+  .catalog .body {
+    padding: var(--space-5);
+  }
+
+  .catalog .title {
+    font-size: var(--text-xl);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .card:hover {
+    transform: none;
+  }
+
+  .visual img,
+  .card:hover .visual img {
+    transition: none;
     transform: none;
   }
 }
