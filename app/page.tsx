@@ -184,7 +184,7 @@ export default function HomePage() {
           <div className={styles.cards}>
             {services.map((s, i) => (
               <Reveal key={s.slug} delay={i * 90}>
-                <ServiceCard service={s} />
+                  <ServiceCard service={s} preview />
               </Reveal>
             ))}
           </div>
