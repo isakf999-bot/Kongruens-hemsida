@@ -30,7 +30,7 @@
 .bio .shell {
   grid-template-columns: minmax(0, 1.12fr) minmax(18rem, 0.88fr);
   column-gap: clamp(2.5rem, 6vw, 6.5rem);
-  align-items: center;
+  align-items: start;
 }
 
 .bioCopy {
@@ -76,16 +76,13 @@
   transform: scale(1.02);
 }
 
-.method {
-  background: var(--paper-2);
-  padding: var(--space-9) 0;
+.quoteBand {
+  background: var(--water);
+  color: var(--foam);
+  padding: var(--space-7) 0;
 }
 
-.methodColumn {
-  display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
-  column-gap: clamp(2.5rem, 6vw, 6.5rem);
-  align-items: start;
+.quoteBandInner {
   width: 100%;
   max-width: 90rem;
   margin: 0 auto;
@@ -94,47 +91,73 @@
 
 .quoteLockup {
   display: grid;
-  grid-template-columns: 8rem minmax(0, 1fr);
-  column-gap: var(--space-6);
-  align-items: start;
+  grid-template-columns: minmax(14rem, 0.72fr) minmax(0, 1.28fr);
+  column-gap: clamp(1.5rem, 3.5vw, 2.75rem);
+  align-items: stretch;
+  max-width: 82rem;
+  margin-inline: auto;
+}
+
+.quoteBlock {
+  display: block;
 }
 
 .drawing {
   margin: 0;
+  min-height: 0;
+  height: 100%;
 }
 
 .drawing img {
+  display: block;
   width: 100%;
-  height: auto;
-  aspect-ratio: 4 / 5;
+  height: 100%;
   object-fit: cover;
   object-position: 50% 18%;
-  background: var(--surface);
+  background: color-mix(in srgb, var(--foam) 88%, var(--paper));
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-card);
+  box-shadow: var(--shadow-lg);
+}
+
+.quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-5);
 }
 
 .quote p {
   font-family: var(--font-serif);
-  font-size: var(--text-lg);
+  font-size: clamp(1.28rem, 1.12rem + 0.65vw, 1.6rem);
   font-style: italic;
   font-weight: 400;
   line-height: 1.5;
-  color: var(--water-deep);
+  color: color-mix(in srgb, var(--foam) 92%, transparent);
   font-variation-settings: "SOFT" 64, "WONK" 0.1, "opsz" 28;
 }
 
-.quote h3 {
-  margin-top: var(--space-5);
+.attribution {
+  margin: 0;
   font-size: var(--text-xl);
   font-style: normal;
   font-weight: 400;
+  text-align: center;
+  color: var(--foam);
   font-variation-settings: "SOFT" 48, "WONK" 0.16, "opsz" 36;
 }
 
+.replyBand {
+  background: var(--paper-2);
+  padding: var(--space-7) 0 var(--space-8);
+}
+
 .reply {
-  max-width: 40rem;
-  padding-top: var(--space-2);
+  max-width: 68rem;
+  margin-inline: auto;
+  padding: 0 var(--gutter);
+  text-align: center;
+  font-size: clamp(1.14rem, 1.06rem + 0.32vw, 1.28rem);
+  line-height: 1.7;
 }
 
 .reply p + p {
@@ -142,6 +165,7 @@
 }
 
 .reply :global(.btn) {
+  display: inline-flex;
   margin-top: var(--space-7);
   min-height: 2.75rem;
   padding: 0.55rem 1.4rem;
@@ -159,13 +183,19 @@
     object-position: 34% 22%;
   }
 
-  .bio,
-  .method {
+  .bio {
     padding-block: 4.5rem;
   }
 
+  .quoteBand {
+    padding-block: var(--space-6);
+  }
+
+  .replyBand {
+    padding-block: var(--space-6) 4.5rem;
+  }
+
   .bio .shell,
-  .methodColumn,
   .quoteLockup {
     grid-template-columns: 1fr;
     row-gap: var(--space-5);
@@ -176,7 +206,14 @@
   }
 
   .drawing {
-    width: min(100%, 11rem);
+    width: min(100%, 14rem);
+    height: auto;
+    margin-inline: auto;
+  }
+
+  .drawing img {
+    height: auto;
+    aspect-ratio: 4 / 5;
   }
 }
 

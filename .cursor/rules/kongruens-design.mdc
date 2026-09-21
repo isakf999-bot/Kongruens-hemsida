@@ -9,7 +9,7 @@ Stay in this repo only. Learn craft from Mats.ppm / other chats; never copy thei
 
 ## Content lock
 
-All visible text must match kongruens.se exactly, including typos: `Personliv Vägledare`, `leva ditt ditt liv`, `55 - årig` (home) vs `55-årig` (about), `kvalité`, `á 40 minuter`, `emedan`, `dig.Att spegla`. Nav: Om, Tjänster, Mejla Nu. Buttons stay `BOKA NU` / `Boka nu` / `Kontakta mig` / `Mejla Nu` / `Läs mer` / `Fler tjänster` / `Skicka`. Form labels: `Ditt namn`, `Din e-mail`, `Ämne`, `Meddelande`. Prices: `4 950 kr` / `900 kr` / `3 900 kr`. The contact form lives on `/kontakt`, not in the footer. Booking is mailto, not Wix. Social hrefs stay Wix placeholders.
+All visible text must match kongruens.se exactly, including typos: `Personliv Vägledare`, `leva ditt ditt liv`, `55 - årig` (home) vs `55-årig` (about), `kvalité`, `á 40 minuter`, `emedan`, `dig.Att spegla`. About page heading is `Min historia` with the customer life-story copy (three marriages, Landskrona, farm, finance firm). Nav: Om, Tjänster, Mejla Nu. Buttons stay `BOKA NU` / `Boka nu` / `Kontakta mig` / `Mejla Nu` / `Läs mer` / `Fler tjänster` / `Skicka`. Form labels: `Ditt namn`, `Din e-mail`, `Ämne`, `Meddelande`. Prices: `4 950 kr` / `900 kr` / `3 900 kr`. The contact form lives on `/kontakt`, not in the footer. Booking is mailto, not Wix. Social hrefs stay Wix placeholders.
 
 ## Palette and type
 

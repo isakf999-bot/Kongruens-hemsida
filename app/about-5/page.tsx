@@ -4,7 +4,7 @@ import { Reveal } from "@/components/Reveal";
 import styles from "./about.module.css";
 
 export const metadata: Metadata = {
-  title: "Om mig — Kongruens",
+  title: "Min historia — Kongruens",
 };
 
 export default function AboutPage() {
@@ -22,34 +22,29 @@ export default function AboutPage() {
       <section className={styles.bio}>
         <div className={styles.shell}>
           <Reveal className={styles.bioCopy}>
-            <h1>Om mig</h1>
+            <h1>Min historia</h1>
             <p>
-              Jag är socionom sedan 1998 och har bred erfarenhet av många olika arbetsområden inom
-              socialt arbete, bland annat som kurator, handledare, socialkonsulent,
-              familjehemskonsulent och barnsekreterare.
+              Jag har varit gift tre gånger och gått igenom två skilsmässor. Nu gift med min kära fru
+              sedan 20 år tillbaka. Med henne har jag fyra barn. Tre tonåringar och en tre-åring.
             </p>
             <p>
-              Min spetskompetens ligger i arbetet med att vägleda, stödja och handleda individer och
-              grupper. Under omkring tolv år har jag arbetat särskilt med handledning, samtal och
-              personlig utveckling, både individuellt och i grupp.
+              Jag har en vuxen dotter och genom henne ett barnbarn. Två av mina barn har gått bort. En
+              pojke i plötslig spädbarnsdöd när han var åtta månader och en flicka som avled i suicid
+              när hon var 14 år.
             </p>
             <p>
-              Jag har även lång erfarenhet av att leda grupper och utvecklingsprocesser och har genom
-              åren arbetat med många människor i olika livssituationer – kring relationer, sorg,
-              arbete, förändring, personlig utveckling och svåra beslut.
+              Jag är uppväxt med knappa omständigheter i en familj med 5 storasystrar. Mina föräldrar
+              skildes när jag var 10 och jag bodde med min mamma i ett höghus getto i Landskrona där vi
+              barn sprang ute på nätterna och levde rövare.
             </p>
             <p>
-              Jag vidareutbildar mig för närvarande inom psykoterapi och går en grundläggande
-              psykoterapiutbildning med inriktning mot affektfokuserat och psykodynamiskt arbete.
+              Idag bor jag med min familj på en gård med hästar, hundar och katter och marsvin. Jag har
+              byggt upp ett finansföretag från grunden till en omsättning på 15 miljoner kr per år och
+              har en vision om att alla människor ska kunna ha det gott både inombords och ekonomiskt.
             </p>
             <p>
-              Parallellt har jag under många år arbetat med ekonomi, företagande, sparande och
-              investeringar. Det gör att jag kan erbjuda vägledning både i personliga frågor och i mer
-              praktiska frågor kring arbete, ekonomi och framtidsplanering.
-            </p>
-            <p>
-              Min utgångspunkt är enkel: människor behöver inte alltid terapi. Ibland behöver man någon
-              med erfarenhet, kunskap och perspektiv att resonera med för att komma vidare.
+              Min levnadsbana har varit krokig och många gånger svår. På vägen har jag dock lärt mig
+              mycket om livet, mig själv, människor och om livets olika processer.
             </p>
           </Reveal>
           <Reveal className={styles.portrait} delay={120}>
@@ -63,28 +58,34 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className={styles.method}>
-        <div className={styles.methodColumn}>
-          <Reveal className={styles.quoteLockup}>
-            <figure className={styles.drawing}>
-              <img
-                src="/images/kierkegaard.jpg"
-                alt="Blyertsporträtt av Søren Kierkegaard."
-                width={640}
-                height={800}
-              />
-            </figure>
-            <div className={styles.quote}>
-              <p>
-                &quot;Om jag vill lyckas med att föra en människa mot ett bestämt mål måste jag först
-                finna henne där hon är och börja just där. Den som inte kan det lurar sig själv när hon
-                tror att hon kan hjälpa andra. För att hjälpa någon måste jag visserligen förstå mer än
-                hon gör, men först och främst förstå det hon förstår.&quot;
-              </p>
-              <h3>Søren Kierkegaard</h3>
+      <section className={styles.quoteBand}>
+        <div className={styles.quoteBandInner}>
+          <Reveal className={styles.quoteBlock}>
+            <div className={styles.quoteLockup}>
+              <figure className={styles.drawing}>
+                <img
+                  src="/images/kierkegaard.jpg"
+                  alt="Blyertsporträtt av Søren Kierkegaard."
+                  width={640}
+                  height={800}
+                />
+              </figure>
+              <div className={styles.quote}>
+                <p>
+                  &quot;Om jag vill lyckas med att föra en människa mot ett bestämt mål måste jag först
+                  finna henne där hon är och börja just där. Den som inte kan det lurar sig själv när hon
+                  tror att hon kan hjälpa andra. För att hjälpa någon måste jag visserligen förstå mer än
+                  hon gör, men först och främst förstå det hon förstår.&quot;
+                </p>
+                <h3 className={styles.attribution}>Søren Kierkegaard</h3>
+              </div>
             </div>
           </Reveal>
-          <Reveal className={styles.reply} delay={80}>
+        </div>
+      </section>
+
+      <section className={styles.replyBand}>
+        <Reveal className={styles.reply} delay={80}>
             <p>
               Jag tycker Kierkegaard uttrycker detta på ett bra sätt. I arbetet med samtal som grund
               vilar mitt förhållningssätt i tron på att individen har svaren inom sig. Experten på dig
@@ -110,8 +111,7 @@ export default function AboutPage() {
               Boka nu
             </Link>
           </Reveal>
-        </div>
-      </section>
+        </section>
     </main>
   );
 }
