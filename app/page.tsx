@@ -16,14 +16,6 @@ export default function HomePage() {
             <span className={styles.title}>KONGRUENS</span>
             <span className={styles.kicker}>STARTAR HÄR</span>
           </h1>
-          <div className={styles.heroActions}>
-            <Link href="/services" className="btn">
-              BOKA NU
-            </Link>
-            <Link href="/about-5" className={styles.ghost}>
-              OM
-            </Link>
-          </div>
         </div>
       </section>
 
@@ -72,14 +64,14 @@ export default function HomePage() {
                   <p>Samtal på Zoom, Teams eller mobil?</p>
                   <p>Du bestämmer!</p>
                 </div>
-                <Link href="/services" className="btn">
-                  Boka nu
+                <Link href="/kontakt" className="btn">
+                  Kontakta mig
                 </Link>
               </Reveal>
               <Reveal className={styles.session} delay={160}>
                 <img
-                  src="/images/pv-samtal.jpg"
-                  alt="Två personer som sitter i samtal i ett ljust rum."
+                  src="/images/mats-gard.jpg"
+                  alt="Mats Svensson på gården med två hundar."
                   width={800}
                   height={1000}
                 />
@@ -166,8 +158,8 @@ export default function HomePage() {
           <Reveal delay={120}>
             <figure className={styles.portrait}>
               <img
-                src="/images/portrait.jpg"
-                alt="Mats Svensson utomhus i mörk skjorta, framför grönska."
+                src="/images/mats-gard.jpg"
+                alt="Mats Svensson på gården med två hundar."
                 width={720}
                 height={985}
               />

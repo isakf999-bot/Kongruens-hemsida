@@ -5,7 +5,7 @@
   display: grid;
   align-items: start;
   justify-items: stretch;
-  color: var(--ink);
+  color: var(--foam);
   overflow: hidden;
   padding: calc(var(--header-h) + 0.2rem) 0 26vh;
 }
@@ -39,7 +39,7 @@
 
 .kicker {
   font-family: var(--font-sans);
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.18em;
   line-height: 1.2;
@@ -63,49 +63,6 @@
 
 .heroCopy .kicker:last-of-type {
   animation-delay: 0.38s;
-}
-
-.heroActions {
-  display: flex;
-  align-items: center;
-  gap: 0.7rem;
-  margin-top: 2.15rem;
-  animation: rise 1.1s var(--ease) 0.5s both;
-}
-
-.heroActions :global(.btn) {
-  min-height: 2.15rem;
-  padding: 0.4rem 0.95rem;
-  font-size: 0.72rem;
-  box-shadow: none;
-}
-
-.ghost {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 2.15rem;
-  padding: 0.4rem 0.95rem;
-  border: 1.5px solid color-mix(in srgb, var(--ink) 46%, transparent);
-  border-radius: var(--radius-pill);
-  background: transparent;
-  color: var(--ink);
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  text-decoration: none;
-  text-shadow: none;
-  transition:
-    transform var(--t-fast) var(--ease),
-    background var(--t-fast) var(--ease),
-    color var(--t-fast) var(--ease),
-    border-color var(--t-fast) var(--ease);
-}
-
-.ghost:hover {
-  color: var(--white);
-  background: var(--ink);
-  border-color: var(--ink);
 }
 
 .intro {
@@ -188,11 +145,10 @@
 }
 
 .session {
-  flex: 1 1 auto;
+  flex: none;
   width: 100%;
-  min-height: 14rem;
+  aspect-ratio: 3 / 2;
   margin: 0;
-  align-self: stretch;
   position: relative;
   overflow: hidden;
   border-radius: var(--radius-lg);
@@ -205,7 +161,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 50% 30%;
+  object-position: 40% 46%;
   transition: transform 0.8s var(--ease);
 }
 
@@ -214,7 +170,7 @@
 }
 
 .close {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
   gap: var(--space-4);
@@ -355,9 +311,9 @@
 .portrait img {
   width: 100%;
   height: auto;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 3 / 2;
   object-fit: cover;
-  object-position: 50% 16%;
+  object-position: 40% 46%;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-card);
 }
@@ -402,7 +358,12 @@
 
 @media (max-width: 900px) {
   .hero {
+    color: var(--ink);
     padding: calc(var(--header-h) + 0.15rem) 0 30vh;
+  }
+
+  .close {
+    display: flex;
   }
 
   .heroCopy {
@@ -488,8 +449,8 @@
 
   .session {
     flex: none;
-    height: 18rem;
-    min-height: 18rem;
+    height: auto;
+    aspect-ratio: 3 / 2;
   }
 
   .topicsInner {
@@ -504,8 +465,7 @@
 
 @media (prefers-reduced-motion: reduce) {
   .kicker,
-  .title,
-  .heroActions {
+  .title {
     animation: none;
   }
 
