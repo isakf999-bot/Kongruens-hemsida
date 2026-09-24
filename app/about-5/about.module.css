@@ -30,7 +30,7 @@
 .bio .shell {
   grid-template-columns: minmax(0, 1.12fr) minmax(18rem, 0.88fr);
   column-gap: clamp(2.5rem, 6vw, 6.5rem);
-  align-items: start;
+  align-items: center;
 }
 
 .bioCopy {
@@ -57,16 +57,17 @@
 
 .portrait {
   justify-self: end;
-  width: min(100%, 28rem);
+  align-self: center;
+  width: 100%;
   margin: 0;
 }
 
 .portrait img {
   width: 100%;
   height: auto;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 3 / 2;
   object-fit: cover;
-  object-position: 50% 16%;
+  object-position: 40% 46%;
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-card);
   transition: transform 0.8s var(--ease);
@@ -199,10 +200,6 @@
   .quoteLockup {
     grid-template-columns: 1fr;
     row-gap: var(--space-5);
-  }
-
-  .portrait {
-    display: none;
   }
 
   .drawing {
