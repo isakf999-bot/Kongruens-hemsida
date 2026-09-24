@@ -49,10 +49,10 @@ export default function AboutPage() {
           </Reveal>
           <Reveal className={styles.portrait} delay={120}>
             <img
-              src="/images/portrait.jpg"
-              alt="Mats Svensson utomhus i mörk skjorta, framför grönska."
-              width={720}
-              height={985}
+              src="/images/mats-gard.jpg"
+              alt="Mats Svensson på gården med två hundar."
+              width={1200}
+              height={800}
             />
           </Reveal>
         </div>
@@ -107,8 +107,8 @@ export default function AboutPage() {
               dig. Du kommer istället att få rätt frågor som leder till att du upptäcker dina egna
               svar vilket leder dina tankegångar på rätt spår.
             </p>
-            <Link href="/services" className="btn">
-              Boka nu
+            <Link href="/kontakt" className="btn">
+              Kontakta mig
             </Link>
           </Reveal>
         </section>
