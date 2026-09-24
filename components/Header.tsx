@@ -44,7 +44,7 @@ export function Header() {
     >
       <div className={styles.inner}>
         <Link href="/" className={styles.brand} onClick={() => setOpen(false)}>
-          <BrandLogo className={styles.logo} />
+          <BrandLogo className={styles.logo} onDark={!ink} />
         </Link>
 
         <nav className={styles.nav} aria-label="Huvudmeny">
@@ -66,7 +66,7 @@ export function Header() {
         </nav>
 
         <Link href="/kontakt" className={`btn btn-nav ${styles.cta}`} onClick={() => setOpen(false)}>
-          Mejla Nu
+          Kontakta mig
         </Link>
 
         <button
@@ -88,7 +88,7 @@ export function Header() {
           </Link>
         ))}
         <Link href="/kontakt" className="btn btn-nav" onClick={() => setOpen(false)}>
-          Mejla Nu
+          Kontakta mig
         </Link>
       </div>
     </header>
