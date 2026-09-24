@@ -68,7 +68,10 @@ export function ServiceCard({
             Läs mer
           </Link>
         ) : null}
-        <Link href="/kontakt" className={`btn ${styles.cta}`}>
+        <Link
+          href={`/kontakt?amne=${encodeURIComponent(service.title)}`}
+          className={`btn ${styles.cta}`}
+        >
           Kontakta mig
         </Link>
       </div>

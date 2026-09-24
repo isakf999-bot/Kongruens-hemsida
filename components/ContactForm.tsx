@@ -1,11 +1,13 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import styles from "./ContactForm.module.css";
 
 type Errors = { email?: boolean };
 
 export function ContactForm() {
+  const subjectFromLink = useSearchParams().get("amne") ?? "";
   const [errors, setErrors] = useState<Errors>({});
   const [status, setStatus] = useState<"idle" | "loading" | "success">("idle");
 
@@ -67,7 +69,7 @@ export function ContactForm() {
       </div>
       <label>
         Ämne
-        <input name="subject" type="text" />
+        <input name="subject" type="text" defaultValue={subjectFromLink} key={subjectFromLink} />
       </label>
       <label>
         Meddelande

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { services } from "@/lib/content";
 import styles from "./book.module.css";
 
@@ -25,12 +26,9 @@ export default async function BookingPage({
         ))}
         {service.meta ? <p className={styles.meta}>{service.meta}</p> : null}
         <p className={styles.price}>{service.price}</p>
-        <a
-          className="btn"
-          href={`mailto:info@kongruens.se?subject=${encodeURIComponent(service.title)}`}
-        >
-          Boka
-        </a>
+        <Link className="btn" href={`/kontakt?amne=${encodeURIComponent(service.title)}`}>
+          Kontakta mig
+        </Link>
       </article>
     </main>
   );
