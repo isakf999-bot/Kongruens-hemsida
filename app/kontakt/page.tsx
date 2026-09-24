@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { ContactForm } from "@/components/ContactForm";
 import styles from "./kontakt.module.css";
 
@@ -21,7 +22,9 @@ export default function ContactPage() {
             </p>
           </div>
           <div className={styles.formArea}>
-            <ContactForm />
+            <Suspense fallback={null}>
+              <ContactForm />
+            </Suspense>
           </div>
         </div>
       </section>
