@@ -25,7 +25,7 @@ export function Footer() {
       <div className={styles.inner}>
         <div className={styles.brand}>
           <Link href="/" className={styles.mark}>
-            <BrandLogo className={styles.logo} onDark />
+            <BrandLogo className={styles.logo} onDark loading="lazy" />
           </Link>
           <p className={styles.blurb}>
             Personlig vägledning som ett mer tillgängligt alternativ. Någon att resonera med kring

@@ -89,6 +89,7 @@ export default function HomePage() {
                   alt="Mats Svensson på gården med två hundar."
                   width={800}
                   height={1000}
+                  loading="lazy"
                 />
               </Reveal>
             </div>
@@ -178,6 +179,7 @@ export default function HomePage() {
                 alt="Mats Svensson på gården med två hundar."
                 width={720}
                 height={985}
+                loading="lazy"
               />
             </figure>
           </Reveal>
