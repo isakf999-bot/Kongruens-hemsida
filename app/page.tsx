@@ -1,9 +1,17 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { HeroMedia } from "@/components/HeroMedia";
 import { Reveal } from "@/components/Reveal";
 import { ServiceCard } from "@/components/ServiceCard";
 import { services, topics } from "@/lib/content";
+import { siteDescription } from "@/lib/site";
 import styles from "./page.module.css";
+
+export const metadata: Metadata = {
+  title: "Din väg mot kongruens — Mats Svensson",
+  description: siteDescription,
+  alternates: { canonical: "/" },
+};
 
 export default function HomePage() {
   return (
@@ -12,9 +20,16 @@ export default function HomePage() {
         <HeroMedia />
         <div className={styles.heroCopy}>
           <h1>
-            <span className={styles.kicker}>DIN VÄG MOT</span>
-            <span className={styles.title}>KONGRUENS</span>
-            <span className={styles.kicker}>STARTAR HÄR</span>
+            <span className="srOnly">Din väg mot kongruens startar här</span>
+            <span className={styles.kicker} aria-hidden="true">
+              DIN VÄG MOT
+            </span>
+            <span className={styles.title} aria-hidden="true">
+              KONGRUENS
+            </span>
+            <span className={styles.kicker} aria-hidden="true">
+              STARTAR HÄR
+            </span>
           </h1>
         </div>
       </section>
@@ -150,8 +165,9 @@ export default function HomePage() {
                 Min utgångspunkt är enkel: människor behöver inte alltid terapi. Ibland behöver man
                 någon med erfarenhet, kunskap och perspektiv att resonera med för att komma vidare.
               </p>
-              <Link href="/about-5" className="btn">
+              <Link href="/about-5" className="btn" aria-label="Läs mer om Mats Svensson">
                 Läs mer
+                <span className="srOnly"> om Mats Svensson</span>
               </Link>
             </div>
           </Reveal>

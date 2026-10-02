@@ -5,6 +5,7 @@ import styles from "./about.module.css";
 
 export const metadata: Metadata = {
   title: "Min historia — Kongruens",
+  alternates: { canonical: "/about-5" },
 };
 
 export default function AboutPage() {

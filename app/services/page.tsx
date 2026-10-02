@@ -1,7 +1,13 @@
+import type { Metadata } from "next";
 import { Reveal } from "@/components/Reveal";
 import { ServiceCard } from "@/components/ServiceCard";
 import { services } from "@/lib/content";
 import styles from "./services.module.css";
+
+export const metadata: Metadata = {
+  title: "Tjänster — Kongruens",
+  alternates: { canonical: "/services" },
+};
 
 export default function ServicesPage() {
   return (

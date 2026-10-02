@@ -1,6 +1,19 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { services } from "@/lib/content";
 import styles from "./book.module.css";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  return {
+    title: "Kontakta mig — Kongruens",
+    alternates: { canonical: `/booking-calendar/${slug}` },
+  };
+}
 
 export default async function BookingPage({
   params,

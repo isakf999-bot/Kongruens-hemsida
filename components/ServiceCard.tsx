@@ -64,8 +64,13 @@ export function ServiceCard({
           )}
         </div>
         {preview ? (
-          <Link href={`/services#${service.slug}`} className={styles.more}>
+          <Link
+            href={`/services#${service.slug}`}
+            className={styles.more}
+            aria-label={`Läs mer om ${service.title}`}
+          >
             Läs mer
+            <span className="srOnly"> om {service.title}</span>
           </Link>
         ) : null}
         <Link

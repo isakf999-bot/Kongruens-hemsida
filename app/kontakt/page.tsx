@@ -5,6 +5,7 @@ import styles from "./kontakt.module.css";
 
 export const metadata: Metadata = {
   title: "Kontakt — Kongruens",
+  alternates: { canonical: "/kontakt" },
 };
 
 export default function ContactPage() {
