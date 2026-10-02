@@ -1,0 +1,8 @@
+# Kongruens
+
+Mats Svensson är personlig vägledare. Sidan beskriver samtal om livet, relationer, arbete och beslut.
+
+- Startsida: https://kongruens-hemsida.vercel.app/
+- Om: https://kongruens-hemsida.vercel.app/about-5
+- Tjänster: https://kongruens-hemsida.vercel.app/services
+- Kontakt: https://kongruens-hemsida.vercel.app/kontakt
