@@ -38,33 +38,26 @@ export default function HomePage() {
       <section className={styles.intro}>
         <div className={styles.introInner}>
           <Reveal className={styles.introBody} delay={80}>
-            <p className={styles.lead}>
-              Ja, det ena utesluter såklart inte det andra men det är ju vanligt att man har en PT för
-              den fysiska träningen emedan man låter den inre träningen stå tillbaka. Ska man vara
-              ärlig blir ingen människa genuint lycklig genom att fokusera på det yttre. Det är en
-              viktig del för att vi ska må fysiskt väl men en kombination av yttre och inre fokus
-              kommer att ge dig harmoni och större förmåga att leva ditt ditt liv med full potential.
-            </p>
             <p className={styles.emphasis}>
-              Med mig som PV – Personlig Vägledare – får du någon att tänka högt tillsammans med.
+              Är det något i livet som skaver – eller har du svårt att komma överens med dig själv?
             </p>
             <p>
-              Många drar sig för att kontakta psykolog eller terapeut. Det kan kännas stort, dyrt och
-              för vissa fortfarande förknippat med att något måste vara fel. Det kan i sig bli ett
-              hinder för att söka stöd.
+              Kanske fungerar inte en relation som du vill. Kanske grubblar du över ett beslut, känner
+              dig vilsen i arbete eller ekonomi, har svårt att sätta gränser eller undrar om du
+              verkligen lever i linje med dina egna värderingar.
             </p>
             <p>
-              Mitt PV-koncept är tänkt som ett mer tillgängligt och avslappnat alternativ för dig som
-              vill ha någon att resonera med kring livet, relationer, arbete, beslut eller andra
-              frågor som dyker upp längs vägen.
+              Du behöver inte alltid terapi för att komma vidare. Ibland behöver du bara någon
+              utomstående som hjälper dig att sortera tankarna, se nya perspektiv och hitta nästa steg.
             </p>
+            <p className={styles.emphasis}>Det är där jag kommer in.</p>
             <p>
-              Tanken är enkel: att ha en person du kan vända dig till när du behöver sortera tankar,
-              få nya perspektiv eller komma vidare i en fråga.
+              Som din PV – Personliga Vägledare – får du någon att tänka högt tillsammans med när
+              livet känns oklart, komplicerat eller när du behöver hjälp att hitta riktning.
             </p>
-            <p>
-              En egen PV – Personlig Vägledare – som finns där som ett kontinuerligt stöd.
-            </p>
+            <Link href="/kontakt" className="btn">
+              Boka ett första kostnadsfritt samtal
+            </Link>
           </Reveal>
           <div className={styles.introLockup}>
             <Reveal className={styles.introHead}>
