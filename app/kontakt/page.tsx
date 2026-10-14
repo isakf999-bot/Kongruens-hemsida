@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
+import { Mail, Phone } from "lucide-react";
+import { Grain, Rings } from "@/components/Atmosphere";
 import { ContactForm } from "@/components/ContactForm";
+import { FocusText } from "@/components/FocusText";
 import styles from "./kontakt.module.css";
 
 export const metadata: Metadata = {
@@ -14,12 +17,22 @@ export default function ContactPage() {
       <section className={styles.page}>
         <div className={styles.panel}>
           <div className={styles.intro}>
-            <h1>Kontakt</h1>
+            <Grain className={styles.grain} />
+            <Rings className={styles.rings} />
+            <h1>
+              <FocusText now text="Kontakt" delay={120} />
+            </h1>
             <p>
-              <a href="tel:+46705536050">Tel: 0705-536050</a>
+              <a href="tel:+46705536050">
+                <Phone aria-hidden="true" strokeWidth={1.5} />
+                Tel: 0705-536050
+              </a>
             </p>
             <p>
-              <a href="mailto:info@kongruens.se">info@kongruens.se</a>
+              <a href="mailto:info@kongruens.se">
+                <Mail aria-hidden="true" strokeWidth={1.5} />
+                info@kongruens.se
+              </a>
             </p>
           </div>
           <div className={styles.formArea}>

@@ -79,6 +79,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <a className="skip" href="#innehall">
           Hoppa till innehåll
         </a>
+        <noscript>
+          <style>{".reveal{opacity:1;transform:none;filter:none}"}</style>
+        </noscript>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         <Header />
         <div id="innehall">{children}</div>

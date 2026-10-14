@@ -1,15 +1,20 @@
 "use client";
 
-import { useEffect, useRef, type ReactNode } from "react";
+import { useEffect, useRef, type CSSProperties, type ReactNode } from "react";
 
 export function Reveal({
   children,
   className = "",
   delay = 0,
+  plain = false,
+  style,
 }: {
   children: ReactNode;
   className?: string;
   delay?: number;
+  /** Do not move the block itself; used around headings whose words animate. */
+  plain?: boolean;
+  style?: CSSProperties;
 }) {
   const ref = useRef<HTMLDivElement>(null);
 
@@ -39,7 +44,7 @@ export function Reveal({
   }, []);
 
   return (
-    <div ref={ref} className={`reveal ${className}`} style={{ transitionDelay: `${delay}ms` }}>
+    <div ref={ref} className={`reveal ${plain ? "reveal-plain" : ""} ${className}`} style={{ ...style, transitionDelay: `${delay}ms` }}>
       {children}
     </div>
   );

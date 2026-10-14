@@ -2,6 +2,7 @@
 
 import { FormEvent, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import { Send } from "lucide-react";
 import styles from "./ContactForm.module.css";
 
 type Errors = { email?: boolean };
@@ -78,6 +79,7 @@ export function ContactForm() {
       <div className={styles.actions}>
         <button className="btn" type="submit" disabled={status === "loading"}>
           Skicka
+          {status === "idle" ? <Send aria-hidden="true" strokeWidth={1.75} /> : null}
           {status === "loading" ? <span className={styles.spinner} aria-hidden="true" /> : null}
           {status === "success" ? <span className={styles.check} aria-hidden="true" /> : null}
         </button>

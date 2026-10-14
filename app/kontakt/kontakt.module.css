@@ -1,4 +1,11 @@
+/*
+ * Side-by-side layout after HyperUI marketing/contact-forms 5 "Side-by-side
+ * form with description": details with icons on one side, the form on the
+ * other. Written in this project's CSS.
+ */
+
 .page {
+  position: relative;
   min-height: 100svh;
   display: grid;
   place-items: center;
@@ -8,44 +15,82 @@
 
 .panel {
   display: grid;
-  grid-template-columns: minmax(17rem, 0.7fr) minmax(0, 1.3fr);
-  width: min(100%, 70rem);
+  grid-template-columns: minmax(17rem, 0.75fr) minmax(0, 1.25fr);
+  width: min(100%, 72rem);
   overflow: hidden;
   background: #fff;
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-lg);
+  border-radius: var(--radius-xl);
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--water-deep) 8%, transparent),
+    var(--shadow-lg);
 }
 
 .intro {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding: clamp(2.5rem, 5vw, 5rem);
+  justify-content: flex-end;
+  min-height: 30rem;
+  padding: clamp(2.5rem, 5vw, 4.5rem);
   background: var(--water);
   color: var(--foam);
 }
 
+.grain {
+  z-index: -1;
+  opacity: 0.45;
+  mix-blend-mode: overlay;
+}
+
+.rings {
+  position: absolute;
+  top: -12%;
+  right: -38%;
+  z-index: -1;
+  width: 130%;
+  color: var(--hair-on-dark);
+}
+
 .intro h1 {
-  max-width: 8ch;
-  font-size: clamp(2.6rem, 2rem + 2.2vw, 4.4rem);
-  margin-bottom: var(--space-7);
+  font-size: var(--text-3xl);
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: var(--space-6);
   color: var(--foam);
-  font-variation-settings: "SOFT" 48, "WONK" 0.16, "opsz" 72;
+  font-variation-settings: "SOFT" 48, "WONK" 0.16, "opsz" 144;
 }
 
 .intro p {
-  margin: 0 0 0.7em;
-  color: color-mix(in srgb, var(--foam) 86%, transparent);
+  margin: 0;
+  border-top: 1px solid var(--hair-on-dark);
+}
+
+.intro p:last-child {
+  border-bottom: 1px solid var(--hair-on-dark);
 }
 
 .intro a {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 1rem 0;
   text-decoration: none;
-  color: inherit;
-  transition: color var(--t-fast) var(--ease);
+  color: color-mix(in srgb, var(--foam) 88%, transparent);
+  transition: color var(--t-fast) var(--ease), padding var(--t-med) var(--ease-out);
+}
+
+.intro a svg {
+  flex: none;
+  width: 1.15rem;
+  height: 1.15rem;
+  color: var(--paper-3);
 }
 
 .intro a:hover {
   color: var(--foam);
+  padding-left: 0.35rem;
 }
 
 .formArea {
@@ -63,7 +108,8 @@
   }
 
   .intro {
-    padding: var(--space-6) var(--space-5);
+    min-height: 0;
+    padding: var(--space-7) var(--space-5) var(--space-5);
   }
 
   .intro h1 {
@@ -72,6 +118,20 @@
   }
 
   .formArea {
-    padding: var(--space-5);
+    padding: var(--space-6) var(--space-5);
   }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .intro a {
+    transition: none;
+  }
+
+  .intro a:hover {
+    padding-left: 0;
+  }
+}
+
+.intro :focus-visible {
+  outline-color: var(--foam);
 }

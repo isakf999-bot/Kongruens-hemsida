@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Clock } from "lucide-react";
+import { FocusText } from "@/components/FocusText";
 import { services } from "@/lib/content";
 import styles from "./book.module.css";
 
@@ -33,11 +35,18 @@ export default async function BookingPage({
         <img src={service.image} alt={service.alt} width={1600} height={1200} />
       </div>
       <article className={styles.sheet}>
-        <h1>{service.title}</h1>
+        <h1>
+          <FocusText now text={service.title} delay={350} step={60} />
+        </h1>
         {service.paragraphs.map((p) => (
           <p key={p}>{p}</p>
         ))}
-        {service.meta ? <p className={styles.meta}>{service.meta}</p> : null}
+        {service.meta ? (
+          <p className={styles.meta}>
+            <Clock aria-hidden="true" strokeWidth={1.5} />
+            {service.meta}
+          </p>
+        ) : null}
         <p className={styles.price}>{service.price}</p>
         <Link className="btn" href={`/kontakt?amne=${encodeURIComponent(service.title)}`}>
           Kontakta mig

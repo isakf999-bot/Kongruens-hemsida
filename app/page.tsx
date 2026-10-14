@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
+import type { CSSProperties } from "react";
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { Haze, Rings } from "@/components/Atmosphere";
+import { FocusText } from "@/components/FocusText";
 import { HeroMedia } from "@/components/HeroMedia";
+import { Marker } from "@/components/Marker";
 import { Reveal } from "@/components/Reveal";
 import { ServiceCard } from "@/components/ServiceCard";
 import { services, topics } from "@/lib/content";
@@ -22,13 +27,13 @@ export default function HomePage() {
           <h1>
             <span className="srOnly">Din väg mot kongruens startar här</span>
             <span className={styles.kicker} aria-hidden="true">
-              DIN VÄG MOT
+              <FocusText now text="DIN VÄG MOT" delay={150} step={90} />
             </span>
             <span className={styles.title} aria-hidden="true">
-              KONGRUENS
+              <FocusText now by="letters" text="KONGRUENS" delay={380} step={55} />
             </span>
             <span className={styles.kicker} aria-hidden="true">
-              STARTAR HÄR
+              <FocusText now text="STARTAR HÄR" delay={950} step={90} />
             </span>
           </h1>
         </div>
@@ -50,20 +55,26 @@ export default function HomePage() {
               Du behöver inte alltid terapi för att komma vidare. Ibland behöver du bara någon
               utomstående som hjälper dig att sortera tankarna, se nya perspektiv och hitta nästa steg.
             </p>
-            <p className={styles.emphasis}>Det är där jag kommer in.</p>
+            <p className={styles.emphasis}>
+              <Marker>Det är där jag kommer in.</Marker>
+            </p>
             <p>
               Som din PV – Personliga Vägledare – får du någon att tänka högt tillsammans med när
               livet känns oklart, komplicerat eller när du behöver hjälp att hitta riktning.
             </p>
             <Link href="/kontakt" className="btn">
               Boka ett första kostnadsfritt samtal
+              <ArrowRight aria-hidden="true" strokeWidth={1.75} />
             </Link>
           </Reveal>
           <div className={styles.introLockup}>
-            <Reveal className={styles.introHead}>
+            <Rings className={styles.introRings} />
+            <Reveal plain className={styles.introHead}>
               <h2>
-                Alla borde
-                <span className={styles.titleBreak}>ha en PV</span>
+                <FocusText text="Alla borde" />
+                <span className={styles.titleBreak}>
+                  <FocusText text="ha en PV" delay={170} />
+                </span>
               </h2>
             </Reveal>
             <div className={styles.introMedia}>
@@ -76,7 +87,11 @@ export default function HomePage() {
                   Kontakta mig
                 </Link>
               </Reveal>
-              <Reveal className={styles.session} delay={160}>
+              <Reveal
+                className={`photo ${styles.session}`}
+                delay={160}
+                style={{ "--photo": "url(/images/mats-gard.jpg)", "--photo-pos": "40% 46%" } as CSSProperties}
+              >
                 <img
                   src="/images/mats-gard.jpg"
                   alt="Mats Svensson på gården med två hundar."
@@ -91,9 +106,12 @@ export default function HomePage() {
       </section>
 
       <section className={styles.topics} aria-labelledby="stod-rubrik">
+        <Haze />
         <div className={styles.topicsInner}>
-          <Reveal className={styles.topicsIntro}>
-            <h2 id="stod-rubrik">Jag kan vara ett stöd inom bland annat:</h2>
+          <Reveal plain className={styles.topicsIntro}>
+            <h2 id="stod-rubrik">
+              <FocusText text="Jag kan vara ett stöd inom bland annat:" step={55} />
+            </h2>
             <p className={styles.topicLead}>
               Livet ställer oss alla inför olika utmaningar. I vissa perioder kan det vara
               värdefullt att ha någon utomstående att resonera med, få perspektiv av och sortera
@@ -104,7 +122,7 @@ export default function HomePage() {
             <ul>
               {topics.slice(0, 8).map((t) => (
                 <li key={t}>
-                  <span aria-hidden="true">→</span>
+                  <ArrowRight aria-hidden="true" strokeWidth={1.5} />
                   {t}
                 </li>
               ))}
@@ -112,7 +130,7 @@ export default function HomePage() {
             <ul>
               {topics.slice(8).map((t) => (
                 <li key={t}>
-                  <span aria-hidden="true">→</span>
+                  <ArrowRight aria-hidden="true" strokeWidth={1.5} />
                   {t}
                 </li>
               ))}
@@ -130,7 +148,9 @@ export default function HomePage() {
         <div className={styles.aboutInner}>
           <Reveal>
             <div className={styles.aboutCopy}>
-              <h2>Om mig</h2>
+              <h2>
+                <FocusText text="Om mig" />
+              </h2>
               <p>
                 Jag är socionom sedan 1998 och har bred erfarenhet av många olika arbetsområden inom
                 socialt arbete, bland annat som kurator, handledare, socialkonsulent,
@@ -166,7 +186,10 @@ export default function HomePage() {
             </div>
           </Reveal>
           <Reveal delay={120}>
-            <figure className={styles.portrait}>
+            <figure
+              className={`photo ${styles.portrait}`}
+              style={{ "--photo": "url(/images/mats-gard.jpg)", "--photo-pos": "40% 46%" } as CSSProperties}
+            >
               <img
                 src="/images/mats-gard.jpg"
                 alt="Mats Svensson på gården med två hundar."
@@ -180,9 +203,12 @@ export default function HomePage() {
       </section>
 
       <section className={styles.help}>
+        <Haze flip />
         <div className={styles.helpInner}>
-          <Reveal>
-            <h2>Hur jag kan hjälpa dig</h2>
+          <Reveal plain>
+            <h2>
+              <FocusText text="Hur jag kan hjälpa dig" />
+            </h2>
           </Reveal>
           <div className={styles.cards}>
             {services.map((s, i) => (

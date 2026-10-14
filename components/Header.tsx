@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { BrandLogo } from "@/components/BrandLogo";
+import { ArrowUpRight } from "lucide-react";
 import styles from "./Header.module.css";
 
 const links = [
@@ -32,6 +33,15 @@ export function Header() {
   }, []);
 
   useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setOpen(false);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [open]);
+
+  useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
@@ -40,7 +50,7 @@ export function Header() {
 
   return (
     <header
-      className={`${styles.header} ${ink ? styles.ink : ""} ${solid ? styles.scrolled : ""} ${open ? styles.open : ""}`}
+      className={`${styles.header} ${ink ? styles.ink : ""} ${solid ? styles.solid : ""} ${scrolled ? styles.floating : ""} ${open ? styles.open : ""}`}
     >
       <div className={styles.inner}>
         <Link href="/" className={styles.brand} onClick={() => setOpen(false)}>
@@ -82,9 +92,16 @@ export function Header() {
       </div>
 
       <div id="mobilmeny" className={`${styles.panel} ${open ? styles.panelOpen : ""}`}>
-        {links.map((l) => (
-          <Link key={l.label} href={l.href} onClick={() => setOpen(false)}>
+        {links.map((l, i) => (
+          <Link
+            key={l.label}
+            href={l.href}
+            className={styles.panelLink}
+            style={{ transitionDelay: open ? `${90 + i * 70}ms` : "0ms" }}
+            onClick={() => setOpen(false)}
+          >
             {l.label}
+            <ArrowUpRight aria-hidden="true" strokeWidth={1.25} />
           </Link>
         ))}
         <Link href="/kontakt" className="btn btn-nav" onClick={() => setOpen(false)}>

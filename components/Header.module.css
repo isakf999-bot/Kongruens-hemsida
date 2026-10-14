@@ -1,29 +1,58 @@
+/*
+ * The bar narrows into a floating capsule once the page is scrolled.
+ * Behaviour taken from Aceternity UI "Resizable Navbar"
+ * (https://ui.aceternity.com/components/resizable-navbar): width, offset,
+ * blur and shadow change together. Rewritten as CSS transitions on this
+ * project's own header, without Tailwind or motion.
+ */
+
 .header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: var(--z-nav);
-  height: var(--header-h);
+  padding: 0 var(--gutter);
   color: var(--foam);
+  pointer-events: none;
   transition:
-    height var(--t-med) var(--ease),
+    padding var(--t-slow) var(--ease-out),
     background var(--t-med) var(--ease),
-    color var(--t-med) var(--ease),
-    box-shadow var(--t-med) var(--ease);
+    color var(--t-med) var(--ease);
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: var(--hair);
+  opacity: 0;
+  transition: opacity var(--t-med) var(--ease);
 }
 
 .inner {
   position: relative;
   z-index: var(--z-raise);
-  height: 100%;
+  height: var(--header-h);
   display: grid;
   grid-template-columns: 1fr auto auto;
   align-items: center;
-  gap: var(--space-5);
-  padding: 0 var(--gutter);
-  max-width: 90rem;
+  gap: var(--space-6);
+  width: 100%;
+  max-width: calc(90rem - 2 * var(--gutter));
   margin: 0 auto;
+  padding: 0;
+  border-radius: var(--radius-pill);
+  pointer-events: auto;
+  transition:
+    max-width var(--t-slow) var(--ease-out),
+    height var(--t-slow) var(--ease-out),
+    padding var(--t-slow) var(--ease-out),
+    background var(--t-med) var(--ease),
+    box-shadow var(--t-med) var(--ease);
 }
 
 .brand {
@@ -41,9 +70,10 @@
   display: block;
   height: 4.15rem;
   width: auto;
-  max-width: min(70vw, 26rem);
+  max-width: min(64vw, 26rem);
   object-fit: contain;
   object-position: left center;
+  transition: height var(--t-slow) var(--ease-out);
 }
 
 .nav {
@@ -55,107 +85,151 @@
 .link {
   position: relative;
   text-decoration: none;
-  font-size: 1.0625rem;
+  font-size: 1rem;
   font-weight: 500;
-  padding: 0.25rem 0;
-  opacity: 0.7;
-  transition: opacity var(--t-med) var(--ease);
+  letter-spacing: 0.01em;
+  padding: 0.35rem 0;
+  color: inherit;
 }
 
 .link::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -0.22rem;
+  bottom: 0;
   width: 100%;
-  height: 1.5px;
-  border-radius: 99px;
+  height: 1px;
   background: currentColor;
   transform: scaleX(0);
-  transform-origin: left center;
-  transition: transform var(--t-fast) var(--ease);
+  transform-origin: right center;
+  transition: transform var(--t-med) var(--ease-out);
 }
 
-.header:not(.ink) .link {
-  opacity: 1;
-  color: var(--foam);
-}
-
-.link:hover,
-.active {
-  opacity: 1;
+.link:hover {
   color: inherit;
 }
 
 .link:hover::after,
 .active::after {
   transform: scaleX(1);
+  transform-origin: left center;
 }
 
+.ink .link {
+  color: color-mix(in srgb, var(--nav-ink) 72%, transparent);
+  transition: color var(--t-fast) var(--ease);
+}
+
+.ink .link:hover,
+.ink .active {
+  color: var(--nav-ink);
+}
+
+/* The one call to action in the bar: a step lighter than the other dark buttons. */
 .inner :global(.btn).cta {
   justify-self: end;
-  min-height: 2.65rem;
-  padding: 0.55rem 1.25rem;
-  font-size: 0.875rem;
-  box-shadow: var(--shadow-xs);
+  min-height: 3rem;
+  padding: 0.7rem 1.65rem;
+  font-size: 0.9375rem;
+  background: var(--water);
+  color: var(--foam);
 }
 
-.scrolled .logo,
-.open .logo {
-  height: 3.15rem;
+.inner :global(.btn).cta:hover {
+  background: var(--brass);
+  color: var(--foam);
 }
 
 .ink {
   color: var(--nav-ink);
 }
 
+/* Pages without a dark hero: a calm full-width bar. */
+.solid {
+  background: var(--surface);
+}
+
+.solid::after {
+  opacity: 1;
+}
+
+.solid .inner {
+  height: var(--header-h-scrolled);
+}
+
+.solid .logo {
+  height: 3.15rem;
+}
+
+/* Scrolled: the bar lets go of the edges and becomes a capsule. */
+.floating {
+  padding-top: 0.7rem;
+  background: transparent;
+}
+
+.floating::after {
+  opacity: 0;
+}
+
+.floating .inner {
+  max-width: 58rem;
+  height: 3.9rem;
+  padding: 0 0.7rem 0 1.5rem;
+  background: color-mix(in srgb, var(--surface) 82%, transparent);
+  backdrop-filter: blur(14px) saturate(1.2);
+  -webkit-backdrop-filter: blur(14px) saturate(1.2);
+  box-shadow:
+    inset 0 1px 0 color-mix(in srgb, #fff 70%, transparent),
+    0 0 0 1px color-mix(in srgb, var(--water-deep) 7%, transparent),
+    0 1px 2px color-mix(in srgb, var(--water-deep) 8%, transparent),
+    0 18px 44px -20px color-mix(in srgb, var(--water-deep) 38%, transparent);
+}
+
+.floating .logo {
+  height: 2.75rem;
+}
+
 .burger {
   display: none;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.75rem;
+  height: 2.75rem;
   border: 0;
+  border-radius: 50%;
   background: transparent;
   color: inherit;
-  padding: 0.6rem 0.4rem;
+  padding: 0.75rem 0.6rem;
   cursor: pointer;
 }
 
 .burger span {
   display: block;
-  height: 1px;
+  height: 1.5px;
+  border-radius: 2px;
   background: currentColor;
-  margin: 7px 0;
-  transition: transform var(--t-med) var(--ease);
+  margin: 6px 0;
+  transition: transform var(--t-med) var(--ease-out);
 }
 
 .panel {
   display: none;
 }
 
-.scrolled {
-  height: var(--header-h-scrolled);
-  color: var(--nav-ink);
-  background: color-mix(in srgb, var(--surface) 94%, transparent);
-  backdrop-filter: blur(16px);
-  box-shadow: var(--shadow-xs);
-}
-
-.open {
-  color: var(--nav-ink);
-  background: var(--surface);
-}
-
 .open .burger span:first-child {
-  transform: translateY(4px) rotate(45deg);
+  transform: translateY(3.75px) rotate(45deg);
 }
 
 .open .burger span:last-child {
-  transform: translateY(-4px) rotate(-45deg);
+  transform: translateY(-3.75px) rotate(-45deg);
 }
 
 @media (max-width: 860px) {
-  .logo {
-    height: 3.15rem;
+  .logo,
+  .solid .logo {
+    height: 3rem;
+  }
+
+  .floating .logo {
+    height: 2.5rem;
   }
 
   .nav,
@@ -170,58 +244,132 @@
 
   .inner {
     grid-template-columns: 1fr auto;
+    gap: var(--space-4);
+  }
+
+  .floating {
+    padding-inline: 0.75rem;
+  }
+
+  .floating .inner {
+    height: 3.6rem;
+    padding: 0 0.45rem 0 1rem;
+  }
+
+  /* Open: a full sheet under the bar. */
+  .open {
+    padding: 0 var(--gutter);
+    background: var(--surface);
+    color: var(--nav-ink);
+  }
+
+  .open::after {
+    opacity: 1;
+  }
+
+  .open .inner {
+    max-width: none;
+    height: var(--header-h-scrolled);
+    padding: 0;
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: none;
+  }
+
+  .open .logo {
+    height: 3rem;
   }
 
   .panel {
     display: flex;
     flex-direction: column;
-    gap: var(--space-5);
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
-    top: 100%;
-    padding: var(--space-6) var(--gutter) var(--space-7);
+    top: var(--header-h-scrolled);
+    bottom: 0;
+    padding: var(--space-5) var(--gutter) var(--space-7);
+    overflow-y: auto;
     background: var(--surface);
     color: var(--nav-ink);
-    box-shadow: var(--shadow-lg);
-    transform: translateY(-0.35rem);
     opacity: 0;
-    pointer-events: none;
     visibility: hidden;
+    pointer-events: none;
     transition:
       opacity var(--t-med) var(--ease),
-      transform var(--t-slow) var(--ease),
-      visibility var(--t-med) var(--ease);
+      visibility 0s linear var(--t-med);
   }
 
-  .open .panel,
   .panelOpen {
     opacity: 1;
-    transform: none;
-    pointer-events: auto;
     visibility: visible;
+    pointer-events: auto;
+    transition:
+      opacity var(--t-med) var(--ease),
+      visibility 0s;
   }
 
-  .panel a {
+  .panelLink {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.15rem 0;
+    border-bottom: 1px solid var(--hair);
     font-family: var(--font-serif);
-    font-size: var(--text-xl);
+    font-size: clamp(2rem, 9vw, 2.75rem);
     font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
     text-decoration: none;
+    opacity: 0;
+    transform: translateY(0.9rem);
+    transition:
+      opacity var(--t-med) var(--ease),
+      transform var(--t-slow) var(--ease-out);
+  }
+
+  .panelLink svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--paper-4);
+  }
+
+  .panelOpen .panelLink {
+    opacity: 1;
+    transform: none;
   }
 
   .panel :global(.btn) {
-    align-self: flex-start;
-    min-height: 2.75rem;
-    padding: 0.55rem 1.4rem;
-    font-size: 0.8125rem;
+    align-self: stretch;
+    margin-top: var(--space-6);
+    opacity: 0;
+    transition: opacity var(--t-med) var(--ease) 260ms;
+  }
+
+  .panelOpen :global(.btn) {
+    opacity: 1;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .header,
+  .inner,
+  .logo,
   .panel,
+  .panelLink,
+  .panel :global(.btn),
   .burger span,
   .link::after {
     transition: none;
   }
+
+  .panelLink {
+    transform: none;
+  }
+}
+
+/* Over the dark photograph the focus ring is drawn in the light colour. */
+.header:not(.ink) :focus-visible {
+  outline-color: var(--foam);
 }

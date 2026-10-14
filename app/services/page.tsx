@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Haze } from "@/components/Atmosphere";
 import { Reveal } from "@/components/Reveal";
 import { ServiceCard } from "@/components/ServiceCard";
 import { services } from "@/lib/content";
@@ -13,6 +14,7 @@ export default function ServicesPage() {
   return (
     <main>
       <section className={styles.list}>
+        <Haze />
         <h1 className={styles.title}>Tjänster</h1>
         <div className={styles.listInner}>
           {services.map((s, i) => (

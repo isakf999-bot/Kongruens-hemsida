@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
+import type { CSSProperties } from "react";
 import Link from "next/link";
+import { Compass, GraduationCap, MessageCircleQuestion, Quote } from "lucide-react";
+import { Grain, Haze } from "@/components/Atmosphere";
+import { FocusText } from "@/components/FocusText";
+import { PathBeam } from "@/components/PathBeam";
 import { Reveal } from "@/components/Reveal";
 import styles from "./about.module.css";
 
@@ -22,8 +27,11 @@ export default function AboutPage() {
 
       <section className={styles.bio}>
         <div className={styles.shell}>
-          <Reveal className={styles.bioCopy}>
-            <h1>Min historia</h1>
+          <PathBeam className={styles.bioCopy}>
+          <Reveal>
+            <h1>
+              <FocusText text="Min historia" />
+            </h1>
             <p>
               Jag har varit gift tre gånger och gått igenom två skilsmässor. Nu gift med min kära fru
               sedan 20 år tillbaka. Med henne har jag fyra barn. Tre tonåringar och en tre-åring.
@@ -48,7 +56,12 @@ export default function AboutPage() {
               mycket om livet, mig själv, människor och om livets olika processer.
             </p>
           </Reveal>
-          <Reveal className={styles.portrait} delay={120}>
+          </PathBeam>
+          <Reveal
+            className={`photo ${styles.portrait}`}
+            delay={120}
+            style={{ "--photo": "url(/images/mats-gard.jpg)", "--photo-pos": "40% 46%" } as CSSProperties}
+          >
             <img
               src="/images/mats-gard.jpg"
               alt="Mats Svensson på gården med två hundar."
@@ -60,10 +73,11 @@ export default function AboutPage() {
       </section>
 
       <section className={styles.quoteBand}>
+        <Grain className={styles.quoteGrain} />
         <div className={styles.quoteBandInner}>
           <Reveal className={styles.quoteBlock}>
             <div className={styles.quoteLockup}>
-              <figure className={styles.drawing}>
+              <figure className={`photo photo-on-dark ${styles.drawing}`}>
                 <img
                   src="/images/kierkegaard.jpg"
                   alt="Blyertsporträtt av Søren Kierkegaard."
@@ -72,6 +86,7 @@ export default function AboutPage() {
                 />
               </figure>
               <div className={styles.quote}>
+                <Quote className={styles.quoteMark} aria-hidden="true" strokeWidth={1} />
                 <p>
                   &quot;Om jag vill lyckas med att föra en människa mot ett bestämt mål måste jag först
                   finna henne där hon är och börja just där. Den som inte kan det lurar sig själv när hon
@@ -86,7 +101,9 @@ export default function AboutPage() {
       </section>
 
       <section className={styles.replyBand}>
-        <Reveal className={styles.reply} delay={80}>
+        <Haze />
+        <div className={styles.reply}>
+          <Reveal className={styles.replyLead}>
             <p>
               Jag tycker Kierkegaard uttrycker detta på ett bra sätt. I arbetet med samtal som grund
               vilar mitt förhållningssätt i tron på att individen har svaren inom sig. Experten på dig
@@ -94,25 +111,37 @@ export default function AboutPage() {
               uppfattar som problem för dig.Att spegla dig och dina tankar och göra dem tydliga för
               dig. Att gå nära och leda dig i rätt riktning.
             </p>
-            <p>
+          </Reveal>
+          <Reveal className={styles.replyPoints} delay={120}>
+            <div className={styles.point}>
+              <GraduationCap aria-hidden="true" strokeWidth={1.25} />
+              <p>
               Jag är socionom sedan 1998 med bred erfarenhet av de mest skiftande arbetsuppgifter inom
               området.
-            </p>
-            <p>
+              </p>
+            </div>
+            <div className={styles.point}>
+              <Compass aria-hidden="true" strokeWidth={1.25} />
+              <p>
               Min spetskompetens ligger dock i arbetet med att vägleda och handleda individer och
               grupper då min utbildning och mitt intresse är och har varit inom detta område. Därför
               har jag under tolv av mina verksamma år arbetat som handledare och kurator.
-            </p>
-            <p>
+              </p>
+            </div>
+            <div className={styles.point}>
+              <MessageCircleQuestion aria-hidden="true" strokeWidth={1.25} />
+              <p>
               Med mig som vägledare kommer du alltså inte att få några svar som du inte redan har inom
               dig. Du kommer istället att få rätt frågor som leder till att du upptäcker dina egna
               svar vilket leder dina tankegångar på rätt spår.
-            </p>
+              </p>
+            </div>
             <Link href="/kontakt" className="btn">
               Kontakta mig
             </Link>
           </Reveal>
-        </section>
+        </div>
+      </section>
     </main>
   );
 }
