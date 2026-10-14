@@ -24,8 +24,8 @@ export function HeroMedia() {
           className={styles.plate}
           src="/images/hero-home.jpg"
           alt=""
-          width={1920}
-          height={1200}
+          width={1600}
+          height={1000}
           fetchPriority="high"
           decoding="async"
         />

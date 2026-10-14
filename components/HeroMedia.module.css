@@ -12,29 +12,20 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 50% 86%;
-  animation: heroZoom 22s var(--ease) both;
+  /* Skjut upp bilden så långt det går utan att kulan hamnar under rubriken. */
+  object-position: 50% calc(-1 * clamp(0px, 20.9vw - 14.5rem, max(0px, 62.5vw - 100svh)));
 }
 
-@keyframes heroZoom {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.04);
-  }
-}
-
-@media (max-width: 800px) {
-  .plate {
-    object-position: 50% 62%;
-    animation: none;
-    transform: none;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .plate {
-    animation: none;
-  }
+.media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgb(31 61 74 / 0.86) 0%,
+    rgb(31 61 74 / 0.8) 24%,
+    rgb(31 61 74 / 0) 56%
+  );
+  mix-blend-mode: multiply;
+  pointer-events: none;
 }

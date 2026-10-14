@@ -365,7 +365,6 @@
 
 @media (max-width: 900px) {
   .hero {
-    color: var(--ink);
     padding: calc(var(--header-h) + 0.15rem) 0 30vh;
   }
 

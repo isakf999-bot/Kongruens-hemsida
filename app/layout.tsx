@@ -37,9 +37,9 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/images/hero-home.jpg",
-        width: 1920,
-        height: 1200,
-        alt: "Hand som håller en glaskula vid en brygga i skymningen.",
+        width: 1600,
+        height: 1000,
+        alt: "Hand som håller en glaskula på en brygga vid en sjö omgiven av berg.",
       },
     ],
   },
