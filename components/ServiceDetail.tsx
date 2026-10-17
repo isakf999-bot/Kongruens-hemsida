@@ -47,7 +47,7 @@ export function ServiceDetail({
         <Reveal
           className={`photo ${styles.media}`}
           delay={80}
-          style={{ "--photo": `url(${service.image})` } as CSSProperties}
+          style={{ "--photo": `url(${service.shadow})` } as CSSProperties}
         >
           <img src={service.image} alt={service.alt} width={1200} height={1500} />
         </Reveal>

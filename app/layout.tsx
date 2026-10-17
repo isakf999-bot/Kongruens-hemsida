@@ -1,17 +1,26 @@
 import type { Metadata } from "next";
-import { Fraunces, Schibsted_Grotesk } from "next/font/google";
+import { Schibsted_Grotesk } from "next/font/google";
+import localFont from "next/font/local";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { serviceHref, services } from "@/lib/content";
 import { siteDescription, siteUrl } from "@/lib/site";
 import "./globals.css";
 
-const fraunces = Fraunces({
-  subsets: ["latin", "latin-ext"],
-  style: ["normal", "italic"],
-  axes: ["SOFT", "WONK", "opsz"],
+/*
+ * Fraunces (SIL OFL, see fonts/Fraunces-OFL.txt), cut down for speed: SOFT and
+ * WONK are fixed at the values the site uses, weight is limited to 300-400 and
+ * the glyphs to Latin. Optical size stays variable for the large headings.
+ * About half the bytes of the full Google version.
+ */
+const fraunces = localFont({
+  src: [
+    { path: "./fonts/fraunces-roman.woff2", weight: "300 400", style: "normal" },
+    { path: "./fonts/fraunces-italic.woff2", weight: "300 400", style: "italic" },
+  ],
   display: "swap",
   preload: false,
+  fallback: ["Times New Roman", "serif"],
   variable: "--font-serif-face",
 });
 
@@ -90,7 +99,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             title: s.title,
             meta: s.meta,
             price: s.price,
-            image: s.image,
+            image: s.thumb,
             href: serviceHref(s),
           }))}
         />

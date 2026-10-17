@@ -90,14 +90,17 @@ export default function HomePage() {
               <Reveal
                 className={`photo ${styles.session}`}
                 delay={160}
-                style={{ "--photo": "url(/images/mats-gard.jpg)", "--photo-pos": "40% 46%" } as CSSProperties}
+                style={{ "--photo": "url(/images/mats-gard-shadow.webp)", "--photo-pos": "40% 46%" } as CSSProperties}
               >
                 <img
-                  src="/images/mats-gard.jpg"
+                  src="/images/mats-gard-1024.webp"
+                  srcSet="/images/mats-gard-660.webp 660w, /images/mats-gard-1024.webp 1024w"
+                  sizes="(max-width: 900px) calc(100vw - 2.5rem), 40vw"
                   alt="Mats Svensson på gården med två hundar."
-                  width={800}
-                  height={1000}
+                  width={1024}
+                  height={682}
                   loading="lazy"
+                  decoding="async"
                 />
               </Reveal>
             </div>
@@ -188,14 +191,17 @@ export default function HomePage() {
           <Reveal delay={120}>
             <figure
               className={`photo ${styles.portrait}`}
-              style={{ "--photo": "url(/images/mats-gard.jpg)", "--photo-pos": "40% 46%" } as CSSProperties}
+              style={{ "--photo": "url(/images/mats-gard-shadow.webp)", "--photo-pos": "40% 46%" } as CSSProperties}
             >
               <img
-                src="/images/mats-gard.jpg"
+                src="/images/mats-gard-1024.webp"
+                srcSet="/images/mats-gard-660.webp 660w, /images/mats-gard-1024.webp 1024w"
+                sizes="(max-width: 900px) min(100vw - 2.5rem, 26rem), 45vw"
                 alt="Mats Svensson på gården med två hundar."
-                width={720}
-                height={985}
+                width={1024}
+                height={682}
                 loading="lazy"
+                decoding="async"
               />
             </figure>
           </Reveal>

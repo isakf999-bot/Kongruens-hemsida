@@ -27,7 +27,7 @@ export default function ServicesPage() {
               {services.map((s) => (
                 <li key={s.slug}>
                   <Link href={serviceHref(s)} className={styles.row}>
-                    <img src={s.image} alt={s.alt} width={480} height={360} />
+                    <img src={s.thumb} alt={s.alt} width={320} height={214} decoding="async" />
                     <span className={styles.rowTitle}>{s.title}</span>
                     <span className={styles.rowMeta}>
                       {s.meta ? (

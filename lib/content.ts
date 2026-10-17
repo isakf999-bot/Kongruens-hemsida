@@ -24,6 +24,10 @@ export type Service = {
   meta: string;
   price: string;
   image: string;
+  /** Small version for menu and list thumbnails. */
+  thumb: string;
+  /** Tiny version that only feeds the blurred photo shadow. */
+  shadow: string;
   alt: string;
   href: string;
   /** The service's own campaign page. */
@@ -51,7 +55,9 @@ export const services: Service[] = [
     ],
     meta: "",
     price: "3 900 kr",
-    image: "/images/service-kursmaterial.jpg",
+    image: "/images/service-kursmaterial.webp",
+    thumb: "/images/service-kursmaterial-320.webp",
+    shadow: "/images/service-kursmaterial-shadow.webp",
     alt: "Händer som skriver i en planerare.",
     href: "/booking-calendar/kursmaterial",
     page: "/paradigmskiftet",
@@ -68,7 +74,9 @@ export const services: Service[] = [
     ],
     meta: "50 minuter",
     price: "900 kr",
-    image: "/images/service-vagledning.jpg",
+    image: "/images/service-vagledning.webp",
+    thumb: "/images/service-vagledning-320.webp",
+    shadow: "/images/service-vagledning-shadow.webp",
     alt: "Två personer som skakar hand.",
     href: "/booking-calendar/personlig-vägledning",
     page: "/personlig-vagledning",
@@ -84,7 +92,9 @@ export const services: Service[] = [
     ],
     meta: "",
     price: "4 950 kr",
-    image: "/images/service-grupp.jpg",
+    image: "/images/service-grupp.webp",
+    thumb: "/images/service-grupp-320.webp",
+    shadow: "/images/service-grupp-shadow.webp",
     alt: "Grupp som sitter i en samtalsring.",
     href: "/booking-calendar/kurs-i-grupp",
     page: "/paradigmskiftet",

@@ -18,10 +18,13 @@ export default function AboutPage() {
     <main>
       <section className={styles.hero}>
         <img
-          src="/images/about-hero.jpg"
+          src="/images/about-hero-1920.webp"
+          srcSet="/images/about-hero-960.webp 960w, /images/about-hero-1920.webp 1920w"
+          sizes="100vw"
           alt="Mats Svensson med ett barn utomhus framför en röd ekonomibyggnad."
-          width={1600}
-          height={1067}
+          width={1920}
+          height={1200}
+          fetchPriority="high"
         />
       </section>
 
@@ -60,13 +63,17 @@ export default function AboutPage() {
           <Reveal
             className={`photo ${styles.portrait}`}
             delay={120}
-            style={{ "--photo": "url(/images/mats-gard.jpg)", "--photo-pos": "40% 46%" } as CSSProperties}
+            style={{ "--photo": "url(/images/mats-gard-shadow.webp)", "--photo-pos": "40% 46%" } as CSSProperties}
           >
             <img
-              src="/images/mats-gard.jpg"
+              src="/images/mats-gard-1024.webp"
+              srcSet="/images/mats-gard-660.webp 660w, /images/mats-gard-1024.webp 1024w"
+              sizes="(max-width: 860px) calc(100vw - 2.5rem), 40vw"
               alt="Mats Svensson på gården med två hundar."
-              width={1200}
-              height={800}
+              width={1024}
+              height={682}
+              loading="lazy"
+              decoding="async"
             />
           </Reveal>
         </div>
@@ -79,10 +86,12 @@ export default function AboutPage() {
             <div className={styles.quoteLockup}>
               <figure className={`photo photo-on-dark ${styles.drawing}`}>
                 <img
-                  src="/images/kierkegaard.jpg"
+                  src="/images/kierkegaard-720.webp"
                   alt="Blyertsporträtt av Søren Kierkegaard."
-                  width={640}
-                  height={800}
+                  width={720}
+                  height={661}
+                  loading="lazy"
+                  decoding="async"
                 />
               </figure>
               <div className={styles.quote}>
