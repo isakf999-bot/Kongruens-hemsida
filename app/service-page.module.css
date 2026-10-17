@@ -1,0 +1,127 @@
+/* Shared by the campaign pages for each service. */
+
+.page {
+  background: var(--paper);
+}
+
+.intro,
+.single {
+  position: relative;
+  isolation: isolate;
+}
+
+.intro {
+  padding: calc(var(--header-h-scrolled) + var(--space-8)) 0 var(--space-7);
+}
+
+.introInner {
+  position: relative;
+  z-index: var(--z-raise);
+  width: 100%;
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.pageTitle {
+  font-size: var(--text-hero);
+  font-weight: 300;
+  line-height: 0.95;
+  letter-spacing: -0.045em;
+  font-variation-settings: "SOFT" 50, "WONK" 0.2, "opsz" 144;
+}
+
+/* The two courses as a short index the visitor can jump from. */
+.index {
+  list-style: none;
+  margin: var(--space-7) 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-5);
+}
+
+.index a {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-rows: auto auto;
+  column-gap: var(--space-5);
+  row-gap: var(--space-3);
+  align-items: end;
+  height: 100%;
+  padding: var(--space-5) var(--space-6);
+  border-top: 1px solid var(--hair-strong);
+  background: color-mix(in srgb, var(--surface) 55%, transparent);
+  border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+  color: var(--ink);
+  text-decoration: none;
+  transition:
+    background var(--t-med) var(--ease),
+    border-color var(--t-med) var(--ease);
+}
+
+.index a:hover {
+  color: var(--ink);
+  background: var(--surface);
+  border-color: var(--water);
+}
+
+.indexTitle {
+  grid-column: 1;
+  font-family: var(--font-serif);
+  font-size: clamp(1.35rem, 1.1rem + 0.8vw, 1.8rem);
+  font-weight: 400;
+  line-height: 1.15;
+  font-variation-settings: "SOFT" 50, "WONK" 0.18, "opsz" 48;
+}
+
+.indexPrice {
+  grid-column: 1;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+}
+
+.index svg {
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--water);
+  transition: transform var(--t-med) var(--ease-out);
+}
+
+.index a:hover svg {
+  transform: translateY(3px);
+}
+
+.single > section {
+  padding-top: calc(var(--header-h-scrolled) + var(--space-8));
+}
+
+@media (max-width: 900px) {
+  .intro {
+    padding: calc(var(--header-h-scrolled) + var(--space-6)) 0 var(--space-5);
+  }
+
+  .index {
+    grid-template-columns: 1fr;
+  }
+
+  .single > section {
+    padding-top: calc(var(--header-h-scrolled) + var(--space-6));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .index a,
+  .index svg {
+    transition: none;
+  }
+
+  .index a:hover svg {
+    transform: none;
+  }
+}

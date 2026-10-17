@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ArrowUpRight, Check, Clock } from "lucide-react";
 import { Grain } from "@/components/Atmosphere";
 import GlareHover from "@/components/reactbits/GlareHover";
-import type { Service } from "@/lib/content";
+import { serviceHref, type Service } from "@/lib/content";
 import styles from "./ServiceCard.module.css";
 
 export function ServiceCard({
@@ -88,7 +88,7 @@ export function ServiceCard({
         <div className={styles.actions}>
           {preview ? (
             <Link
-              href={`/services#${service.slug}`}
+              href={serviceHref(service)}
               className={`link-rule ${styles.more}`}
               aria-label={`Läs mer om ${service.title}`}
             >

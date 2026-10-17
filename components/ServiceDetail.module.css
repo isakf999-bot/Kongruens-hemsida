@@ -1,0 +1,194 @@
+.detail {
+  position: relative;
+  scroll-margin-top: var(--header-h-scrolled);
+  padding: var(--space-8) 0;
+}
+
+.detail + .detail {
+  border-top: 1px solid var(--hair);
+}
+
+.top,
+.body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+  column-gap: clamp(2.5rem, 6vw, 7rem);
+  width: 100%;
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.top {
+  align-items: center;
+}
+
+/* Every other service puts its photo on the left, so a long page does not repeat itself. */
+.flip .top {
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr);
+}
+
+.flip .media {
+  order: -1;
+}
+
+.title {
+  font-size: var(--text-3xl);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.035em;
+  font-variation-settings: "SOFT" 50, "WONK" 0.2, "opsz" 144;
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--space-5);
+  margin-top: var(--space-6);
+  padding: 1rem 0;
+  border-top: 1px solid var(--hair-strong);
+  border-bottom: 1px solid var(--hair);
+}
+
+.meta strong {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 1.5rem + 1.4vw, 2.85rem);
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+  font-variation-settings: "SOFT" 35, "WONK" 0.15, "opsz" 72;
+}
+
+.meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+}
+
+.meta svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.lead {
+  max-width: 34ch;
+  margin-top: var(--space-6);
+  font-family: var(--font-serif);
+  font-size: clamp(1.3rem, 1.05rem + 0.8vw, 1.7rem);
+  font-weight: 300;
+  line-height: 1.42;
+  font-variation-settings: "SOFT" 52, "WONK" 0.1, "opsz" 36;
+}
+
+.intro :global(.btn) {
+  margin-top: var(--space-7);
+}
+
+.media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  max-height: 44rem;
+  object-fit: cover;
+}
+
+.body {
+  align-items: start;
+  margin-top: var(--space-8);
+}
+
+.points {
+  padding: var(--space-6);
+  border: 1px solid var(--hair);
+  border-radius: var(--radius-xl);
+  background: color-mix(in srgb, var(--surface) 70%, transparent);
+}
+
+.listLead {
+  margin-bottom: var(--space-4);
+  font-weight: 600;
+}
+
+.points ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.points li {
+  display: grid;
+  grid-template-columns: 1.1rem 1fr;
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+  border-top: 1px solid var(--hair);
+  line-height: 1.5;
+}
+
+.points li svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  margin-top: 0.2em;
+  color: var(--water);
+}
+
+.text {
+  max-width: 62ch;
+  color: var(--ink-soft);
+}
+
+.text p + p {
+  margin-top: 1.35em;
+}
+
+/* Without a list the remaining text runs in two columns under the intro. */
+.textOnly {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.textOnly .text {
+  max-width: none;
+  columns: 2 22rem;
+  column-gap: clamp(2.5rem, 6vw, 7rem);
+}
+
+.textOnly .text p {
+  break-inside: avoid;
+}
+
+@media (max-width: 900px) {
+  .detail {
+    padding: 4.5rem 0;
+  }
+
+  .top,
+  .flip .top,
+  .body {
+    grid-template-columns: 1fr;
+    row-gap: var(--space-7);
+  }
+
+  .flip .media {
+    order: 0;
+  }
+
+  .media img {
+    aspect-ratio: 4 / 3;
+  }
+
+  .body {
+    margin-top: var(--space-7);
+  }
+
+  .points {
+    padding: var(--space-5);
+  }
+
+  .textOnly .text {
+    columns: 1;
+  }
+}

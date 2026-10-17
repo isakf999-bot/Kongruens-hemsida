@@ -18,6 +18,8 @@ ROUTES = {
     "services": "/services",
     "kontakt": "/kontakt",
     "book": "/booking-calendar/personlig-v%C3%A4gledning",
+    "paradigm": "/paradigmskiftet",
+    "pv": "/personlig-vagledning",
 }
 SIZES = {
     "desk": (1440, 900),

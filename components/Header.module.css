@@ -373,3 +373,214 @@
 .header:not(.ink) :focus-visible {
   outline-color: var(--foam);
 }
+
+/* ---------- Tjänster: dropdown with the three services ---------- */
+
+.drop {
+  position: relative;
+}
+
+.trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  border: 0;
+  background: none;
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+}
+
+.trigger svg {
+  width: 1rem;
+  height: 1rem;
+  transition: transform var(--t-med) var(--ease-out);
+}
+
+.trigger[aria-expanded="true"] svg {
+  transform: rotate(180deg);
+}
+
+/* The panel hangs below the word, with an invisible bridge so hover survives the gap. */
+.dropPanel {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  z-index: var(--z-overlay);
+  width: 25rem;
+  padding-top: 0.85rem;
+  color: var(--ink);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translate(-50%, 0.4rem);
+  transition:
+    opacity var(--t-fast) var(--ease),
+    transform var(--t-med) var(--ease-out),
+    visibility 0s linear var(--t-fast);
+}
+
+.dropOpen {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+  transition:
+    opacity var(--t-fast) var(--ease),
+    transform var(--t-med) var(--ease-out),
+    visibility 0s;
+}
+
+.dropPanel ul {
+  list-style: none;
+  margin: 0;
+  padding: 0.45rem;
+  background: var(--surface);
+  border-radius: var(--radius-xl);
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--water-deep) 8%, transparent),
+    var(--shadow-lg);
+}
+
+.dropItem {
+  display: grid;
+  grid-template-columns: 4.25rem minmax(0, 1fr);
+  gap: 0.95rem;
+  align-items: center;
+  padding: 0.55rem;
+  border-radius: var(--radius-lg);
+  color: var(--ink);
+  text-decoration: none;
+  transition: background var(--t-fast) var(--ease);
+}
+
+.dropItem:hover,
+.dropItem:focus-visible {
+  color: var(--ink);
+  background: color-mix(in srgb, var(--paper) 70%, var(--surface));
+}
+
+.dropItem img {
+  width: 4.25rem;
+  height: 3.2rem;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
+.dropText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.dropTitle {
+  font-family: var(--font-serif);
+  font-size: 1.08rem;
+  line-height: 1.2;
+  font-variation-settings: "SOFT" 50, "WONK" 0.18, "opsz" 28;
+}
+
+.dropMeta {
+  font-size: var(--text-xs);
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+}
+
+.dropItem:focus-visible {
+  outline: 2px solid var(--water);
+  outline-offset: 0;
+}
+
+/* ---------- Tjänster in the mobile sheet: folds out below its row ---------- */
+
+.panelTrigger {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid var(--hair);
+  background: none;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.panelTrigger svg {
+  transition: transform var(--t-med) var(--ease-out);
+}
+
+.panelTrigger[aria-expanded="true"] svg {
+  transform: rotate(180deg);
+}
+
+.panelSub {
+  display: grid;
+  grid-template-rows: 0fr;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  visibility: hidden;
+  transition:
+    grid-template-rows var(--t-med) var(--ease-out),
+    visibility 0s linear var(--t-med);
+}
+
+.panelSubOpen {
+  grid-template-rows: 1fr;
+  visibility: visible;
+  transition:
+    grid-template-rows var(--t-med) var(--ease-out),
+    visibility 0s;
+}
+
+.panelSub > li {
+  min-height: 0;
+  overflow: hidden;
+}
+
+.panelSub a {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.85rem 0 0.85rem 1rem;
+  border-bottom: 1px solid var(--hair);
+  border-left: 2px solid var(--paper-2);
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  line-height: 1.2;
+  text-decoration: none;
+  color: var(--nav-ink);
+}
+
+.panelSub a:hover {
+  border-left-color: var(--water);
+  color: var(--nav-ink);
+}
+
+.panelSub .dropMeta {
+  font-family: var(--font-sans);
+}
+
+@media (min-width: 861px) {
+  .panelTrigger,
+  .panelSub {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .trigger svg,
+  .dropPanel,
+  .dropOpen,
+  .panelTrigger svg,
+  .panelSub,
+  .panelSubOpen {
+    transition: none;
+  }
+
+  .dropPanel,
+  .dropOpen {
+    transform: translate(-50%, 0);
+  }
+}

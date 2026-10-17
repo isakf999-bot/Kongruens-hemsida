@@ -26,6 +26,8 @@ export type Service = {
   image: string;
   alt: string;
   href: string;
+  /** The service's own campaign page. */
+  page: string;
 };
 
 export const services: Service[] = [
@@ -52,6 +54,7 @@ export const services: Service[] = [
     image: "/images/service-kursmaterial.jpg",
     alt: "Händer som skriver i en planerare.",
     href: "/booking-calendar/kursmaterial",
+    page: "/paradigmskiftet",
   },
   {
     slug: "personlig-vagledning",
@@ -68,6 +71,7 @@ export const services: Service[] = [
     image: "/images/service-vagledning.jpg",
     alt: "Två personer som skakar hand.",
     href: "/booking-calendar/personlig-vägledning",
+    page: "/personlig-vagledning",
   },
   {
     slug: "kurs-i-grupp",
@@ -83,8 +87,15 @@ export const services: Service[] = [
     image: "/images/service-grupp.jpg",
     alt: "Grupp som sitter i en samtalsring.",
     href: "/booking-calendar/kurs-i-grupp",
+    page: "/paradigmskiftet",
   },
 ];
+
+/** Where a service is presented: its own page, with an anchor when that page holds several. */
+export function serviceHref(service: Service) {
+  const shared = services.filter((s) => s.page === service.page).length > 1;
+  return shared ? `${service.page}#${service.slug}` : service.page;
+}
 
 export const socials = [
   { name: "Facebook", href: "http://www.facebook.com/wix", icon: "/icons/facebook.png" },

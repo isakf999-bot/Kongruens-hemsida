@@ -5,4 +5,6 @@ Mats Svensson är personlig vägledare. Sidan beskriver samtal om livet, relatio
 - Startsida: https://kongruens-hemsida.vercel.app/
 - Om: https://kongruens-hemsida.vercel.app/about-5
 - Tjänster: https://kongruens-hemsida.vercel.app/services
+- Paradigmskiftet (kurs, enskilt och i grupp): https://kongruens-hemsida.vercel.app/paradigmskiftet
+- Personlig vägledning: https://kongruens-hemsida.vercel.app/personlig-vagledning
 - Kontakt: https://kongruens-hemsida.vercel.app/kontakt

@@ -2,7 +2,14 @@ import type { MetadataRoute } from "next";
 import { siteUrl } from "@/lib/site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const paths = ["", "/about-5", "/services", "/kontakt"];
+  const paths = [
+    "",
+    "/about-5",
+    "/services",
+    "/paradigmskiftet",
+    "/personlig-vagledning",
+    "/kontakt",
+  ];
   return paths.map((path) => ({
     url: `${siteUrl}${path || "/"}`,
     changeFrequency: "monthly",

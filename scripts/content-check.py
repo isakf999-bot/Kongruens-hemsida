@@ -36,6 +36,8 @@ ROUTES = [
     "/",
     "/about-5",
     "/services",
+    "/paradigmskiftet",
+    "/personlig-vagledning",
     "/kontakt",
     "/kontakt?amne=Personlig%20v%C3%A4gledning",
     "/booking-calendar/kursmaterial",

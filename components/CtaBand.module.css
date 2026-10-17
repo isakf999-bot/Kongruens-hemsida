@@ -1,0 +1,51 @@
+.band {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--water);
+  color: var(--foam);
+}
+
+.grain {
+  z-index: -1;
+  opacity: 0.45;
+  mix-blend-mode: overlay;
+}
+
+.inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-6);
+  width: 100%;
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: var(--space-8) var(--gutter);
+}
+
+.inner p {
+  max-width: 22ch;
+  font-family: var(--font-serif);
+  font-size: var(--text-2xl);
+  font-weight: 300;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
+  font-variation-settings: "SOFT" 50, "WONK" 0.2, "opsz" 96;
+}
+
+.band :focus-visible {
+  outline-color: var(--foam);
+}
+
+@media (max-width: 700px) {
+  .inner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-block: var(--space-7);
+  }
+
+  .inner :global(.btn) {
+    white-space: normal;
+  }
+}
