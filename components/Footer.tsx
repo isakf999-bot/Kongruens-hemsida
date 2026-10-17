@@ -1,22 +1,22 @@
 import Link from "next/link";
 import { Phone } from "lucide-react";
-import {
-  IconFacebook,
-  IconInstagram,
-  IconLinkedin,
-  IconTwitter,
-  IconYoutube,
-} from "@/components/icons";
+import { IconFacebook } from "@/components/icons";
 import { BrandLogo } from "@/components/BrandLogo";
 import { aboutSocials, socials } from "@/lib/content";
 import styles from "./Footer.module.css";
 
+// Skool's mark is its "sk" lettering; drawn in one colour here so it sits with the other icons.
+function IconSkool() {
+  return (
+    <span aria-hidden="true" className={styles.skool}>
+      sk
+    </span>
+  );
+}
+
 const iconMap = {
   Facebook: IconFacebook,
-  Twitter: IconTwitter,
-  Instagram: IconInstagram,
-  YouTube: IconYoutube,
-  LinkedIn: IconLinkedin,
+  Skool: IconSkool,
 };
 
 export function Footer() {
@@ -55,6 +55,7 @@ export function Footer() {
                   key={s.name}
                   href={s.href}
                   aria-label={s.name}
+                  title={s.name}
                   target="_blank"
                   rel="noreferrer"
                 >

@@ -225,3 +225,13 @@
 .footer :focus-visible {
   outline-color: var(--foam);
 }
+
+.skool {
+  font-family: var(--font-sans);
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.05em;
+  /* optical centring: lowercase letters sit low in the circle */
+  transform: translateY(-1px);
+}

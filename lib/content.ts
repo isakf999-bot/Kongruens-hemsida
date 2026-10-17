@@ -98,15 +98,8 @@ export function serviceHref(service: Service) {
 }
 
 export const socials = [
-  { name: "Facebook", href: "http://www.facebook.com/wix", icon: "/icons/facebook.png" },
-  { name: "Twitter", href: "http://www.twitter.com/wix", icon: "/icons/twitter.png" },
-  { name: "Instagram", href: "https://instagram.com/wix/", icon: "/icons/instagram.png" },
-  { name: "YouTube", href: "https://www.youtube.com/user/Wix", icon: "/icons/youtube.png" },
+  { name: "Facebook", href: "https://www.facebook.com/groups/497076378788324" },
+  { name: "Skool", href: "https://www.skool.com/paradigmskiftet-5939/about" },
 ];
 
-export const aboutSocials = [
-  { name: "Facebook", href: "http://www.facebook.com/wix", icon: "/icons/facebook.png" },
-  { name: "Twitter", href: "http://www.twitter.com/wix", icon: "/icons/twitter.png" },
-  { name: "LinkedIn", href: "https://www.linkedin.com/", icon: "/icons/linkedin.png" },
-  { name: "Instagram", href: "https://instagram.com/wix/", icon: "/icons/instagram.png" },
-];
+export const aboutSocials = socials;
