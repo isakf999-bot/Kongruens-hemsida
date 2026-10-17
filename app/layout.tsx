@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Fraunces, Schibsted_Grotesk } from "next/font/google";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { serviceHref, services } from "@/lib/content";
 import { siteDescription, siteUrl } from "@/lib/site";
 import "./globals.css";
 
@@ -83,7 +84,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <style>{".reveal{opacity:1;transform:none;filter:none}"}</style>
         </noscript>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-        <Header />
+        <Header
+          services={services.map((s) => ({
+            slug: s.slug,
+            title: s.title,
+            meta: s.meta,
+            price: s.price,
+            image: s.image,
+            href: serviceHref(s),
+          }))}
+        />
         <div id="innehall">{children}</div>
         <Footer />
       </body>

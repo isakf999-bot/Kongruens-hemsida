@@ -5,12 +5,21 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { ArrowUpRight, ChevronDown } from "lucide-react";
 import { BrandLogo } from "@/components/BrandLogo";
-import { serviceHref, services } from "@/lib/content";
+
+/** What the menu shows for each service; passed in so the full texts stay off the client. */
+export type MenuService = {
+  slug: string;
+  title: string;
+  meta: string;
+  price: string;
+  image: string;
+  href: string;
+};
 import styles from "./Header.module.css";
 
 const servicePaths = ["/services", "/paradigmskiftet", "/personlig-vagledning"];
 
-export function Header() {
+export function Header({ services }: { services: MenuService[] }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [menuServices, setMenuServices] = useState(false);
@@ -132,7 +141,7 @@ export function Header() {
               <ul>
                 {services.map((s) => (
                   <li key={s.slug}>
-                    <Link href={serviceHref(s)} className={styles.dropItem} onClick={closeAll}>
+                    <Link href={s.href} className={styles.dropItem} onClick={closeAll}>
                       <img src={s.image} alt="" width={96} height={72} loading="lazy" />
                       <span className={styles.dropText}>
                         <span className={styles.dropTitle}>{s.title}</span>
@@ -192,7 +201,7 @@ export function Header() {
         >
           {services.map((s) => (
             <li key={s.slug}>
-              <Link href={serviceHref(s)} onClick={closeAll} tabIndex={menuServices ? 0 : -1}>
+              <Link href={s.href} onClick={closeAll} tabIndex={menuServices ? 0 : -1}>
                 <span>{s.title}</span>
                 <span className={styles.dropMeta}>
                   {s.meta ? `${s.meta} · ` : ""}

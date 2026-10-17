@@ -391,10 +391,30 @@ textarea {
   display: inline-block;
 }
 
-.reveal.is-in .focus .w,
-.focus-now .w {
+.reveal.is-in .focus .w {
   animation: focus-in 0.95s var(--ease-out) both;
   animation-delay: calc(var(--focus-delay, 0ms) + var(--i) * var(--focus-step, 75ms));
+}
+
+/*
+ * Page headings shown on load are the largest thing on screen, so they must be
+ * on screen from the first frame: the words are there at once, out of focus,
+ * and sharpen in turn. Fading them in from nothing would hold back LCP.
+ */
+.focus-now .w {
+  animation: focus-sharpen 0.9s var(--ease-out) both;
+  animation-delay: calc(var(--focus-delay, 0ms) * 0.5 + var(--i) * var(--focus-step, 75ms) * 0.6);
+}
+
+@keyframes focus-sharpen {
+  0% {
+    filter: blur(6px);
+    transform: translateY(0.2em);
+  }
+  100% {
+    filter: blur(0);
+    transform: none;
+  }
 }
 
 @keyframes focus-in {
