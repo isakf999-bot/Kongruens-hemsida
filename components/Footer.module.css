@@ -100,10 +100,6 @@
   background-size: 100% 1px;
 }
 
-.col a.email {
-  color: var(--foam);
-}
-
 .col .hint {
   margin-top: var(--space-3);
   font-size: 0.875rem;

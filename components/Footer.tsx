@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, Phone } from "lucide-react";
+import { Phone } from "lucide-react";
 import {
   IconFacebook,
   IconInstagram,
@@ -40,12 +40,6 @@ export function Footer() {
             <a href="tel:+46705536050" className={styles.contact}>
               <Phone aria-hidden="true" strokeWidth={1.5} />
               Tel: 0705-536050
-            </a>
-          </p>
-          <p>
-            <a href="mailto:info@kongruens.se" className={`${styles.contact} ${styles.email}`}>
-              <Mail aria-hidden="true" strokeWidth={1.5} />
-              info@kongruens.se
             </a>
           </p>
           <p className={styles.hint}>Det första samtalet är kostnadsfritt.</p>
