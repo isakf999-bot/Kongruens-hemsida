@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Schibsted_Grotesk } from "next/font/google";
 import localFont from "next/font/local";
+import Script from "next/script";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { serviceHref, services } from "@/lib/content";
@@ -61,6 +62,9 @@ export const metadata: Metadata = {
   },
 };
 
+// Google Tag Manager container for www.kongruens.se, set up by Svensk Media Partner (Google Ads).
+const GTM_ID = "GTM-W5PFKXTN";
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
@@ -86,6 +90,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="sv">
       <body className={`${grotesk.className} ${fraunces.variable} ${grotesk.variable}`}>
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+            title="Google Tag Manager"
+          />
+        </noscript>
         <a className="skip" href="#innehall">
           Hoppa till innehåll
         </a>
@@ -105,6 +118,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
         <div id="innehall">{children}</div>
         <Footer />
+        {/* The container snippet as supplied; loaded after the page is interactive so it does not hold up the first paint. */}
+        <Script id="gtm" strategy="afterInteractive">
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','${GTM_ID}');`}
+        </Script>
       </body>
     </html>
   );
