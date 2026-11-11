@@ -32,6 +32,8 @@ export type Service = {
   href: string;
   /** The service's own campaign page. */
   page: string;
+  /** Extra heading and paragraph under the button on the service page, for Google Ads relevance. */
+  extra?: { heading: string; text: string };
 };
 
 export const services: Service[] = [
@@ -80,6 +82,10 @@ export const services: Service[] = [
     alt: "Två personer som skakar hand.",
     href: "/booking-calendar/personlig-vägledning",
     page: "/personlig-vagledning",
+    extra: {
+      heading: "Livscoach online – samtal för personlig utveckling",
+      text: "För dig som söker en livscoach kan personlig vägledning vara ett alternativ. Här får du möjlighet att samtala om livsval, relationer och personlig utveckling för att hitta nya perspektiv och en tydligare riktning.",
+    },
   },
   {
     slug: "kurs-i-grupp",

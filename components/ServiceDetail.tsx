@@ -42,6 +42,12 @@ export function ServiceDetail({
             <Link href={`/kontakt?amne=${encodeURIComponent(service.title)}`} className="btn">
               Kontakta mig
             </Link>
+            {service.extra ? (
+              <div className={styles.extra}>
+                <h2>{service.extra.heading}</h2>
+                <p>{service.extra.text}</p>
+              </div>
+            ) : null}
           </Reveal>
         </div>
         <Reveal

@@ -88,6 +88,25 @@
   margin-top: var(--space-7);
 }
 
+.extra {
+  max-width: 44ch;
+  margin-top: var(--space-7);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--hair);
+}
+
+.extra h2 {
+  font-size: var(--text-xl);
+  font-weight: 400;
+  line-height: 1.15;
+  font-variation-settings: "SOFT" 50, "WONK" 0.18, "opsz" 48;
+}
+
+.extra p {
+  margin-top: var(--space-4);
+  color: var(--ink);
+}
+
 .media img {
   display: block;
   width: 100%;
