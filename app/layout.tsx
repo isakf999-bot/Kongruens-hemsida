@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Schibsted_Grotesk } from "next/font/google";
 import localFont from "next/font/local";
 import Script from "next/script";
 import { Header } from "@/components/Header";
@@ -25,10 +24,14 @@ const fraunces = localFont({
   variable: "--font-serif-face",
 });
 
-const grotesk = Schibsted_Grotesk({
-  subsets: ["latin", "latin-ext"],
-  weight: ["400", "500", "600"],
+/*
+ * Schibsted Grotesk (SIL OFL, see fonts/SchibstedGrotesk-OFL.txt), self-hosted so the
+ * build never depends on reaching Google Fonts: weight 400-600, Latin + Latin Extended.
+ */
+const grotesk = localFont({
+  src: [{ path: "./fonts/schibsted-grotesk.woff2", weight: "400 600", style: "normal" }],
   display: "swap",
+  fallback: ["system-ui", "sans-serif"],
   variable: "--font-sans-face",
 });
 
