@@ -83,7 +83,7 @@ const jsonLd = {
       url: siteUrl,
       image: `${siteUrl}/images/logo.png`,
       telephone: "+46705536050",
-      email: "info@kongruens.se",
+      email: "mats@kongruens.se",
       description: siteDescription,
     },
   ],

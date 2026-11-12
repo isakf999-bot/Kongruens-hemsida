@@ -29,9 +29,9 @@ export default function ContactPage() {
               </a>
             </p>
             <p>
-              <a href="mailto:info@kongruens.se">
+              <a href="mailto:mats@kongruens.se">
                 <Mail aria-hidden="true" strokeWidth={1.5} />
-                info@kongruens.se
+                mats@kongruens.se
               </a>
             </p>
           </div>

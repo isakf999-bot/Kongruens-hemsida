@@ -140,7 +140,7 @@ export function ContactForm() {
             <>
               Meddelandet kunde inte skickas. Försök igen, eller ring{" "}
               <a href="tel:+46705536050">0705-536050</a> eller mejla{" "}
-              <a href="mailto:info@kongruens.se">info@kongruens.se</a>.
+              <a href="mailto:mats@kongruens.se">mats@kongruens.se</a>.
             </>
           ) : null}
         </p>
