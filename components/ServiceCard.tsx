@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ArrowUpRight, Check, Clock } from "lucide-react";
 import { Grain } from "@/components/Atmosphere";
 import GlareHover from "@/components/reactbits/GlareHover";
-import { serviceHref, type Service } from "@/lib/content";
+import { bookHref, serviceHref, type Service } from "@/lib/content";
 import styles from "./ServiceCard.module.css";
 
 export function ServiceCard({
@@ -98,10 +98,10 @@ export function ServiceCard({
             </Link>
           ) : null}
           <Link
-            href={`/kontakt?amne=${encodeURIComponent(service.title)}`}
+            href={bookHref(service)}
             className={`btn ${featured ? "btn-on-dark" : ""} ${styles.cta}`}
           >
-            Kontakta mig
+            Boka tid
           </Link>
         </div>
       </div>

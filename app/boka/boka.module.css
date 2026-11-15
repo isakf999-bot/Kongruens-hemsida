@@ -1,0 +1,105 @@
+.page {
+  position: relative;
+  isolation: isolate;
+  min-height: 100svh;
+  background: var(--paper);
+  padding: calc(var(--header-h-scrolled) + var(--space-8)) 0 var(--space-8);
+}
+
+.inner {
+  position: relative;
+  z-index: var(--z-raise);
+  width: 100%;
+  max-width: 82rem;
+  margin: 0 auto;
+  padding: 0 var(--gutter);
+}
+
+.title {
+  font-size: var(--text-hero);
+  font-weight: 300;
+  line-height: 0.95;
+  letter-spacing: -0.045em;
+  font-variation-settings: "SOFT" 50, "WONK" 0.2, "opsz" 144;
+}
+
+/* The services as a row of tabs; the chosen one is filled. */
+.choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: var(--space-6) 0 var(--space-5);
+}
+
+.choices a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.6rem;
+  padding: 0.45rem 1.1rem;
+  border: 1px solid var(--hair-strong);
+  border-radius: var(--radius-pill);
+  background: color-mix(in srgb, var(--surface) 55%, transparent);
+  color: var(--ink);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  text-decoration: none;
+  transition:
+    background var(--t-fast) var(--ease),
+    border-color var(--t-fast) var(--ease),
+    color var(--t-fast) var(--ease);
+}
+
+.choices a:hover {
+  color: var(--ink);
+  background: var(--surface);
+  border-color: var(--water);
+}
+
+.choices a.current {
+  background: var(--water);
+  border-color: var(--water);
+  color: var(--foam);
+}
+
+/* Kaddio's page in a framed panel, tall enough for its calendar without inner scrolling. */
+.frame {
+  overflow: hidden;
+  background: #fafafa;
+  border-radius: var(--radius-xl);
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--water-deep) 8%, transparent),
+    var(--shadow-lg);
+}
+
+.frame iframe {
+  display: block;
+  width: 100%;
+  height: 900px;
+  border: 0;
+}
+
+.fallback {
+  margin-top: var(--space-4);
+  font-size: var(--text-sm);
+  color: var(--ink-soft);
+}
+
+.fallback a {
+  color: var(--water);
+}
+
+@media (max-width: 860px) {
+  .page {
+    padding: calc(var(--header-h-scrolled) + var(--space-6)) 0 var(--space-7);
+  }
+
+  .frame iframe {
+    height: 1250px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .choices a {
+    transition: none;
+  }
+}

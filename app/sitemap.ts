@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/services",
     "/paradigmskiftet",
     "/personlig-vagledning",
+    "/boka",
     "/kontakt",
   ];
   return paths.map((path) => ({

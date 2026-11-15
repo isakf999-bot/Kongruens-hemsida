@@ -37,7 +37,8 @@ export function Header({ services }: { services: MenuService[] }) {
     scrolled ||
     pathname.startsWith("/about") ||
     onServices ||
-    pathname.startsWith("/kontakt");
+    pathname.startsWith("/kontakt") ||
+    pathname.startsWith("/boka");
   const ink = open || solid || !darkHero;
 
   const closeAll = () => {
@@ -158,9 +159,14 @@ export function Header({ services }: { services: MenuService[] }) {
           </div>
         </nav>
 
-        <Link href="/kontakt" className={`btn btn-nav ${styles.cta}`} onClick={closeAll}>
-          Kontakta mig
-        </Link>
+        <div className={styles.ctas}>
+          <Link href="/kontakt" className={`btn ${styles.ctaSecondary}`} onClick={closeAll}>
+            Kontakta mig
+          </Link>
+          <Link href="/boka" className={`btn btn-nav ${styles.cta}`} onClick={closeAll}>
+            Boka tid
+          </Link>
+        </div>
 
         <button
           className={styles.burger}
@@ -195,23 +201,28 @@ export function Header({ services }: { services: MenuService[] }) {
           Tjänster
           <ChevronDown aria-hidden="true" strokeWidth={1.25} />
         </button>
-        <ul
+        <div
           id="mobil-tjanster"
           className={`${styles.panelSub} ${menuServices ? styles.panelSubOpen : ""}`}
         >
-          {services.map((s) => (
-            <li key={s.slug}>
-              <Link href={s.href} onClick={closeAll} tabIndex={menuServices ? 0 : -1}>
-                <span>{s.title}</span>
-                <span className={styles.dropMeta}>
-                  {s.meta ? `${s.meta} · ` : ""}
-                  {s.price}
-                </span>
-              </Link>
-            </li>
-          ))}
-        </ul>
-        <Link href="/kontakt" className="btn btn-nav" onClick={closeAll}>
+          <ul>
+            {services.map((s) => (
+              <li key={s.slug}>
+                <Link href={s.href} onClick={closeAll} tabIndex={menuServices ? 0 : -1}>
+                  <span>{s.title}</span>
+                  <span className={styles.dropMeta}>
+                    {s.meta ? `${s.meta} · ` : ""}
+                    {s.price}
+                  </span>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <Link href="/boka" className="btn btn-nav" onClick={closeAll}>
+          Boka tid
+        </Link>
+        <Link href="/kontakt" className={`btn ${styles.panelSecondary}`} onClick={closeAll}>
           Kontakta mig
         </Link>
       </div>

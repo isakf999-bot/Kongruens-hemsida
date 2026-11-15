@@ -32,6 +32,8 @@ export type Service = {
   href: string;
   /** The service's own campaign page. */
   page: string;
+  /** This service's page in the Kaddio booking, where the visitor picks a time. */
+  booking: string;
   /** Extra heading and paragraph under the button on the service page, for Google Ads relevance. */
   extra?: { heading: string; text: string };
 };
@@ -63,6 +65,7 @@ export const services: Service[] = [
     alt: "Händer som skriver i en planerare.",
     href: "/booking-calendar/kursmaterial",
     page: "/paradigmskiftet",
+    booking: "https://kongruensse.kaddio.com/booking/cal/paradigmskiftet-en-resa-till-dig-sjalv?step=pickTime",
   },
   {
     slug: "personlig-vagledning",
@@ -82,6 +85,7 @@ export const services: Service[] = [
     alt: "Två personer som skakar hand.",
     href: "/booking-calendar/personlig-vägledning",
     page: "/personlig-vagledning",
+    booking: "https://kongruensse.kaddio.com/booking/cal/personlig-vagledning?step=pickTime",
     extra: {
       heading: "Livscoach online – samtal för personlig utveckling",
       text: "För dig som söker en livscoach kan personlig vägledning vara ett alternativ. Här får du möjlighet att samtala om livsval, relationer och personlig utveckling för att hitta nya perspektiv och en tydligare riktning.",
@@ -104,6 +108,7 @@ export const services: Service[] = [
     alt: "Grupp som sitter i en samtalsring.",
     href: "/booking-calendar/kurs-i-grupp",
     page: "/paradigmskiftet",
+    booking: "https://kongruensse.kaddio.com/booking/cal/paradigmskiftet-i-grupp?step=pickTime",
   },
 ];
 
@@ -111,6 +116,14 @@ export const services: Service[] = [
 export function serviceHref(service: Service) {
   const shared = services.filter((s) => s.page === service.page).length > 1;
   return shared ? `${service.page}#${service.slug}` : service.page;
+}
+
+/** Kaddio's booking with every service, for "Boka tid" without a chosen service. */
+export const bookingUrl = "https://kongruensse.kaddio.com/booking";
+
+/** Link to the booking page on this site, opened at one service when given. */
+export function bookHref(service?: Service) {
+  return service ? `/boka?tjanst=${service.slug}` : "/boka";
 }
 
 export const socials = [

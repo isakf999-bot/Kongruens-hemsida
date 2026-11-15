@@ -125,9 +125,35 @@
   color: var(--nav-ink);
 }
 
-/* The one call to action in the bar: a step lighter than the other dark buttons. */
-.inner :global(.btn).cta {
+.ctas {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
   justify-self: end;
+}
+
+/* Kontakta mig: an outlined button beside the filled Boka tid, so booking stays the first choice. */
+.inner :global(.btn).ctaSecondary {
+  min-height: 3rem;
+  padding: 0.7rem 1.5rem;
+  font-size: 0.9375rem;
+  background: transparent;
+  color: inherit;
+  box-shadow: inset 0 0 0 1.5px currentColor;
+}
+
+.inner :global(.btn).ctaSecondary::after {
+  display: none;
+}
+
+.inner :global(.btn).ctaSecondary:hover {
+  color: inherit;
+  background: color-mix(in srgb, currentColor 10%, transparent);
+  box-shadow: inset 0 0 0 1.5px currentColor;
+}
+
+/* The main call to action in the bar: a step lighter than the other dark buttons. */
+.inner :global(.btn).cta {
   min-height: 3rem;
   padding: 0.7rem 1.65rem;
   font-size: 0.9375rem;
@@ -233,7 +259,7 @@
   }
 
   .nav,
-  .inner .cta {
+  .ctas {
     display: none;
   }
 
@@ -345,6 +371,17 @@
     margin-top: var(--space-6);
     opacity: 0;
     transition: opacity var(--t-med) var(--ease) 260ms;
+  }
+
+  .panel :global(.btn).panelSecondary {
+    margin-top: var(--space-3);
+    background: transparent;
+    color: var(--nav-ink);
+    box-shadow: inset 0 0 0 1.5px currentColor;
+  }
+
+  .panel :global(.btn).panelSecondary::after {
+    display: none;
   }
 
   .panelOpen :global(.btn) {
@@ -534,9 +571,13 @@
     visibility 0s;
 }
 
-.panelSub > li {
+/* One grid row holding the whole list, so the closed list takes no space. */
+.panelSub > ul {
   min-height: 0;
   overflow: hidden;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .panelSub a {
