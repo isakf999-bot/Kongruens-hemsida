@@ -94,6 +94,17 @@
   color: var(--ink-soft);
 }
 
+.free p + p {
+  margin-top: 0.3rem;
+}
+
+.free a {
+  color: var(--water);
+  font-weight: 500;
+  text-underline-offset: 0.2em;
+  overflow-wrap: anywhere;
+}
+
 .free strong {
   color: var(--ink);
   font-weight: 600;

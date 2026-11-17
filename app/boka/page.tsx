@@ -55,15 +55,20 @@ export default async function BookingPage({
                 {chosen.meta}
               </span>
             ) : null}
-            <span>{chosen.price}</span>
           </p>
         ) : null}
 
         {src ? (
           <>
-            <p className={styles.free}>
-              <strong>Det första samtalet är kostnadsfritt.</strong>
-            </p>
+            <div className={styles.free}>
+              <p>
+                <strong>Det första samtalet är kostnadsfritt.</strong>
+              </p>
+              <p>
+                Behöver du en kvällstid kan du maila mig på{" "}
+                <a href="mailto:mats@kongruens.se">mats@kongruens.se</a>
+              </p>
+            </div>
             <div className={styles.frame}>
               <iframe key={src} src={bookingEmbed(src)} title={`Boka tid: ${chosen?.title}`} loading="eager" allow="payment" />
             </div>
