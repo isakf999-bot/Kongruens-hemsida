@@ -49,6 +49,7 @@ export default async function BookingPage({
         ) : chosen ? (
           <p className={styles.service}>
             <strong>{chosen.title}</strong>
+            <span>{chosen.price}</span>
             {chosen.meta ? (
               <span>
                 <Clock aria-hidden="true" strokeWidth={1.5} />
