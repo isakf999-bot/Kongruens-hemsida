@@ -3,7 +3,7 @@ import type { CSSProperties } from "react";
 import { Check, Clock } from "lucide-react";
 import { FocusText } from "@/components/FocusText";
 import { Reveal } from "@/components/Reveal";
-import { bookHref, type Service } from "@/lib/content";
+import { serviceAction, type Service } from "@/lib/content";
 import styles from "./ServiceDetail.module.css";
 
 /** One service presented in full, for its own campaign page. */
@@ -39,8 +39,8 @@ export function ServiceDetail({
               ) : null}
             </div>
             {lead ? <p className={styles.lead}>{lead}</p> : null}
-            <Link href={bookHref(service)} className="btn">
-              Boka tid
+            <Link href={serviceAction(service).href} className="btn">
+              {serviceAction(service).label}
             </Link>
             {service.extra ? (
               <div className={styles.extra}>

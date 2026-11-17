@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Clock } from "lucide-react";
 import { FocusText } from "@/components/FocusText";
-import { bookHref, services } from "@/lib/content";
+import { serviceAction, services } from "@/lib/content";
 import styles from "./book.module.css";
 
 export async function generateMetadata({
@@ -48,8 +48,8 @@ export default async function BookingPage({
           </p>
         ) : null}
         <p className={styles.price}>{service.price}</p>
-        <Link className="btn" href={bookHref(service)}>
-          Boka tid
+        <Link className="btn" href={serviceAction(service).href}>
+          {serviceAction(service).label}
         </Link>
       </article>
     </main>

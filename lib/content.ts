@@ -32,8 +32,12 @@ export type Service = {
   href: string;
   /** The service's own campaign page. */
   page: string;
-  /** This service's page in the Kaddio booking, where the visitor picks a time. */
-  booking: string;
+  /**
+   * This service's page in the Kaddio booking, where the visitor picks a time.
+   * Only for services Mats takes bookings for online; the rest are reached
+   * through the contact form.
+   */
+  booking?: string;
   /** Extra heading and paragraph under the button on the service page, for Google Ads relevance. */
   extra?: { heading: string; text: string };
 };
@@ -65,7 +69,6 @@ export const services: Service[] = [
     alt: "Händer som skriver i en planerare.",
     href: "/booking-calendar/kursmaterial",
     page: "/paradigmskiftet",
-    booking: "https://kongruensse.kaddio.com/booking/cal/paradigmskiftet-en-resa-till-dig-sjalv?step=pickTime",
   },
   {
     slug: "personlig-vagledning",
@@ -108,7 +111,6 @@ export const services: Service[] = [
     alt: "Grupp som sitter i en samtalsring.",
     href: "/booking-calendar/kurs-i-grupp",
     page: "/paradigmskiftet",
-    booking: "https://kongruensse.kaddio.com/booking/cal/paradigmskiftet-i-grupp?step=pickTime",
   },
 ];
 
@@ -118,12 +120,19 @@ export function serviceHref(service: Service) {
   return shared ? `${service.page}#${service.slug}` : service.page;
 }
 
-/** Kaddio's booking with every service, for "Boka tid" without a chosen service. */
-export const bookingUrl = "https://kongruensse.kaddio.com/booking";
+/** The services that can be booked online, in the order they are listed. */
+export const bookableServices = services.filter((s) => s.booking);
 
 /** Link to the booking page on this site, opened at one service when given. */
 export function bookHref(service?: Service) {
   return service ? `/boka?tjanst=${service.slug}` : "/boka";
+}
+
+/** The main button for a service: book online where that is possible, otherwise get in touch. */
+export function serviceAction(service: Service) {
+  return service.booking
+    ? { href: bookHref(service), label: "Boka tid" }
+    : { href: `/kontakt?amne=${encodeURIComponent(service.title)}`, label: "Kontakta mig" };
 }
 
 export const socials = [
