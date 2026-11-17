@@ -130,7 +130,7 @@
         ""
       ],
       [
-        "/kontakt",
+        "/boka",
         "Boka ett första kostnadsfritt samtal",
         "",
         ""
@@ -877,7 +877,7 @@
         ""
       ],
       [
-        "/kontakt",
+        "/boka",
         "Boka ett första kostnadsfritt samtal",
         "",
         ""
@@ -1093,7 +1093,7 @@
         ""
       ],
       [
-        "/kontakt?amne=Personlig%20v%C3%A4gledning",
+        "/boka",
         "Boka ett första kostnadsfritt samtal",
         "",
         ""
@@ -1194,7 +1194,7 @@
   },
   "/boka": {
     "title": "Boka tid — Kongruens",
-    "text": "Hoppa till innehåll Om Tjänster Paradigmskiftet – En resa till dig själv 3 900 kr Personlig vägledning 50 minuter · 900 kr Paradigmskiftet i grupp 4 950 kr Kontakta mig Boka tid OmTjänster Paradigmskiftet – En resa till dig själv 3 900 kr Personlig vägledning 50 minuter · 900 kr Paradigmskiftet i grupp 4 950 kr Boka tidKontakta mig Boka tid Personlig vägledning 50 minuter 900 kr Syns inte bokningen? Öppna bokningen i ett nytt fönster Personlig vägledning som ett mer tillgängligt alternativ. Någon att resonera med kring livet, relationer, arbete och de beslut som betyder mest. Kontakt Tel: 0705-536050 Det första samtalet är kostnadsfritt. Följ oss sk © Kongruens 2026 Producerad av IsakWeb",
+    "text": "Hoppa till innehåll Om Tjänster Paradigmskiftet – En resa till dig själv 3 900 kr Personlig vägledning 50 minuter · 900 kr Paradigmskiftet i grupp 4 950 kr Kontakta mig Boka tid OmTjänster Paradigmskiftet – En resa till dig själv 3 900 kr Personlig vägledning 50 minuter · 900 kr Paradigmskiftet i grupp 4 950 kr Boka tidKontakta mig Boka tid Personlig vägledning 50 minuter 900 kr Det första samtalet är kostnadsfritt. Syns inte bokningen? Öppna bokningen i ett nytt fönster Personlig vägledning som ett mer tillgängligt alternativ. Någon att resonera med kring livet, relationer, arbete och de beslut som betyder mest. Kontakt Tel: 0705-536050 Det första samtalet är kostnadsfritt. Följ oss sk © Kongruens 2026 Producerad av IsakWeb",
     "headings": [
       [
         "H1",

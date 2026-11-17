@@ -3,7 +3,7 @@ import Link from "next/link";
 import { ArrowUpRight, Clock } from "lucide-react";
 import { Haze } from "@/components/Atmosphere";
 import { FocusText } from "@/components/FocusText";
-import { bookableServices, bookHref } from "@/lib/content";
+import { bookableServices, bookHref, bookingEmbed } from "@/lib/content";
 import styles from "./boka.module.css";
 
 export const metadata: Metadata = {
@@ -61,8 +61,11 @@ export default async function BookingPage({
 
         {src ? (
           <>
+            <p className={styles.free}>
+              <strong>Det första samtalet är kostnadsfritt.</strong>
+            </p>
             <div className={styles.frame}>
-              <iframe key={src} src={src} title={`Boka tid: ${chosen?.title}`} loading="eager" allow="payment" />
+              <iframe key={src} src={bookingEmbed(src)} title={`Boka tid: ${chosen?.title}`} loading="eager" allow="payment" />
             </div>
             <p className={styles.fallback}>
               Syns inte bokningen?{" "}

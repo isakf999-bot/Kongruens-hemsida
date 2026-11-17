@@ -123,6 +123,15 @@ export function serviceHref(service: Service) {
 /** The services that can be booked online, in the order they are listed. */
 export const bookableServices = services.filter((s) => s.booking);
 
+/**
+ * Kaddio's embed version of a booking link. The ordinary /booking page keeps a
+ * sticky date bar offset for Kaddio's own header, which covers the service row
+ * inside an iframe; /iframe/booking is the same booking without that header.
+ */
+export function bookingEmbed(url: string) {
+  return url.replace("kaddio.com/booking/", "kaddio.com/iframe/booking/");
+}
+
 /** Link to the booking page on this site, opened at one service when given. */
 export function bookHref(service?: Service) {
   return service ? `/boka?tjanst=${service.slug}` : "/boka";

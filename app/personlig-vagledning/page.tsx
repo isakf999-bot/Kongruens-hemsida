@@ -22,7 +22,7 @@ export default function PersonligVagledningPage() {
         <Haze />
         <ServiceDetail service={service} heading="h1" />
       </div>
-      <CtaBand subject={service.title} />
+      <CtaBand />
     </main>
   );
 }

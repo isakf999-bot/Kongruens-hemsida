@@ -8,7 +8,7 @@ import { HeroMedia } from "@/components/HeroMedia";
 import { Marker } from "@/components/Marker";
 import { Reveal } from "@/components/Reveal";
 import { ServiceCard } from "@/components/ServiceCard";
-import { services, topics } from "@/lib/content";
+import { bookHref, services, topics } from "@/lib/content";
 import { siteDescription } from "@/lib/site";
 import styles from "./page.module.css";
 
@@ -62,7 +62,7 @@ export default function HomePage() {
               Som din PV – Personliga Vägledare – får du någon att tänka högt tillsammans med när
               livet känns oklart, komplicerat eller när du behöver hjälp att hitta riktning.
             </p>
-            <Link href="/kontakt" className="btn">
+            <Link href={bookHref()} className="btn">
               Boka ett första kostnadsfritt samtal
               <ArrowRight aria-hidden="true" strokeWidth={1.75} />
             </Link>
