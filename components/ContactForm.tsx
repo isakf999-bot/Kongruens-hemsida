@@ -3,6 +3,7 @@
 import { FormEvent, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import { Send } from "lucide-react";
+import { track } from "@/lib/track";
 import styles from "./ContactForm.module.css";
 
 type Errors = { email?: boolean };
@@ -63,6 +64,8 @@ export function ContactForm() {
         throw new Error(json?.message || `HTTP ${res.status}`);
       }
       setStatus("success");
+      // The main conversion: a message actually delivered.
+      track("generate_lead", { form: "kontakt", service: subject || undefined, page: window.location.pathname });
       form.reset();
     } catch (err) {
       console.error("Contact form submission failed:", err);

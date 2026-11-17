@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import Script from "next/script";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { ContactTracking } from "@/components/ContactTracking";
 import { serviceHref, services } from "@/lib/content";
 import { siteDescription, siteUrl } from "@/lib/site";
 import "./globals.css";
@@ -121,6 +122,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
         <div id="innehall">{children}</div>
         <Footer />
+        <ContactTracking />
         {/* The container snippet as supplied; loaded after the page is interactive so it does not hold up the first paint. */}
         <Script id="gtm" strategy="afterInteractive">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
